@@ -1,0 +1,32 @@
+---
+title: "BINARY_STRING"
+---
+
+1. [📚REFERENCE](/reference)
+2. [SQL Reference](/reference/sql-reference)
+3. [SQL Functions](/reference/sql-reference/all-functions)
+4. [Conversion](/reference/sql-reference/all-functions/conversion)
+
+Converts the input expression to a binary value.
+
+### Syntax
+
+#### BINARY\_STRING(*expression* VARCHAR) → BINARY
+
+* expression: Varchar expression to convert to binary.
+
+**Examples**
+
+<CodeGroup>
+  ```bash BINARY_STRING example
+  SELECT BINARY_STRING('SPICE')
+  -- RFJFTUlP
+  ```
+</CodeGroup>
+
+<CodeGroup>
+  ```bash BINARY_STRING example
+  SELECT BINARY_STRING('000')
+  -- MDAw
+  ```
+</CodeGroup>

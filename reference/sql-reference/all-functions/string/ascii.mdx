@@ -1,0 +1,39 @@
+---
+title: "ASCII"
+---
+
+1. [📚REFERENCE](/reference)
+2. [SQL Reference](/reference/sql-reference)
+3. [SQL Functions](/reference/sql-reference/all-functions)
+4. [String](/reference/sql-reference/all-functions/string)
+
+Returns the ASCII code for the first character of a string. If the string is empty, 0 is returned.
+
+### Syntax
+
+#### ASCII(*expression* varchar) → int32
+
+* expression: The string for which the ASCII code for the first character in the string is returned.
+
+**Examples**
+
+<CodeGroup>
+  ```bash ASCII example
+  SELECT ASCII ('SPICE')
+  -- 68
+  ```
+</CodeGroup>
+
+<CodeGroup>
+  ```bash ASCII example
+  SELECT ASCII ('D')
+  -- 68
+  ```
+</CodeGroup>
+
+<CodeGroup>
+  ```bash ASCII example
+  SELECT ASCII ('')
+  -- 0
+  ```
+</CodeGroup>

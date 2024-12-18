@@ -1,0 +1,25 @@
+---
+title: "UNBASE64"
+---
+
+1. [📚REFERENCE](/reference)
+2. [SQL Reference](/reference/sql-reference)
+3. [SQL Functions](/reference/sql-reference/all-functions)
+4. [String](/reference/sql-reference/all-functions/string)
+
+Decodes a Base64-encoded string.
+
+### Syntax
+
+#### UNBASE64(*expression* varchar) → varbinary
+
+* expression: A Base64-encoded string.
+
+**Examples**
+
+<CodeGroup>
+  ```bash UNBASE64 example
+  SELECT CAST(UNBASE64('RHJlbWlv') AS VARCHAR)
+  -- Spice
+  ```
+</CodeGroup>

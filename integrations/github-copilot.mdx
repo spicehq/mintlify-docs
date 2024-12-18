@@ -1,0 +1,165 @@
+---
+title: "Overview"
+---
+
+1. [🔌Integrations](/integrations)
+
+How to use the Spice.ai for GitHub Copilot Extension
+
+The [Spice AI GitHub Copilot Extension](https://github.com/marketplace/spice-ai-for-github-copilot) makes it easy to access and chat with external data in GitHub Copilot, enhancing AI-assisted research, Q\&A, code, and documentation suggestions for greater accuracy.
+
+<Frame caption="The @spiceai extension in GitHub Copilot.">
+  <img src="/images/integrations/files%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252F-Mc71sWdWMqp1e_rsTZE-129938315%252Fuploads%252FcHbmfrSSEqivi2sVOji5%252FScreenshot%25202024-10-23%2520at%252015.45.09.png" />
+</Frame>
+
+Access structured and unstructured data from any Spice data source like GitHub, PostgreSQL, MySQL, Snowflake, Databricks, GraphQL, data lakes (S3, Delta Lake, OneLake), HTTP(s), SharePoint, and even FTP.
+
+Some example prompts:
+
+* `@spiceai`` What documentation is relevant to this file?`
+
+* `@spiceai`` Write documentation about the user authentication issue`
+
+* `@spiceai`` Who are the top 5 committers to this repository?`
+
+* `@spiceai`` What are the latest error logs from my web app?`
+
+## Installing the Spice.ai for GitHub Copilot Extension
+
+To install the extension, visit the [GitHub Marketplace](https://github.com/marketplace/spice-ai-for-github-copilot) and search for **Spice.ai**.
+
+<Frame caption="The Spice.ai Extension in the GitHub Marketplace.">
+  <img src="/images/integrations/files%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252F-Mc71sWdWMqp1e_rsTZE-129938315%252Fuploads%252FjdMHeXmiZ8zFddqfdJdf%252Fimage.png" />
+</Frame>
+
+Scroll down, and click **Install it for free**.
+
+<Frame caption="Install the Community Edition of the Spice.ai Extension for free.">
+  <img src="/images/integrations/files%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252F-Mc71sWdWMqp1e_rsTZE-129938315%252Fuploads%252FEH0mpxSL8QyYnuVbQSKQ%252Fimage.png" />
+</Frame>
+
+## Configuring the extension
+
+1. Once installed, open Copilot Chat and type `@spiceai`. Press enter.
+
+<Frame caption="Starting a conversaton with @spiceai">
+  <img src="/images/integrations/files%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252F-Mc71sWdWMqp1e_rsTZE-129938315%252Fuploads%252FhciiymOo6YosiPhpDQ7u%252Fcopilot_chat_again.png" />
+</Frame>
+
+1. A prompt will appear to connect to the Spice.ai Platform.
+
+<Frame caption="Connection prompt">
+  <img src="/images/integrations/files%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252F-Mc71sWdWMqp1e_rsTZE-129938315%252Fuploads%252FGb9s8NDH1t6kQrejI9j1%252Fcopilot_connect.png" />
+</Frame>
+
+1. You will need to authorize the extension. Click **Authorize spiceai**.
+
+<Frame caption="Permissions screen for the Spice AI Extension">
+  <img src="/images/integrations/files%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252F-Mc71sWdWMqp1e_rsTZE-129938315%252Fuploads%252F0kHKOc6dsDyK8zY2ErG5%252Fcopilot_authorize.png" />
+</Frame>
+
+1. To create an account on the Spice.ai Cloud Platform, click **Authorize Spice.ai Cloud Platform.**
+
+<Frame caption="Authorizing the Spice.ai Cloud Platform">
+  <img src="/images/integrations/files%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252F-Mc71sWdWMqp1e_rsTZE-129938315%252Fuploads%252F0b2avSIILQTehjHO6sKx%252Fcopilot_authorize_platform.png" />
+</Frame>
+
+1. Once your account is created, you can configure the extension. Select from a set of ready-to-use datasets to get started. You'll have a chance to configure other datasets after setup.
+
+<Frame caption="GitHub Copilot Extension Setup page">
+  <img src="/images/integrations/files%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252F-Mc71sWdWMqp1e_rsTZE-129938315%252Fuploads%252F2wMSJvlfEZhExx1HwS9g%252Fcopilot_extension_setup.png" />
+</Frame>
+
+![](/images/integrations/files%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252F-Mc71sWdWMqp1e_rsTZE-129938315%252Fuploads%252FkeVqtwiTeLaSmbQMcShh%252Fcopilot_select_datasets.png)
+
+1. The extension will take up to 30 seconds to deploy and load the initial dataset.
+
+<Frame caption="GitHub Copilot Extension Deployment page">
+  <img src="/images/integrations/files%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252F-Mc71sWdWMqp1e_rsTZE-129938315%252Fuploads%252FtrjZhjsVrDe4k0OXyirA%252Fcopilot_start_instance.png" />
+</Frame>
+
+1. When complete, proceed back to **GitHub Copilot Chat**.
+
+## Chatting with Copilot Chat
+
+### Start a new chat
+
+To chat with the **Spice.ai for GitHub Copilot** extension, prefix the message with `@spiceai`
+
+![](/images/integrations/files%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252F-Mc71sWdWMqp1e_rsTZE-129938315%252Fuploads%252FZQuRLgu5C4Qk9mbfQyEm%252Fcopilot_chat_again.png)
+
+If `@spiceai` does not appear in the popup (2), ensure that all the [installation](/integrations/github-copilot) steps have been followed.
+
+### Querying which datasets are available
+
+To list the datasets available to Copilot, try `@spiceai What datasets do I have access to?`
+
+![](/images/integrations/files%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252F-Mc71sWdWMqp1e_rsTZE-129938315%252Fuploads%252FygOn49HEph3AQKMrov5N%252Fcopilot_what_datasets_again.png)
+
+![](/images/integrations/files%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252F-Mc71sWdWMqp1e_rsTZE-129938315%252Fuploads%252FRQBfp8dgstORdLtJGO3z%252Fcopilot_chat_results.png)
+
+### Querying data using SQL
+
+1
+
+### Navigate to [Spice.ai](https://spice.ai) and click Portal
+
+![](/images/integrations/files%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252F-Mc71sWdWMqp1e_rsTZE-129938315%252Fuploads%252FDjPuZQzLJ8CpXmw7mWhp%252Fcopilot_portal.png)
+
+2
+
+### Click the `copilot` app
+
+![](/images/integrations/files%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252F-Mc71sWdWMqp1e_rsTZE-129938315%252Fuploads%252FpvCYJYTVGANESQOm2rf0%252Fcopilot_portal_app.png)
+
+This will open the Spice.ai playground
+
+3
+
+### List the tables available
+
+Run `show tables` to list the tables that are available to the Copilot extension
+
+![](/images/integrations/files%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252F-Mc71sWdWMqp1e_rsTZE-129938315%252Fuploads%252FrmfhxS0LUoVmQoCvWBc3%252Fcopilot_show_tables.png)
+
+4
+
+### Querying repository content
+
+To query the GitHub content, query one of the tables above like so:
+
+> `SELECT name, path, url, content_embedding FROM react.docs LIMIT 10;`
+
+![](/images/integrations/files%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252F-Mc71sWdWMqp1e_rsTZE-129938315%252Fuploads%252F9yxzj07GfWZ4EV5kcnoh%252Fcopilot_select.png)
+
+## Reset the Copilot instance
+
+1
+
+### Navigate to [spice.ai](https://spice.ai) and click Portal
+
+![](/images/integrations/files%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252F-Mc71sWdWMqp1e_rsTZE-129938315%252Fuploads%252FDjPuZQzLJ8CpXmw7mWhp%252Fcopilot_portal.png)
+
+2
+
+### Open the account menu in the top-right corner
+
+![](/images/integrations/files%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252F-Mc71sWdWMqp1e_rsTZE-129938315%252Fuploads%252F4aOhS7vqHOfvsqm1VXgA%252Fcopilot_reset_user.png)
+
+3
+
+### Click Account Settings
+
+![](/images/integrations/files%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252F-Mc71sWdWMqp1e_rsTZE-129938315%252Fuploads%252F4l39w9UkrD6XENfQd5jS%252Fcopilot_reset_settings.png)
+
+4
+
+### Click GitHub Copilot
+
+![](/images/integrations/files%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252F-Mc71sWdWMqp1e_rsTZE-129938315%252Fuploads%252Fybom2ZkKUPDJUDlh6T17%252Fcopilot_reset_copilot.png)
+
+5
+
+### Click Reset GitHub Copilot config
+
+![](/images/integrations/files%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252F-Mc71sWdWMqp1e_rsTZE-129938315%252Fuploads%252F7qbXi9xpbKgpd2Iuaa7G%252Fcopilot_reset_config.png)

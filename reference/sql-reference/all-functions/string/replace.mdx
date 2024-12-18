@@ -1,0 +1,29 @@
+---
+title: "REPLACE"
+---
+
+1. [📚REFERENCE](/reference)
+2. [SQL Reference](/reference/sql-reference)
+3. [SQL Functions](/reference/sql-reference/all-functions)
+4. [String](/reference/sql-reference/all-functions/string)
+
+Removes all occurrences of a specified substring and replaces them with another string.
+
+### Syntax
+
+#### REPLACE(*string\_expression* varchar, *pattern* varchar, *replacement* varchar) → varchar
+
+* string\_expression: String expression in which to do the replacements.
+
+* pattern: The substring you want replaced in the string\_expression.
+
+* replacement: The string to replace the occurrences of the pattern substring with.
+
+**Examples**
+
+<CodeGroup>
+  ```bash REPLACE example
+  SELECT REPLACE('THE CATATONIC CAT', 'CAT', 'DOG')
+  -- sample return 1
+  ```
+</CodeGroup>

@@ -1,0 +1,161 @@
+---
+title: "DATE_ADD"
+---
+
+1. [📚REFERENCE](/reference)
+2. [SQL Reference](/reference/sql-reference)
+3. [SQL Functions](/reference/sql-reference/all-functions)
+4. [Date/Time](/reference/sql-reference/all-functions/date-time)
+
+Returns the sum of two expressions of time as another expression of time.
+
+### Syntax
+
+#### DATE\_ADD(*date\_expression* string, *days* integer) → date
+
+* date\_expression: A string-formatted date in the format ‘YYYY-MM-DD’.
+
+* days: The number of days to be added to the specified date.
+
+**Examples**
+
+<CodeGroup>
+  ```bash Adds two days to the specified date.
+  SELECT DATE_ADD('2022-01-01', 2)
+  -- 2022-01-03
+  ```
+</CodeGroup>
+
+<CodeGroup>
+  ```bash Adds negative two days to the specified date.
+  SELECT DATE_ADD('2022-01-01', -2)
+  -- 2021-12-30
+  ```
+</CodeGroup>
+
+#### DATE\_ADD(*date\_expression* date, *days* integer) → date
+
+* date\_expression: The date, in the format ‘YYY-MM-DD’, to add days to. The value can be either a database column in DATE format, or literal value explicitly converted to DATE.
+
+* days: A 32-bit integer of the number of days to be added to the specified date.
+
+**Examples**
+
+<CodeGroup>
+  ```bash Adds 30 days to the specified date.
+  SELECT DATE_ADD(DATE '2022-01-01', 30)
+  -- 2022-01-31
+  ```
+</CodeGroup>
+
+<CodeGroup>
+  ```bash Adds negative 30 days to the specified date.
+  SELECT DATE_ADD(DATE '2022-01-01', -30)
+  -- 2021-12-02
+  ```
+</CodeGroup>
+
+#### DATE\_ADD(*date\_expression* string, *time\_interval* interval) → timestamp
+
+* date\_expression: A string-formatted date in the format ‘YYYY-MM-DD’.
+
+* time\_interval: A CAST of a number to one of these intervals: DAY, MONTH, YEAR.
+
+**Examples**
+
+<CodeGroup>
+  ```bash Adds two days to the specified date.
+  SELECT DATE_ADD('2022-01-01', CAST(2 AS INTERVAL DAY))
+  -- 2022-01-03 00:00:00
+  ```
+</CodeGroup>
+
+<CodeGroup>
+  ```bash Adds negative two days to the specified date.
+  SELECT DATE_ADD('2022-01-01', CAST(-2 AS INTERVAL DAY))
+  -- 2021-12-30 00:00:00
+  ```
+</CodeGroup>
+
+#### DATE\_ADD(*date\_expression* date, *time\_interval* interval) → timestamp
+
+* date\_expression: The date, in the format ‘YYY-MM-DD’, to add the time interval to. The value can be either a database column in DATE format, or literal value explicitly converted to DATE.
+
+* time\_interval: A CAST of a number to one of these intervals: DAY, MONTH, YEAR.
+
+**Examples**
+
+<CodeGroup>
+  ```bash DATE_ADD example
+  SELECT DATE_ADD(DATE '2022-01-01', CAST(30 AS INTERVAL DAY))
+  -- 2022-01-31 00:00:00
+  ```
+</CodeGroup>
+
+#### DATE\_ADD(*timestamp\_expression* string, *time\_interval* interval) → timestamp
+
+* timestamp\_expression: A string-formatted timestamp in the format ‘YYYY-MM-DD HH24:MI:SS’.
+
+* time\_interval: A CAST of a number to one of these intervals: SECOND, MINUTE, HOUR, DAY, MONTH, YEAR.
+
+**Examples**
+
+<CodeGroup>
+  ```bash Adds 30 days to the specified timestamp. Note that the time information is lost.
+  SELECT DATE_ADD('2022-01-01 12:00:00', CAST(30 AS INTERVAL DAY))
+  -- 2022-01-31 00:00:00
+  ```
+</CodeGroup>
+
+<CodeGroup>
+  ```bash Adds negative 30 days to the specified timestamp. Note that the time information is lost.
+  SELECT DATE_ADD('2022-01-01 12:00:00', CAST(-30 AS INTERVAL DAY))
+  -- 2021-12-02 00:00:00
+  ```
+</CodeGroup>
+
+#### DATE\_ADD(*timestamp\_expression* timestamp, *time\_interval* interval) → timestamp
+
+* timestamp\_expression: The timestamp, in the format ‘YYYY-MM-DD HH:MM:SS’, to add days to. The value can be either a database column in TIMESTAMP format, or literal value explicitly converted to TIMESTAMP.
+
+* time\_interval: A CAST of a number to one of these intervals: SECOND, MINUTE, HOUR, DAY, MONTH, YEAR.
+
+**Examples**
+
+Adds 30 days to the specified timestamp.
+
+<CodeGroup>
+  ```bash Adds 30 days to the specified timestamp.
+  SELECT DATE_ADD(TIMESTAMP '2022-01-01 12:00:00', CAST(30 AS INTERVAL DAY))
+  -- 2022-01-31 12:00:00
+  ```
+</CodeGroup>
+
+<CodeGroup>
+  ```bash Adds negative 30 days to the specified timestamp.
+  SELECT DATE_ADD(TIMESTAMP '2022-01-01 12:00:00', CAST(-30 AS INTERVAL DAY))
+  -- 2021-12-02 12:00:00
+  ```
+</CodeGroup>
+
+#### DATE\_ADD(*time\_expression* time, *time\_interval* interval) → time
+
+* time\_expression: The time, in the format ‘HH:MM:SS’, to add the time interval to. The value can be either a database column in TIMESTAMP format, or literal value explicitly converted to TIMESTAMP.
+
+* time\_interval: A CAST of a number to one of these intervals: SECOND, MINUTE, HOUR.
+
+**Examples**
+
+<CodeGroup>
+  ```bash Adds 30 minutes to the specified time.
+  SELECT DATE_ADD(TIME '00:00:00', CAST(30 AS INTERVAL MINUTE))
+  -- 00:30:00
+  ```
+</CodeGroup>
+
+<CodeGroup>
+  ```bash Adds negative 30 minutes to the specified time.
+  SELECT DATE_ADD(TIME '00:00:00', CAST(-30 AS INTERVAL MINUTE))
+  -- 84600
+  ```
+</CodeGroup>

@@ -1,0 +1,36 @@
+---
+title: "eth.nft_contracts"
+---
+
+1. [📚REFERENCE](/reference)
+2. [SQL Query Tables](/reference/sql-query-tables)
+3. [Ethereum](/reference/sql-query-tables/ethereum)
+4. [NFT Tables](/reference/sql-query-tables/ethereum/nft-tables)
+
+SQL table schema for eth.nft\_contracts
+
+All Ethereum erc721 contracts & subset of erc1155 contracts that contain NFTs.
+
+Column Name
+
+Data Type
+
+Description
+
+`address`
+
+CHARACTER VARYING
+
+The contract address of this NFT.
+
+`is_erc721`
+
+BOOLEAN
+
+True if Spice considers this token contract to conform to the ERC721 standard.
+
+`is_erc1155`
+
+BOOLEAN
+
+True if Spice considers this token contract to conform to the ERC1155 standard.

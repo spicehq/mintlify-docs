@@ -1,0 +1,31 @@
+---
+title: "MONTHS_BETWEEN"
+---
+
+1. [📚REFERENCE](/reference)
+2. [SQL Reference](/reference/sql-reference)
+3. [SQL Functions](/reference/sql-reference/all-functions)
+4. [Date/Time](/reference/sql-reference/all-functions/date-time)
+
+Returns the number of months between two date or timestamp values.
+
+### Syntax
+
+#### MONTHS\_BETWEEN(*date\_timestamp\_expression1* string, *date\_timestamp\_expression2* string) → float
+
+* date\_timestamp\_expression1: The `DATE` or `TIMESTAMP` to subtract from.
+
+* date\_timestamp\_expression2: The `DATE` or `TIMESTAMP` to subtract.
+
+**Examples**
+
+<CodeGroup>
+  ```bash MONTHS_BETWEEN example
+  SELECT MONTHS_BETWEEN('2018-11-01 10:30:00', '2019-02-28')
+  -- -3.870967741935484
+  ```
+</CodeGroup>
+
+### Usage Notes
+
+If date or timestamp `date_timestamp_expression1` represents an earlier point in time than `date_timestamp_expression2`, then `MONTHS_BETWEEN(date_timestamp_expression1, date_timestamp_expression2)` returns a negative value; otherwise it returns a positive value. You can use a date value for one input parameter and a timestamp for the other.

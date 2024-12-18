@@ -1,0 +1,60 @@
+---
+title: "eth.withdrawals"
+---
+
+1. [📚REFERENCE](/reference)
+2. [SQL Query Tables](/reference/sql-query-tables)
+3. [Ethereum](/reference/sql-query-tables/ethereum)
+4. [Core Tables](/reference/sql-query-tables/ethereum/core-tables)
+
+SQL table schema for eth.withdrawals and eth.recent\_withdrawals
+
+Ethereum Block withdrawals.
+
+Column Name
+
+Data Type
+
+Description
+
+`withdrawal_index`
+
+DOUBLE
+
+Unique identifier of the withdrawal (within the withdrawal table).
+
+`validator_index`
+
+DOUBLE
+
+Unique identifier of the validator (within the validator table).
+
+`amount`
+
+DOUBLE
+
+The amount of ETH withdrawn.
+
+`address`
+
+CHARACTER VARYING
+
+The address of the withdrawing account.
+
+`block_timestamp`
+
+BIGINT
+
+Unix time when the block including this withdrawal was mined/validated.
+
+`block_hash`
+
+CHARACTER VARYING
+
+The hash of the block including this withdrawal
+
+`block_number`
+
+BIGINT
+
+The number of the block including this withdrawal

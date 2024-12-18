@@ -1,0 +1,36 @@
+---
+title: "CONCAT"
+---
+
+1. [📚REFERENCE](/reference)
+2. [SQL Reference](/reference/sql-reference)
+3. [SQL Functions](/reference/sql-reference/all-functions)
+4. [String](/reference/sql-reference/all-functions/string)
+
+Concatenates two or more strings. NULL values are ignored.
+
+### Syntax
+
+#### CONCAT(*expression1* string, *expression2* string, *expressionN* string) → string
+
+* expression1: First string expression.
+
+* expression2: Second string expression.
+
+* expressionN: Nth string expression.
+
+**Examples**
+
+<CodeGroup>
+  ```bash CONCAT example
+  SELECT CONCAT('CON', 'CAT')
+  -- CONCAT
+  ```
+</CodeGroup>
+
+<CodeGroup>
+  ```bash CONCAT example
+  SELECT CONCAT('con', 'cat', NULL)
+  -- concat
+  ```
+</CodeGroup>

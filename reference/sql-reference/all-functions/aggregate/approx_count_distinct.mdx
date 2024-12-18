@@ -1,0 +1,26 @@
+---
+title: "APPROX_COUNT_DISTINCT"
+---
+
+1. [📚REFERENCE](/reference)
+2. [SQL Reference](/reference/sql-reference)
+3. [SQL Functions](/reference/sql-reference/all-functions)
+4. [Aggregate](/reference/sql-reference/all-functions/aggregate)
+
+Returns the approximate number of unique, non-null values in a column.
+
+### Syntax
+
+#### APPROX\_COUNT\_DISTINCT(*column\_name* any primitive) → BIGINT
+
+* `column_name`: You can specify a column of any primitive data type.
+
+**Examples**
+
+<CodeGroup>
+  ```bash APPROX_COUNT_DISTINCT example
+  SELECT APPROX_COUNT_DISTINCT(number)
+  FROM eth.recent_blocks
+  -- 143
+  ```
+</CodeGroup>

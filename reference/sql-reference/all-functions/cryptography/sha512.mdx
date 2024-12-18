@@ -1,0 +1,25 @@
+---
+title: "SHA512"
+---
+
+1. [📚REFERENCE](/reference)
+2. [SQL Reference](/reference/sql-reference)
+3. [SQL Functions](/reference/sql-reference/all-functions)
+4. [Cryptography](/reference/sql-reference/all-functions/cryptography)
+
+Computes the 512-bit SHA-2 hash value of a string.
+
+### Syntax
+
+#### SHA512(*expr* varchar) → varchar
+
+* expression: The string to hash.
+
+**Examples**
+
+<CodeGroup>
+  ```bash SHA512 example
+  SELECT SHA512('Spice')
+  -- f011241f4a038756cbffccc934ab67215e0ca5760d84423af09307c0e6d9991b24963680db6102466176bcea4d609b82ed2e
+  ```
+</CodeGroup>

@@ -1,0 +1,32 @@
+---
+title: "IS_MEMBER"
+---
+
+1. [📚REFERENCE](/reference)
+2. [SQL Reference](/reference/sql-reference)
+3. [SQL Functions](/reference/sql-reference/all-functions)
+4. [Boolean](/reference/sql-reference/all-functions/boolean)
+
+Returns whether the current user is a member of the specified role.
+
+### Syntax
+
+#### IS\_MEMBER(*expression* varchar) → boolean
+
+* expression: String expression identifying a role in Spice.
+
+**Examples**
+
+<CodeGroup>
+  ```bash IS_MEMBER example
+  SELECT IS_MEMBER ('public')
+  -- True
+  ```
+</CodeGroup>
+
+<CodeGroup>
+  ```bash IS_MEMBER example
+  SELECT IS_MEMBER ('non-role')
+  -- False
+  ```
+</CodeGroup>

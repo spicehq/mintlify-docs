@@ -1,0 +1,42 @@
+---
+title: "MASK"
+---
+
+1. [📚REFERENCE](/reference)
+2. [SQL Reference](/reference/sql-reference)
+3. [SQL Functions](/reference/sql-reference/all-functions)
+4. [String](/reference/sql-reference/all-functions/string)
+
+Returns a masked version of a string.
+
+### Syntax
+
+#### MASK(*expression* varchar, *uc\_mask* varchar, *lc\_mask* varchar, *num\_mask* varchar) → varchar
+
+* expression: The string to mask.
+
+* uc\_mask: Controls the mask character for upper case letters.
+
+* lc\_mask: Controls the mask character for lower case letters.
+
+* num\_mask: Controls the mask character for numbers.
+
+**Examples**
+
+<CodeGroup>
+  ```bash MASK example
+  SELECT MASK('abcd-ABCD-1234')
+  -- xxxx-XXXX-nnnn
+  ```
+</CodeGroup>
+
+<CodeGroup>
+  ```bash MASK example containing optional arguments.
+  SELECT MASK('abcd-ABCD-1234', 'U', 'u', '#')
+  -- uuuu-UUUU-####
+  ```
+</CodeGroup>
+
+### Usage Notes
+
+By default, upper case letters are converted to `X`, lower case letters are converted to `x`, and numbers are converted to `n`. You can override the characters used in the mask by supplying optional arguments. The first argument controls the mask character for upper case letters, the second argument for lower case letters, and the third argument for numbers.

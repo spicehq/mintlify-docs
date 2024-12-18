@@ -1,0 +1,45 @@
+---
+title: "BIT_OR"
+---
+
+1. [📚REFERENCE](/reference)
+2. [SQL Reference](/reference/sql-reference)
+3. [SQL Functions](/reference/sql-reference/all-functions)
+4. [Bitwise](/reference/sql-reference/all-functions/bitwise)
+
+Returns the bitwise OR of non-NULL input values.
+
+### Syntax
+
+#### BIT\_OR(*expression* int) → int
+
+* expression: An expression that evaluates to a data type that can be cast as an integer.
+
+**Examples**
+
+<CodeGroup>
+  ```bash BIT_OR example
+  SELECT BIT_OR(passenger_count)
+  FROM eth.recent_blocks 
+    
+  -- EXPR$0
+  -- 255
+  ```
+</CodeGroup>
+
+<CodeGroup>
+  ```bash BIT_OR example
+  SELECT total_gas_used, 
+    BIT_OR(transaction_count)
+  FROM eth.recent_blocks 
+  GROUP BY total_gas_used
+
+  -- total_gas_used, EXPR$1
+  -- 29.0, 7
+  -- 5.5, 15
+  ```
+</CodeGroup>
+
+### Usage Notes
+
+If no rows match, returns a value with all bits set to 0. NULL values have no effect on the result unless all results are NULL, which is treated as no match.

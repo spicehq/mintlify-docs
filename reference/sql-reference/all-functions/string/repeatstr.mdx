@@ -1,0 +1,27 @@
+---
+title: "REPEATSTR"
+---
+
+1. [📚REFERENCE](/reference)
+2. [SQL Reference](/reference/sql-reference)
+3. [SQL Functions](/reference/sql-reference/all-functions)
+4. [String](/reference/sql-reference/all-functions/string)
+
+Repeats the given string n times.
+
+### Syntax
+
+#### REPEATSTR(*expression* varchar, *nTimes* int32) → varchar
+
+* expression: String/characters to repeat.
+
+* nTimes: Number of times the string should be repeated.
+
+**Examples**
+
+<CodeGroup>
+  ```bash REPEATSTR example
+  SELECT REPEATSTR('a ', 5)
+  -- a a a a a
+  ```
+</CodeGroup>

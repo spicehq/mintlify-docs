@@ -1,0 +1,59 @@
+---
+title: "SUBSTRING"
+---
+
+1. [📚REFERENCE](/reference)
+2. [SQL Reference](/reference/sql-reference)
+3. [SQL Functions](/reference/sql-reference/all-functions)
+4. [String](/reference/sql-reference/all-functions/string)
+
+Returns the portion of the string from the specified base expression starting at the specified characters.
+
+### Syntax
+
+#### SUBSTRING(*string\_expression* varchar, *offset* int64) → varchar
+
+* string\_expression: Base expression to extract substring from.
+
+* offset: The offset from which the substring starts.
+
+**Examples**
+
+<CodeGroup>
+  ```bash SUBSTRING example
+  SELECT SUBSTRING('spice user 1 2 3', 12)
+  -- 1 2 3
+  ```
+</CodeGroup>
+
+#### SUBSTRING(*string\_expression* varchar, *offset* int64, *length* int64) → varchar
+
+* string\_expression: Base expression to extract substring from.
+
+* offset: The offset from which the substring starts.
+
+* length: The length limit of the substring.
+
+**Examples**
+
+<CodeGroup>
+  ```bash SUBSTRING example
+  SELECT SUBSTRING('base expression', 6, 4)
+  -- expr
+  ```
+</CodeGroup>
+
+#### SUBSTRING(*string\_expression* varchar, *pattern* varchar) → varchar
+
+* string\_expression: Base expression to extract substring from.
+
+* pattern: The offset from which the substring starts.
+
+**Examples**
+
+<CodeGroup>
+  ```bash SUBSTRING example
+  SELECT SUBSTRING('spice user 123', '[0-9]+')
+  -- 123
+  ```
+</CodeGroup>

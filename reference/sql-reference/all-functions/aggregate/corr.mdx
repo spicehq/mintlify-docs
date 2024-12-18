@@ -1,0 +1,43 @@
+---
+title: "CORR"
+---
+
+1. [📚REFERENCE](/reference)
+2. [SQL Reference](/reference/sql-reference)
+3. [SQL Functions](/reference/sql-reference/all-functions)
+4. [Aggregate](/reference/sql-reference/all-functions/aggregate)
+
+Calculates the Pearson correlation coefficient of the values expression1 and expression2. The function name must be enclosed in double quotes (“CORR”).
+
+### Syntax
+
+#### CORR(*expression1* numeric, *expression2* numeric) → double
+
+* expression1: An expression that evaluates to a numeric type. This parameter is the dependent value.
+
+* expression2: An expression that evaluates to a numeric type. This parameter is the independent value.
+
+**Examples**
+
+<CodeGroup>
+  ```bash CORR example
+  SELECT "CORR"(100, 4)
+  -- NaN
+  ```
+</CodeGroup>
+
+<CodeGroup>
+  ```bash CORR example
+  SELECT transaction_count,
+    "CORR"(gas_used, base_fee_per_gas)
+  FROM eth.recent_blocks
+  GROUP BY transaction_count
+  LIMIT 5
+
+  -- 8, 0.38978465691058356
+  -- 4, 0.4254971384215677
+  -- 208, NaN
+  -- 255, -1.0
+  -- 3, 0.46551948595802983
+  ```
+</CodeGroup>

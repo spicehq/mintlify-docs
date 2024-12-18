@@ -1,0 +1,128 @@
+---
+title: "LOG"
+---
+
+1. [📚REFERENCE](/reference)
+2. [SQL Reference](/reference/sql-reference)
+3. [SQL Functions](/reference/sql-reference/all-functions)
+4. [Math](/reference/sql-reference/all-functions/math)
+
+Returns the logarithm of the numeric input expression. If no base is specified, the natural log (ln) will be calculated.
+
+### Syntax
+
+#### LOG(*base\_expression* FLOAT, *expression* FLOAT) → DOUBLE
+
+* base\_expression: The base to use.
+
+* expression: The value to calculate the log.
+
+**Examples**
+
+<CodeGroup>
+  ```bash LOG example
+  SELECT LOG(20.5, 1.5)
+  -- 0.1342410830900514
+  ```
+</CodeGroup>
+
+#### LOG(*base\_expression* DOUBLE, *expression* DOUBLE) → DOUBLE
+
+* base\_expression: The base to use.
+
+* expression: The value for which you want to calculate the log.
+
+**Examples**
+
+<CodeGroup>
+  ```bash LOG example
+  SELECT LOG(20.5, 1.5)
+  -- 0.1342410830900514
+  ```
+</CodeGroup>
+
+#### LOG(*expression* int64) → DOUBLE
+
+* expression: The value for which you want to calculate the log.
+
+**Examples**
+
+<CodeGroup>
+  ```bash LOG example
+  SELECT LOG(10)
+  -- 2.302585092994046
+  ```
+</CodeGroup>
+
+#### LOG(*base\_expression* int64, *expression* int64) → DOUBLE
+
+* base\_expression: The base to use.
+
+* expression: The value for which you want to calculate the log.
+
+**Examples**
+
+<CodeGroup>
+  ```bash LOG example
+  SELECT LOG(10, 2)
+  -- 0.30102999566398114
+  ```
+</CodeGroup>
+
+#### LOG(*expression* int32) → DOUBLE
+
+* expression: The value for which you want to calculate the log.
+
+**Examples**
+
+<CodeGroup>
+  ```bash LOG example
+  SELECT LOG(10)
+  -- 2.302585092994046
+  ```
+</CodeGroup>
+
+#### LOG(*base\_expression* int32, *expression* int32) → DOUBLE
+
+* base\_expression: The base to use.
+
+* expression: The value for which you want to calculate the log.
+
+**Examples**
+
+<CodeGroup>
+  ```bash LOG example
+  SELECT LOG(10, 2)
+  -- 0.30102999566398114
+  ```
+</CodeGroup>
+
+#### LOG(*expression* float) → DOUBLE
+
+* expression: The value for which you want to calculate the log.
+
+**Examples**
+
+<CodeGroup>
+  ```bash LOG example
+  SELECT LOG(12.5)
+  -- 2.5257286443082556
+  ```
+</CodeGroup>
+
+#### LOG(*expression* double) → DOUBLE
+
+* expression: The value for which you want to calculate the log.
+
+**Examples**
+
+<CodeGroup>
+  ```bash LOG example
+  SELECT LOG(12.5)
+  -- 2.5257286443082556
+  ```
+</CodeGroup>
+
+### Usage Notes
+
+If base\_expression is 1. If base\_expression expression is less than 0, NaN will be returned. If the expression input is 0, `-Infinity` is returned. If the expression input is less than 0, NaN will be returned.

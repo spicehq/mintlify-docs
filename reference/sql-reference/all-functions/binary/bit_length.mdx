@@ -1,0 +1,46 @@
+---
+title: "BIT_LENGTH"
+---
+
+1. [📚REFERENCE](/reference)
+2. [SQL Reference](/reference/sql-reference)
+3. [SQL Functions](/reference/sql-reference/all-functions)
+4. [Binary](/reference/sql-reference/all-functions/binary)
+
+Gets length of bits of the input expression.
+
+### Syntax
+
+#### BIT\_LENGTH(*expression* BINARY, VARCHAR) → BINARY
+
+* expression: A binary or varchar expression
+
+**Examples**
+
+<CodeGroup>
+  ```bash BIT_LENGTH example
+  SELECT BIT_LENGTH(1010)
+  -- 32
+  ```
+</CodeGroup>
+
+<CodeGroup>
+  ```bash BIT_LENGTH example
+  SELECT BIT_LENGTH('SPICE')
+  -- 48
+  ```
+</CodeGroup>
+
+<CodeGroup>
+  ```bash BIT_LENGTH example
+  SELECT BIT_LENGTH('abc')
+  -- 24
+  ```
+</CodeGroup>
+
+<CodeGroup>
+  ```bash BIT_LENGTH example
+  SELECT BIT_LENGTH(NULL)
+  -- None
+  ```
+</CodeGroup>

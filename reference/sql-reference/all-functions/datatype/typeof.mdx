@@ -1,0 +1,46 @@
+---
+title: "TYPEOF"
+---
+
+1. [📚REFERENCE](/reference)
+2. [SQL Reference](/reference/sql-reference)
+3. [SQL Functions](/reference/sql-reference/all-functions)
+4. [Datatype](/reference/sql-reference/all-functions/datatype)
+
+Reports the type (in string format) of the input expression.
+
+### Syntax
+
+#### TYPEOF(*input* any) → varchar
+
+* input: An expression for which the type is returned.
+
+**Examples**
+
+<CodeGroup>
+  ```bash TYPEOF example
+  SELECT TYPEOF(TRUE)
+  -- BIT
+  ```
+</CodeGroup>
+
+<CodeGroup>
+  ```bash TYPEOF example
+  SELECT TYPEOF(100)
+  -- INT
+  ```
+</CodeGroup>
+
+<CodeGroup>
+  ```bash TYPEOF example
+  SELECT TYPEOF(98.76)
+  -- DECIMAL
+  ```
+</CodeGroup>
+
+<CodeGroup>
+  ```bash TYPEOF example
+  SELECT TYPEOF('2021-09-14')
+  -- VARCHAR
+  ```
+</CodeGroup>

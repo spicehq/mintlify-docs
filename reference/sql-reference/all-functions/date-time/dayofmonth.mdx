@@ -1,0 +1,38 @@
+---
+title: "DAYOFMONTH"
+---
+
+1. [📚REFERENCE](/reference)
+2. [SQL Reference](/reference/sql-reference)
+3. [SQL Functions](/reference/sql-reference/all-functions)
+4. [Date/Time](/reference/sql-reference/all-functions/date-time)
+
+Returns the day of month of the date or timestamp.
+
+### Syntax
+
+#### DAYOFMONTH(*date\_timestamp\_expression* string) → bigint
+
+* date\_timestamp\_expression: A `DATE` or `TIMESTAMP` expression.
+
+**Examples**
+
+DAYOFMONTH example
+
+<CodeGroup>
+  ```bash DAYOFMONTH example
+  SELECT DAYOFMONTH(DATE '2021-02-28')
+  -- 28
+  ```
+</CodeGroup>
+
+<CodeGroup>
+  ```bash DAYOFMONTH example
+  SELECT DAYOFMONTH(TIMESTAMP '2021-02-28 11:43:22')
+  -- 28
+  ```
+</CodeGroup>
+
+### Usage Notes
+
+This function is identical to the function [`DAY`](/reference/sql-reference/all-functions/date-time/day).

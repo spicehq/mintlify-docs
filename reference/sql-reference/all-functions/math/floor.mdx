@@ -1,0 +1,39 @@
+---
+title: "FLOOR"
+---
+
+1. [📚REFERENCE](/reference)
+2. [SQL Reference](/reference/sql-reference)
+3. [SQL Functions](/reference/sql-reference/all-functions)
+4. [Math](/reference/sql-reference/all-functions/math)
+
+Returns the value from the specifed expression rounded to the nearest equal or smaller integer.
+
+### Syntax
+
+#### FLOOR(*numeric\_expression* NUMERIC) → INTEGER
+
+* numeric\_expression: The number (`DOUBLE`, `FLOAT`, `INTEGER`) used to compute the floor.
+
+**Examples**
+
+<CodeGroup>
+  ```bash FLOOR example
+  SELECT FLOOR(0)
+  -- 0
+  ```
+</CodeGroup>
+
+<CodeGroup>
+  ```bash FLOOR example
+  SELECT FLOOR(45.76)
+  -- 45
+  ```
+</CodeGroup>
+
+<CodeGroup>
+  ```bash FLOOR example
+  SELECT FLOOR(-1.3)
+  -- -2
+  ```
+</CodeGroup>

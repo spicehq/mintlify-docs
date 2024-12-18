@@ -1,25 +1,26 @@
 ---
-title: Spice Models
-description: Spice Models (beta)
+title: "Spice Models"
 ---
 
-<Info>
+1. [🧱Building Blocks](/building-blocks)
+
+Spice Models (beta)
+
 Spice Models are in beta for Design Partners. Get in touch for more info.
-</Info>
 
 Spice Models enable the training and use of AI/ML models natively on the Spice platform.
 
 The platform currently supports time-series forecasting models, with other categories of models planned.
 
-Hosted models have first-class access to co-located data for training and inferencing including: [Spice managed datasets](datasets.md), [user managed datasets](external-data-sources.md), and [custom datasets and views](datasets-and-views.md). Additionally, [Spice Firecache](spice-firecache/) can be leveraged to train and infer up to 10x faster.
+Hosted models have first-class access to co-located data for training and inferencing including: [Spice managed datasets](/building-blocks/datasets), [user managed datasets](/building-blocks/external-data-sources), and [custom datasets and views](/building-blocks/datasets-and-views). Additionally, [Spice Firecache](/building-blocks/spice-firecache) can be leveraged to train and infer up to 10x faster.
 
 ### Defining a Model
 
-Models are defined using a [model manifest](../reference/specifications/models-yaml-specification/) YAML file. Model details such as data requirements, architecture, training parameters, and other important hyperparameters are defined in the `model.yaml.`
+Models are defined using a [model manifest](/reference/specifications/models-yaml-specification) YAML file. Model details such as data requirements, architecture, training parameters, and other important hyperparameters are defined in the `model.yaml.`
 
-Add a `model.yaml` file to the repository path `/models/[model_name]/model.yaml` of a [GitHub connected Spice app](../portal/apps/connect-github-repository.md), replacing `[model_name]` with the desired model name. For example, the [Gas Fees Predictions demo model](https://github.com/lukekim/demo/blob/main/models/gas\_fees-firecache/model.yaml) uses the path `/models/gas-fees/model.yaml`.
+Add a `model.yaml` file to the repository path `/models/[model_name]/model.yaml` of a [GitHub connected Spice app](/portal/apps/connect-github-repository), replacing `[model_name]` with the desired model name. For example, the [Gas Fees Predictions demo model](https://github.com/lukekim/demo/blob/main/models/gas_fees-firecache/model.yaml) uses the path `/models/gas-fees/model.yaml`.
 
-Refer to the [Models YAML specification](../reference/specifications/models-yaml-specification/) for all available configuration options.
+Refer to the [Models YAML specification](/reference/specifications/models-yaml-specification) for all available configuration options.
 
 For example model manifests, see the [models samples repo](https://github.com/spiceai/samples/tree/trunk/.spice/models).
 
@@ -29,29 +30,37 @@ In the [spice.ai Portal](https://spice.ai), navigate to the **Models** tab of th
 
 `model.yaml` files committed to the connected repository will be automatically detected and imported as Spice Models.
 
-<img src="../.gitbook/assets/CleanShot 2024-01-30 at 10.49.30@2x.png" alt=""/>
+<Frame caption="Spice Models defined in  files automatically detected and imported in the Portal.">
+  <img src="/images/building-blocks/files%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252F-Mc71sWdWMqp1e_rsTZE-129938315%252Fuploads%252Fa3nWUfxpLIE1DgvYC1it%252FCleanShot%25202024-01-30%2520at%252010.49.30%25402x.png" />
+
+  `model.yaml`
+</Frame>
 
 Navigating to a specific Model will show detailed information as defined in the `model.yaml`.
 
 A training run can be started using the **Train** button.
 
-<img src="../.gitbook/assets/CleanShot 2024-01-30 at 10.51.58@2x.png" alt=""/>
+<Frame caption="Details for a specific Model.">
+  <img src="/images/building-blocks/files%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252F-Mc71sWdWMqp1e_rsTZE-129938315%252Fuploads%252FLr8oxgxiywknnMunOXtA%252FCleanShot%25202024-01-30%2520at%252010.51.58%25402x.png" />
+</Frame>
 
 **Training runs** in progress will be shown and updated, along with historical training runs.
 
-<img src="../.gitbook/assets/CleanShot 2024-01-30 at 10.53.08@2x.png" alt=""/>
+<Frame caption="A model training with status &#x22;Running&#x22;.">
+  <img src="/images/building-blocks/files%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252F-Mc71sWdWMqp1e_rsTZE-129938315%252Fuploads%252Fde6JT3D8E06GNlmkrx0j%252FCleanShot%25202024-01-30%2520at%252010.53.08%25402x.png" />
+</Frame>
 
 The **Training Status** will be updated to `Complete` for successfully completed training runs. Details and the Training Report, are available on the **Training Run** page.
 
-<img src="../.gitbook/assets/CleanShot 2024-01-30 at 10.55.32@2x.png" alt=""/>
+<Frame caption="A successfully completed Model training run with status &#x22;Complete&#x22;.">
+  <img src="/images/building-blocks/files%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252F-Mc71sWdWMqp1e_rsTZE-129938315%252Fuploads%252F7dTFcgXZKUDUhxxY6Gwv%252FCleanShot%25202024-01-30%2520at%252010.55.32%25402x.png" />
+</Frame>
 
 ### Running Model Predictions
 
-<Info>
-Spice Models (beta) currently supports **time-series forecasting**.&#x20;
+Spice Models (beta) currently supports **time-series forecasting**.
 
 Additional categories of data science and machine learning are on our roadmap.
-</Info>
 
 A successfully trained model can be used to make predictions.
 
@@ -65,12 +74,16 @@ Successfully trained models will be available for selection from the model selec
 
 Clicking **Predict** will demonstrate calling the predictions API using lookback data within the Spice platform. A graph of the predicted value(s) along with the lookback data will be displayed.
 
-<img src="../.gitbook/assets/CleanShot 2024-01-30 at 11.02.00@2x.png" alt=""/>
+<Frame caption="The AI Predictions playground.">
+  <img src="/images/building-blocks/files%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252F-Mc71sWdWMqp1e_rsTZE-129938315%252Fuploads%252FRlbZpkvASsaxLi7e7lEK%252FCleanShot%25202024-01-30%2520at%252011.02.00%25402x.png" />
+</Frame>
 
 ### Predictions by API
 
 The **Training Runs** page provides training details including a copyable `curl` command to make a prediction from the command line.
 
-For details on the API, see [Prediction Documentation](broken-reference).&#x20;
+For details on the API, see Prediction Documentation.
 
-<img src="../.gitbook/assets/CleanShot 2024-01-30 at 11.00.34@2x.png" alt=""/>
+<Frame caption="Detailed training run page with the predictions API">
+  <img src="/images/building-blocks/files%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252F-Mc71sWdWMqp1e_rsTZE-129938315%252Fuploads%252FrBabRlHYiHAdzge3RQFv%252FCleanShot%25202024-01-30%2520at%252011.00.34%25402x.png" />
+</Frame>

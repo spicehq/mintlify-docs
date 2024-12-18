@@ -1,0 +1,161 @@
+---
+title: "DATE_SUB"
+---
+
+1. [📚REFERENCE](/reference)
+2. [SQL Reference](/reference/sql-reference)
+3. [SQL Functions](/reference/sql-reference/all-functions)
+4. [Date/Time](/reference/sql-reference/all-functions/date-time)
+
+Returns the difference of two expressions of time as another expression of time.
+
+### Syntax
+
+#### DATE\_SUB(*date\_expression* STRING, *days* INTEGER) → DATE
+
+* date\_expression: A string-formatted date in the format ‘YYYY-MM-DD’.
+
+* days: The number of days to be subtracted from the specified date.
+
+**Examples**
+
+<CodeGroup>
+  ```bash Subtracts two days from the specified date.
+  SELECT DATE_SUB('2022-01-01', 2)
+  -- 2021-12-30
+  ```
+</CodeGroup>
+
+<CodeGroup>
+  ```bash Subtracts negative two days from the specified date.
+  SELECT DATE_SUB('2022-01-01', -2)
+  -- 2022-01-03
+  ```
+</CodeGroup>
+
+#### DATE\_SUB(*date\_expression* DATE, *days* INTEGER) → DATE
+
+* date\_expression: The date, in the format ‘YYY-MM-DD’, to subtract days from. The value can be either a database column in DATE format, or literal value explicitly converted to DATE.
+
+* days: A 32-bit integer of the number of days to be subtracted from the specified date.
+
+**Examples**
+
+<CodeGroup>
+  ```bash Subtracts 30 days from the specified date.
+  SELECT DATE_SUB(DATE '2022-01-01', 30)
+  -- 2021-12-02
+  ```
+</CodeGroup>
+
+Subtracts negative 30 days from the specified date.
+
+<CodeGroup>
+  ```bash Subtracts negative 30 days from the specified date.
+  SELECT DATE_SUB(DATE '2022-01-01', -30)
+  -- 2022-01-31
+  ```
+</CodeGroup>
+
+#### DATE\_SUB(*date\_expression* STRING, *time\_interval* INTERVAL) → TIMESTAMP
+
+* date\_expression: A string-formatted date in the format ‘YYYY-MM-DD’.
+
+* time\_interval: A CAST of a number to one of these intervals: DAY, MONTH, YEAR.
+
+**Examples**
+
+<CodeGroup>
+  ```bash Subtracts two days from the specified date.
+  SELECT DATE_SUB('2022-01-01', CAST(2 AS INTERVAL DAY))
+  -- 2021-12-30 00:00:00
+  ```
+</CodeGroup>
+
+<CodeGroup>
+  ```bash Subtracts negative two days from the specified date.
+  SELECT DATE_SUB('2022-01-01', CAST(-2 AS INTERVAL DAY))
+  -- 2022-01-03 00:00:00
+  ```
+</CodeGroup>
+
+#### DATE\_SUB(*date\_expression* DATE, *time\_interval* INTERVAL) → TIMESTAMP
+
+* date\_expression: The date, in the format ‘YYY-MM-DD’, to subtract the time interval from. The value can be either a database column in DATE format, or literal value explicitly converted to DATE.
+
+* time\_interval: A CAST of a number to one of these intervals: DAY, MONTH, YEAR.
+
+**Examples**
+
+<CodeGroup>
+  ```bash DATE_SUB example
+  SELECT DATE_SUB(DATE '2022-01-01', CAST(30 AS INTERVAL DAY))
+  -- 2021-12-02 00:00:00
+  ```
+</CodeGroup>
+
+#### DATE\_SUB(*timestamp\_expression* STRING, *time\_interval* INTERVAL) → TIMESTAMP
+
+* timestamp\_expression: A string-formatted timestamp in the format ‘YYYY-MM-DD HH24:MI:SS’.
+
+* time\_interval: A CAST of a number to one of these intervals: SECOND, MINUTE, HOUR, DAY, MONTH, YEAR.
+
+**Examples**
+
+<CodeGroup>
+  ```bash Subtracts 30 days from the specified timestamp. Note that the time information is lost.
+  SELECT DATE_SUB('2022-01-01 12:00:00', CAST(30 AS INTERVAL DAY))
+  -- 2021-12-02 00:00:00
+  ```
+</CodeGroup>
+
+<CodeGroup>
+  ```bash Subtracts negative 30 days from the specified timestamp. Note that the time information is lost.
+  SELECT DATE_SUB('2022-01-01 12:00:00', CAST(-30 AS INTERVAL DAY))
+  -- 2022-01-31 00:00:00
+  ```
+</CodeGroup>
+
+#### DATE\_SUB(*timestamp\_expression* TIMESTAMP, *time\_interval* INTERVAL) → TIMESTAMP
+
+* timestamp\_expression: The timestamp, in the format ‘YYYY-MM-DD HH:MM:SS’, to subtract days from. The value can be either a database column in TIMESTAMP format, or literal value explicitly converted to TIMESTAMP.
+
+* time\_interval: A CAST of a number to one of these intervals: SECOND, MINUTE, HOUR, DAY, MONTH, YEAR.
+
+**Examples**
+
+<CodeGroup>
+  ```bash Subtracts 30 days from the specified timestamp.
+  SELECT DATE_SUB(TIMESTAMP '2022-01-01 12:00:00', CAST(30 AS INTERVAL DAY))
+  -- 2021-12-02 12:00:00
+  ```
+</CodeGroup>
+
+<CodeGroup>
+  ```bash Subtracts negative 30 days from the specified timestamp.
+  SELECT DATE_SUB(TIMESTAMP '2022-01-01 12:00:00', CAST(-30 AS INTERVAL DAY))
+  -- 2022-01-31 12:00:00
+  ```
+</CodeGroup>
+
+#### DATE\_SUB(*time\_expression* TIME, *time\_interval* INTERVAL) → TIME
+
+* time\_expression: The time, in the format ‘HH:MM:SS’, to subtract the time interval from. The value can be either a database column in TIMESTAMP format, or literal value explicitly converted to TIMESTAMP.
+
+* time\_interval: A CAST of a number to one of these intervals: SECOND, MINUTE, HOUR.
+
+**Examples**
+
+<CodeGroup>
+  ```bash Subtracts 30 minutes from the specified time.
+  SELECT DATE_SUB(TIME '00:00:00', CAST(30 AS INTERVAL MINUTE))
+  -- 84600
+  ```
+</CodeGroup>
+
+<CodeGroup>
+  ```bash Subtracts negative 30 minutes from the specified time.
+  SELECT DATE_SUB(TIME '00:00:00', CAST(-30 AS INTERVAL MINUTE))
+  -- 00:30:00
+  ```
+</CodeGroup>

@@ -1,0 +1,37 @@
+---
+title: "PERCENTILE_CONT"
+---
+
+1. [📚REFERENCE](/reference)
+2. [SQL Reference](/reference/sql-reference)
+3. [SQL Functions](/reference/sql-reference/all-functions)
+4. [Percentile](/reference/sql-reference/all-functions/percentile)
+
+Computes a percentile value based on a continuous distribution of the column input.
+
+### Syntax
+
+#### PERCENTILE\_CONT(*fraction* double precision) WITHIN GROUP ( ORDER BY *order\_by\_expression* numeric \[ ASC | DESC ] ) → double precision
+
+* fraction: The fraction/percentile value to compute. The value for this must be a numeric literal in the range of 0 to 1 inclusive and represents a percentage.
+
+* order\_by\_expression: The expression to sort and compute the percentile. You can only provide one expression in the ORDER BY clause. By default, the sort order is ascending (ASC).
+
+**Examples**
+
+<CodeGroup>
+  ```bash PERCENTILE_CONT example
+  SELECT PERCENTILE_CONT(0.6) WITHIN GROUP ( ORDER BY pop ASC ),
+  PERCENTILE_CONT(0.6) WITHIN GROUP ( ORDER BY pop DESC )
+  FROM eth.recent_blocks 
+
+  -- EXPR$0, EXPR$0
+  -- 4519.2, 1806.0
+  ```
+</CodeGroup>
+
+### Usage Notes
+
+This function computes a percentile based on a continuous distribution of the column value. The result is interpolated and may not be equal to any of the actual values in the column. This information was originally provided via [Microsoft’s Transact-SQL Reference Guide](https://bit.ly/3n1NXEz).
+
+This function is used with only numeric data types in Spice. `NULL` values in the data set are ignored. However, passing `NULL` as *fraction* or as *order\_by\_expression* will cause an error.

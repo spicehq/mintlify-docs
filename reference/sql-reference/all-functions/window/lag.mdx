@@ -1,0 +1,41 @@
+---
+title: "LAG"
+---
+
+1. [📚REFERENCE](/reference)
+2. [SQL Reference](/reference/sql-reference)
+3. [SQL Functions](/reference/sql-reference/all-functions)
+4. [Window](/reference/sql-reference/all-functions/window)
+
+Returns the row before the current one in a partition based on the ORDER BY clause without the need for a self-join. If there are no rows, this function returns NULL.
+
+### Syntax
+
+#### LAG(expression, \[offset]) OVER (\[PARTITION BY partition\_expression] \[ORDER BY order\_expression]) → same as input type
+
+* expression: An expression that is returned.
+
+* offset: An optional parameter. The number of rows before the current row from which to obtain a value. Supports only a value of 1.
+
+* partition\_expression: An optional expression that groups rows into partitions.
+
+* order\_expression: An optional expression that specifies the order of the rows within each partition.
+
+**Examples**
+
+<CodeGroup>
+  ```bash LAG example
+  SELECT "Category", 
+    "Descript", 
+    "DayOfWeek",
+    LAG(DayOfWeek, 1) 
+      OVER (
+        PARTITION BY "Category" 
+        ORDER BY "DayOfWeek")
+  FROM  eth.recent_blocks 
+
+  -- Category, Descript, DayOfWeek, EXPR$3
+  -- ARSON, ARSON, Friday, null 
+  -- ARSON, ARSON, Friday, Friday
+  ```
+</CodeGroup>

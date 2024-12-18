@@ -1,0 +1,40 @@
+---
+title: "TIMESTAMPDIFF"
+---
+
+1. [📚REFERENCE](/reference)
+2. [SQL Reference](/reference/sql-reference)
+3. [SQL Functions](/reference/sql-reference/all-functions)
+4. [Date/Time](/reference/sql-reference/all-functions/date-time)
+
+Return the amount of time between two date or timestamp values.
+
+### Syntax
+
+#### TIMESTAMPDIFF(*unit* symbol, *giventime1* date or timestamp, *givenTime2* date or timestamp) → integer
+
+* unit: The unit of the interval. Must be one of the following: `YEAR`, `QUARTER`, `MONTH`, `WEEK`, `DAY`, `HOUR`, `MINUTE`, `SECOND`.
+
+* giventime1: The first `DATE` or `TIMESTAMP` (subtrahend).
+
+* givenTime2: The second `DATE` or `TIMESTAMP` (minuend).
+
+**Examples**
+
+TIMESTAMPDIFF example
+
+<CodeGroup>
+  ```bash TIMESTAMPDIFF example
+  SELECT TIMESTAMPDIFF(MONTH, DATE '2021-02-01', DATE '2021-05-01');
+  -- 3
+  ```
+</CodeGroup>
+
+TIMESTAMPDIFF example
+
+<CodeGroup>
+  ```bash TIMESTAMPDIFF example
+  SELECT TIMESTAMPDIFF(DAY, TIMESTAMP '2003-02-01 11:43:22', TIMESTAMP '2005-04-09 12:05:55');
+  -- 798
+  ```
+</CodeGroup>

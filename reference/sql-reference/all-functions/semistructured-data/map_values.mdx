@@ -1,0 +1,25 @@
+---
+title: "MAP_VALUES"
+---
+
+1. [📚REFERENCE](/reference)
+2. [SQL Reference](/reference/sql-reference)
+3. [SQL Functions](/reference/sql-reference/all-functions)
+4. [Semistructured Data](/reference/sql-reference/all-functions/semistructured-data)
+
+Returns all values from a map expression.
+
+### Syntax
+
+#### MAP\_VALUES(*input* map) → array
+
+* input: A map expression for which to return an array of values.
+
+**Examples**
+
+<CodeGroup>
+  ```bash MAP_VALUES example
+  SELECT MAP_VALUES(properties)
+  -- ['Hardcover', '2002', 'Blue']
+  ```
+</CodeGroup>

@@ -1,0 +1,21 @@
+---
+title: "Limitations"
+---
+
+1. [📚REFERENCE](/reference)
+
+See plan-specific limits in [Pricing](/getting-started/pricing)
+
+Spice.ai has the following limitations:
+
+#### Global API Limits
+
+* 500 row limit for HTTP API results (use the [Apache Arrow API](/api/sql-query/apache-arrow-flight-api) or the [Async HTTP API](/api/sql-query/http-api-1) for no row limits).
+
+#### Firecache Limits
+
+* 60-second query timeout.
+
+#### Data Limitations
+
+* 128-bit integer limit (while data can be uint256). Both the 128-bit `DECIMAL(38)` type and `_hex` fields are included where the type is 256-bit.

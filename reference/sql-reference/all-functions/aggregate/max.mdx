@@ -1,0 +1,50 @@
+---
+title: "MAX"
+---
+
+1. [📚REFERENCE](/reference)
+2. [SQL Reference](/reference/sql-reference)
+3. [SQL Functions](/reference/sql-reference/all-functions)
+4. [Aggregate](/reference/sql-reference/all-functions/aggregate)
+
+Returns the maximum value among the non-NULL input expressions.
+
+### Syntax
+
+#### MAX(*expression* any primitive) → same as input
+
+* expression: Input expression.
+
+**Examples**
+
+<CodeGroup>
+  ```bash Aggregate function example
+  SELECT MAX("total_gas_used") 
+  FROM eth.recent_blocks
+
+  -- EXPR$0
+  -- 685908.1
+  ```
+</CodeGroup>
+
+#### MAX(*expression* any primitive) → same as input
+
+* expression: Input expression.
+
+**Examples**
+
+<CodeGroup>
+  ```bash Window function example
+  SELECT "transaction_count", 
+    MAX("total_gas_used") OVER(PARTITION BY "transaction_count") "max_total_gas_used"
+  FROM eth.recent_blocks
+  LIMIT 1
+
+  -- block_number, max_gas_used
+  -- 0.03, 450.5
+  ```
+</CodeGroup>
+
+### Usage Notes
+
+For information about the data types that are supported in Spice, see Data Types.

@@ -1,0 +1,27 @@
+---
+title: "AES_DECRYPT"
+---
+
+1. [📚REFERENCE](/reference)
+2. [SQL Reference](/reference/sql-reference)
+3. [SQL Functions](/reference/sql-reference/all-functions)
+4. [Cryptography](/reference/sql-reference/all-functions/cryptography)
+
+Decrypts a string produced by AES encryption.
+
+### Syntax
+
+#### AES\_DECRYPT(*ciphertext* varchar, *key* varchar) → varchar
+
+* ciphertext: The string to be decrypted.
+
+* key: The key to use to decrypt the ciphertext.
+
+**Examples**
+
+<CodeGroup>
+  ```bash AES_DECRYPT example
+  SELECT AES_DECRYPT(UNBASE64('Fad52k2P1Y6rMZ0DBcg8SQ=='), 'mypassword')
+  -- Spice
+  ```
+</CodeGroup>

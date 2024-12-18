@@ -1,0 +1,41 @@
+---
+title: "RTRIM"
+---
+
+1. [📚REFERENCE](/reference)
+2. [SQL Reference](/reference/sql-reference)
+3. [SQL Functions](/reference/sql-reference/all-functions)
+4. [String](/reference/sql-reference/all-functions/string)
+
+Removes trailing spaces or characters from a string.
+
+### Syntax
+
+#### RTRIM(*expression* varchar, *trim\_expression* varchar) → varchar
+
+* expression: The expression to be trimmed.
+
+* trim\_expression: Trailing characters to trim. If this parameter is not specified, then spaces will be trimmed from the input expression.
+
+**Examples**
+
+<CodeGroup>
+  ```bash RTRIM example
+  SELECT RTRIM('pancake', 'cake')
+  -- pan
+  ```
+</CodeGroup>
+
+<CodeGroup>
+  ```bash RTRIM example
+  SELECT RTRIM('pancake pan', 'abnp')
+  -- pancake
+  ```
+</CodeGroup>
+
+<CodeGroup>
+  ```bash RTRIM example
+  SELECT RTRIM('spice   ')
+  -- spice
+  ```
+</CodeGroup>

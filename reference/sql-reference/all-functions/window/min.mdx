@@ -1,0 +1,50 @@
+---
+title: "MIN"
+---
+
+1. [📚REFERENCE](/reference)
+2. [SQL Reference](/reference/sql-reference)
+3. [SQL Functions](/reference/sql-reference/all-functions)
+4. [Window](/reference/sql-reference/all-functions/window)
+
+Returns the minimum value among the non-NULL input expressions.
+
+### Syntax
+
+#### MIN(*expression* any primitive) → same as input
+
+* expression: Input expression.
+
+**Examples**
+
+<CodeGroup>
+  ```bash Aggregate function example
+  SELECT MIN("total_gas_used") 
+  FROM eth.recent_blocks
+
+  -- EXPR$0
+  -- -1430.0
+  ```
+</CodeGroup>
+
+#### MIN(*expression* any primitive) → same as input
+
+* expression: Input expression.
+
+**Examples**
+
+<CodeGroup>
+  ```bash Window function example
+  SELECT "transaction_count", 
+    MIN("total_gas_used") OVER(PARTITION BY "transaction_count") "min_total_gas_used"
+  FROM eth.recent_blocks
+  LIMIT 1
+
+  -- trip_distance_mi, min_total_amount
+  -- 0.06, -52.5
+  ```
+</CodeGroup>
+
+### Usage Notes
+
+For information about the data types that are supported in Spice, see Data Types.

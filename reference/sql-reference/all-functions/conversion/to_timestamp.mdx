@@ -1,0 +1,96 @@
+---
+title: "TO_TIMESTAMP"
+---
+
+1. [📚REFERENCE](/reference)
+2. [SQL Reference](/reference/sql-reference)
+3. [SQL Functions](/reference/sql-reference/all-functions)
+4. [Conversion](/reference/sql-reference/all-functions/conversion)
+
+Converts the input expressions to the corresponding timestamp.
+
+### Syntax
+
+#### TO\_TIMESTAMP(*numeric\_expression* double) → timestamp
+
+* numeric\_expression: A Unix epoch timestamp.
+
+**Examples**
+
+<CodeGroup>
+  ```bash TO_TIMESTAMP example
+  SELECT TO_TIMESTAMP(52 * 365.25 * 86400)
+  -- 2022-01-01 00:00:00
+  ```
+</CodeGroup>
+
+#### TO\_TIMESTAMP(*string\_expression* varchar, *format* varchar, *replaceErrorWithNull* int32) → timestamp
+
+* string\_expression: The string from which to extract the timestamp.
+
+* format: String to specify format of the timestamp.
+
+* replaceErrorWithNull: If 0, the function will fail when given malformed input. If 1, the function will return NULL when given malformed input.
+
+**Examples**
+
+<CodeGroup>
+  ```bash TO_TIMESTAMP example
+  SELECT TO_TIMESTAMP('2022-03-15 01:02:03.1245', 'YYYY-MM-DD HH:MI:SS', 1)
+  -- NULL
+  ```
+</CodeGroup>
+
+#### TO\_TIMESTAMP(*numeric\_expression* int64) → timestamp
+
+* numeric\_expression: A Unix epoch timestamp.
+
+**Examples**
+
+<CodeGroup>
+  ```bash TO_TIMESTAMP example
+  SELECT TO_TIMESTAMP(1640131200)
+  -- 2021-12-22 00:00:00
+  ```
+</CodeGroup>
+
+#### TO\_TIMESTAMP(*numeric\_expression* int32) → timestamp
+
+* numeric\_expression: A Unix epoch timestamp.
+
+**Examples**
+
+<CodeGroup>
+  ```bash TO_TIMESTAMP example
+  SELECT TO_TIMESTAMP(1640131200)
+  -- 2021-12-22 00:00:00
+  ```
+</CodeGroup>
+
+#### TO\_TIMESTAMP(*numeric\_expression* float) → timestamp
+
+* numeric\_expression: A Unix epoch timestamp.
+
+**Examples**
+
+<CodeGroup>
+  ```bash TO_TIMESTAMP example
+  SELECT TO_TIMESTAMP(52 * 365.25 * 86400)
+  -- 2022-01-01 00:00:00
+  ```
+</CodeGroup>
+
+#### TO\_TIMESTAMP(*string\_expression* varchar, *format* varchar) → timestamp
+
+* string\_expression: String from which to extract the timestamp.
+
+* format: String to specify format of the timestamp.
+
+**Examples**
+
+<CodeGroup>
+  ```bash TO_TIMESTAMP example
+  SELECT TO_TIMESTAMP('2021-07-31 01:02:03', 'YYYY-MM-DD HH:MI:SS')
+  -- 2021-07-31 01:02:03
+  ```
+</CodeGroup>

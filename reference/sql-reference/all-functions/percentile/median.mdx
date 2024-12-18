@@ -1,0 +1,33 @@
+---
+title: "MEDIAN"
+---
+
+1. [📚REFERENCE](/reference)
+2. [SQL Reference](/reference/sql-reference)
+3. [SQL Functions](/reference/sql-reference/all-functions)
+4. [Percentile](/reference/sql-reference/all-functions/percentile)
+
+Computes the median of a dataset.
+
+### Syntax
+
+#### MEDIAN(*order\_by\_expression* numeric) → double precision
+
+* order\_by\_expression: The expression to sort and compute the median for.
+
+**Examples**
+
+<CodeGroup>
+  ```bash MEDIAN example
+  SELECT MEDIAN(pop) 
+  FROM eth.recent_blocks 
+  -- EXPR$0
+  -- 2783.0
+  ```
+</CodeGroup>
+
+### Usage Notes
+
+This function is used with only numeric data types in Spice. `NULL` values in the data set are ignored.
+
+This function is equivalent to [`PERCENTILE_CONT(0.5) WITHIN GROUP(ORDER BY order_by_expression)`](/reference/sql-reference/all-functions/percentile/percentile_cont).

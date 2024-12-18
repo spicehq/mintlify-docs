@@ -1,0 +1,48 @@
+---
+title: "EXTRACT"
+---
+
+1. [📚REFERENCE](/reference)
+2. [SQL Reference](/reference/sql-reference)
+3. [SQL Functions](/reference/sql-reference/all-functions)
+4. [Date/Time](/reference/sql-reference/all-functions/date-time)
+
+Extracts the specified date or time part from the date or timestamp.
+
+### Syntax
+
+#### EXTRACT(*time\_unit* KEYWORD, *date\_time\_expression* DATE, TIME, TIMESTAMP) → INTEGER
+
+* time\_unit: The time unit that needs to be extracted from the date, time or timestamp. This must YEAR, MONTH, DAY, HOUR, MINUTE, or SECOND.
+
+* date\_time\_expression: The date, time or timestamp to extract time part from.
+
+**Examples**
+
+<CodeGroup>
+  ```bash EXTRACT example
+  SELECT EXTRACT(HOUR FROM CAST('05:33:44' AS TIME))
+  -- 5
+  ```
+</CodeGroup>
+
+<CodeGroup>
+  ```bash EXTRACT example
+  SELECT EXTRACT(MONTH FROM CAST('2021-03-22 05:33:44.2' AS TIMESTAMP))
+  -- 3
+  ```
+</CodeGroup>
+
+<CodeGroup>
+  ```bash EXTRACT example
+  SELECT EXTRACT(SECOND FROM CAST('2021-03-22 05:33:44.2' AS TIMESTAMP))
+  -- 44
+  ```
+</CodeGroup>
+
+<CodeGroup>
+  ```bash EXTRACT example
+  SELECT EXTRACT(YEAR FROM CAST('2021-03-22' AS DATE))
+  -- 2021
+  ```
+</CodeGroup>

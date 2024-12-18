@@ -1,0 +1,166 @@
+---
+title: "ROUND"
+---
+
+1. [📚REFERENCE](/reference)
+2. [SQL Reference](/reference/sql-reference)
+3. [SQL Functions](/reference/sql-reference/all-functions)
+4. [Math](/reference/sql-reference/all-functions/math)
+
+Returns the rounded value for the inputted value. If no scale is specified, the closest whole number is returned.
+
+### Syntax
+
+#### ROUND(*numeric\_expression* decimal(0,0), *scale* int32) → decimal(0,0)
+
+* numeric\_expression: Numeric value to round.
+
+* scale: The decimal place to round.
+
+**Examples**
+
+<CodeGroup>
+  ```bash ROUND example
+  SELECT ROUND(-24.35, -1)
+  -- -24.4
+  ```
+</CodeGroup>
+
+<CodeGroup>
+  ```bash ROUND example
+  SELECT ROUND(24.35, 1)
+  -- 24.4
+  ```
+</CodeGroup>
+
+#### ROUND(*numeric\_expression* int32, *scale* int32) → int32
+
+* numeric\_expression: Numeric value to round.
+
+* scale: The decimal place to round.
+
+**Examples**
+
+<CodeGroup>
+  ```bash ROUND example
+  SELECT ROUND(24, 0)
+  -- 0
+  ```
+</CodeGroup>
+
+<CodeGroup>
+  ```bash ROUND example
+  SELECT ROUND(-24, -1)
+  -- -20
+  ```
+</CodeGroup>
+
+#### ROUND(*numeric\_expression* int32) → int32
+
+* numeric\_expression: Numeric value to round.
+
+**Examples**
+
+<CodeGroup>
+  ```bash ROUND example
+  SELECT ROUND(24)
+  -- 24
+  ```
+</CodeGroup>
+
+#### ROUND(*numeric\_expression* double) → double
+
+* numeric\_expression: Numeric value to round.
+
+**Examples**
+
+<CodeGroup>
+  ```bash ROUND example
+  SELECT ROUND(24.35)
+  -- 24
+  ```
+</CodeGroup>
+
+#### ROUND(*inputHolder* decimal(0,0)) → decimal(0,0)
+
+* inputHolder: sample parameter description
+
+**Examples**
+
+<CodeGroup>
+  ```bash ROUND example
+  sample call 1
+  -- sample return 1
+  ```
+</CodeGroup>
+
+#### ROUND(*in* float) → float
+
+* in: sample parameter description
+
+**Examples**
+
+<CodeGroup>
+  ```bash ROUND example
+  sample call 1
+  -- sample return 1
+  ```
+</CodeGroup>
+
+#### ROUND(*in* int64) → int64
+
+* in: sample parameter description
+
+**Examples**
+
+<CodeGroup>
+  ```bash ROUND example
+  sample call 1
+  -- sample return 1
+  ```
+</CodeGroup>
+
+#### ROUND(*input1* int64, *input2* int32) → int64
+
+* input1: sample parameter description
+
+* input2: sample parameter description
+
+**Examples**
+
+<CodeGroup>
+  ```bash ROUND example
+  sample call 1
+  -- sample return 1
+  ```
+</CodeGroup>
+
+#### ROUND(*input1* double, *input2* int32) → double
+
+* input1: sample parameter description
+
+* input2: sample parameter description
+
+**Examples**
+
+<CodeGroup>
+  ```bash ROUND example
+  sample call 1
+  -- sample return 1
+  ```
+</CodeGroup>
+
+#### ROUND(*numeric\_expression* float, *input2* int32) → float
+
+* numeric\_expression: sample parameter description
+
+* input2: sample parameter description
+
+**Examples**
+
+<CodeGroup>
+  ```bash ROUND example
+  sample call 1
+  -- sample return 1
+  ```
+</CodeGroup>

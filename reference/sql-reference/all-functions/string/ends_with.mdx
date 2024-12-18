@@ -1,0 +1,33 @@
+---
+title: "ENDS_WITH"
+---
+
+1. [📚REFERENCE](/reference)
+2. [SQL Reference](/reference/sql-reference)
+3. [SQL Functions](/reference/sql-reference/all-functions)
+4. [String](/reference/sql-reference/all-functions/string)
+
+Returns whether a string ends with another string. The comparison is case-sensitive.
+
+### Syntax
+
+#### ENDS\_WITH(*expression1* string, *expression2* string) → bit
+
+* expression1: The input expression to search.
+
+* expression2: The string to search for in the specified expression.
+
+**Examples**
+
+<CodeGroup>
+  ```bash ENDS_WITH example
+  SELECT IncidntNum, Category, Descript 
+  FROM  eth.recent_blocks 
+  WHERE ENDS_WITH(Category, 'LAWS')
+  LIMIT 2
+
+  -- IncidntNum, Category, Descript
+  -- 120058272, WEAPON LAWS, POSS OF PROHIBITED WEAPON
+  -- 120058272, WEAPON LAWS, FIREARM, LOADED, IN VEHICLE
+  ```
+</CodeGroup>

@@ -1,0 +1,29 @@
+---
+title: "UNHEX"
+---
+
+1. [📚REFERENCE](/reference)
+2. [SQL Reference](/reference/sql-reference)
+3. [SQL Functions](/reference/sql-reference/all-functions)
+4. [String](/reference/sql-reference/all-functions/string)
+
+Converts the hexadecimal number into the bytes represented by a number.
+
+### Syntax
+
+#### UNHEX(*expression* varchar) → varbinary
+
+* expression: A string containing only hexadecimal digits.
+
+**Examples**
+
+<CodeGroup>
+  ```bash UNHEX example
+  SELECT UNHEX('4472656D696F')
+  -- RHJlbWlv
+  ```
+</CodeGroup>
+
+### Usage Notes
+
+The returned value is a binary string. If the expression contains non-hex characters, the result is `NULL`.

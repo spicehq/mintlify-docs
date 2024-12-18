@@ -1,0 +1,43 @@
+---
+title: "QUARTER"
+---
+
+1. [📚REFERENCE](/reference)
+2. [SQL Reference](/reference/sql-reference)
+3. [SQL Functions](/reference/sql-reference/all-functions)
+4. [Date/Time](/reference/sql-reference/all-functions/date-time)
+
+Extracts the quarter number (from 1 to 4) for a given date or timestamp.
+
+### Syntax
+
+#### EXTRACT(QUARTER FROM *date\_timestamp\_expression* string) → bigint
+
+* date\_timestamp\_expression: A `DATE` or `TIMESTAMP` expression.
+
+**Examples**
+
+<CodeGroup>
+  ```bash QUARTER example using a timestamp.
+  SELECT EXTRACT(QUARTER FROM TIMESTAMP '2019-08-12 01:00:00.123456')
+  -- 3
+  ```
+</CodeGroup>
+
+<CodeGroup>
+  ```bash QUARTER example using a date.
+  SELECT EXTRACT(QUARTER FROM DATE '2019-08-12')
+  -- 3
+  ```
+</CodeGroup>
+
+<CodeGroup>
+  ```bash QUARTER example using the CAST function.
+  SELECT EXTRACT(QUARTER FROM CAST('2019-08-12 01:00:00' AS TIMESTAMP))
+  -- 3
+  ```
+</CodeGroup>
+
+### Usage Notes
+
+This function uses the [`EXTRACT`](/reference/sql-reference/all-functions/date-time/extract) function. When using the [`CAST`](/reference/sql-reference/all-functions/conversion/cast) function, timestamps containing milliseconds are not allowed.

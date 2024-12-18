@@ -1,0 +1,25 @@
+---
+title: "SHA256"
+---
+
+1. [📚REFERENCE](/reference)
+2. [SQL Reference](/reference/sql-reference)
+3. [SQL Functions](/reference/sql-reference/all-functions)
+4. [Cryptography](/reference/sql-reference/all-functions/cryptography)
+
+Computes the 256-bit SHA-2 hash value of a string.
+
+### Syntax
+
+#### SHA256(*expr* varchar) → varchar
+
+* expression: The string to hash.
+
+**Examples**
+
+<CodeGroup>
+  ```bash SHA256 example
+  SELECT SHA256('Spice')
+  -- ffae26c65c486a4d9143cbb1a6829166f17dab711910fdfc5787b1a249bd9921
+  ```
+</CodeGroup>

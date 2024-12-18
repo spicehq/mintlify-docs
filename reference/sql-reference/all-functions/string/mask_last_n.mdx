@@ -1,0 +1,51 @@
+---
+title: "MASK_LAST_N"
+---
+
+1. [📚REFERENCE](/reference)
+2. [SQL Reference](/reference/sql-reference)
+3. [SQL Functions](/reference/sql-reference/all-functions)
+4. [String](/reference/sql-reference/all-functions/string)
+
+Returns a masked version of a string with the last num\_chars characters masked. By default, if you do not provide a mask value, the last four characters are masked.
+
+### Syntax
+
+#### MASK\_LAST\_N(*expression* varchar, *num\_chars* int, *uc\_mask* varchar, *lc\_mask* varchar, *num\_mask* varchar) → varchar
+
+* expression: The string to mask.
+
+* num\_chars: The number of characters to mask.
+
+* uc\_mask: Controls the mask character for upper case letters.
+
+* lc\_mask: Controls the mask character for lower case letters.
+
+* num\_mask: Controls the mask character for numbers.
+
+**Examples**
+
+<CodeGroup>
+  ```bash MASK_LAST_N example
+  SELECT MASK_LAST_N('abcd-ABCD-1234')
+  -- abcd-ABCD-nnnn
+  ```
+</CodeGroup>
+
+<CodeGroup>
+  ```bash MASK_LAST_N example containing optional mask value.
+  SELECT MASK_LAST_N('abcd-ABCD-1234', 2)
+  -- abcd-ABCD-12nn
+  ```
+</CodeGroup>
+
+<CodeGroup>
+  ```bash MASK_LAST_N example containing optional arguments.
+  SELECT MASK_LAST_N('abcd-ABCD-Aa12', 4, 'U', 'u', '#')
+  -- abcd-ABCD-Uu##
+  ```
+</CodeGroup>
+
+### Usage Notes
+
+By default, upper case letters are converted to `X`, lower case letters are converted to `x`, and numbers are converted to `n`. You can override the characters used in the mask by supplying optional arguments. The second argument controls the mask character for upper case letters, the third argument for lower case letters, and the fourth argument for numbers.

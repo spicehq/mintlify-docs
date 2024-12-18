@@ -1,0 +1,27 @@
+---
+title: "FLATTEN"
+---
+
+1. [📚REFERENCE](/reference)
+2. [SQL Reference](/reference/sql-reference)
+3. [SQL Functions](/reference/sql-reference/all-functions)
+4. [Conversion](/reference/sql-reference/all-functions/conversion)
+
+Explodes compound values into multiple rows. This function takes a LIST column and produces a lateral view (that is, an inline view that contains correlation referring to other tables that precede it
+
+### Syntax
+
+#### FLATTEN(*expression* list) → list
+
+* expression: The expression that will be unpacked into rows. The expression must be of data type `LIST`.
+
+**Examples**
+
+<CodeGroup>
+  ```bash FLATTEN example
+  SELECT FLATTEN(CONVERT_FROM ('["Ford", "BMW", "Fiat"]', 'json'))
+  -- Ford
+  -- BMW
+  -- Fiat
+  ```
+</CodeGroup>

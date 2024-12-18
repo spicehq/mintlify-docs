@@ -45,21 +45,698 @@
   ],
   "navigation": [
     {
-      "group": "Getting Started",
+      "group": "Welcome to Spice.ai",
       "pages": [
-        "getting-started/introduction",
-        "getting-started/quickstart",
+        "home",
+        {
+          "group": "Quickstart",
+          "pages": [
+            "getting-started/get-started",
+            "getting-started/get-started/portal-login",
+            "getting-started/get-started/step-2-sql-query",
+            "getting-started/get-started/step-3-leverage-a-sdk",
+            "getting-started/get-started/next-steps"
+          ]
+        },
         "getting-started/faq",
-        "getting-started/pricing"
+        {
+          "group": "Pricing",
+          "pages": [
+            "getting-started/pricing",
+            "getting-started/pricing/community-edition"
+          ]
+        }
       ]
     },
     {
-      "group": "Building Blocks",
+      "group": "Datasets and Views",
       "pages": [
         "building-blocks/datasets-and-views",
-        "building-blocks/datasets",
+        {
+          "group": "🔥Spice Firecache",
+          "pages": [
+            "building-blocks/spice-firecache",
+            "building-blocks/spice-firecache/duckdb-export-database"
+          ]
+        },
         "building-blocks/external-data-sources",
-        "building-blocks/spice-models"
+        "building-blocks/spice-models",
+        "building-blocks/datasets"
+      ]
+    },
+    {
+      "group": "SQL Query API",
+      "pages": [
+        "api/sql-query",
+        {
+          "group": "SQL Query API",
+          "pages": [
+            "api/sql-query",
+            "api/sql-query/http-api",
+            "api/sql-query/http-api-1",
+            "api/sql-query/apache-arrow-flight-api",
+            "api/sql-query/best-practices"
+          ]
+        },
+        "api/health"
+      ]
+    },
+    {
+      "group": "Apps",
+      "pages": [
+        "portal/apps",
+        {
+          "group": "Apps",
+          "pages": [
+            "portal/apps",
+            "portal/apps/connect-github-repository",
+            "portal/apps/app-transfer",
+            "portal/apps/app-api-keys"
+          ]
+        },
+        "portal/organizations",
+        "portal/sql-query-editor",
+        "portal/monitoring-and-request-logs",
+        "portal/profile-settings",
+        "portal/personal-access-tokens"
+      ]
+    },
+    {
+      "group": "Python SDK",
+      "pages": [
+        "sdks/python-sdk",
+        {
+          "group": "Python SDK",
+          "pages": ["sdks/python-sdk", "sdks/python-sdk/streaming"]
+        },
+        {
+          "group": "Node.js SDK",
+          "pages": [
+            "sdks/node.js-sdk",
+            "sdks/node.js-sdk/streaming",
+            "sdks/node.js-sdk/api-reference",
+            "sdks/node.js-sdk/converting-large-numbers"
+          ]
+        },
+        "sdks/go",
+        {
+          "group": "Rust SDK",
+          "pages": ["sdks/rust-sdk", "sdks/rust-sdk/api-reference"]
+        },
+        "sdks/dotnet-sdk",
+        "sdks/java-sdk"
+      ]
+    },
+    {
+      "group": "GitHub Copilot",
+      "pages": [
+        "integrations/github-copilot",
+        {
+          "group": "Grafana",
+          "pages": [
+            "integrations/grafana",
+            "integrations/grafana/grafana-dashboard-examples"
+          ]
+        }
+      ]
+    },
+    {
+      "group": "Data Science",
+      "pages": ["tutorials/data-science-and-machine-learning"]
+    },
+    {
+      "group": "Core Concepts",
+      "pages": [
+        "reference/core-concepts",
+        {
+          "group": "Core Concepts",
+          "pages": [
+            "reference/core-concepts",
+            "reference/core-concepts/organizations",
+            "reference/core-concepts/duration-literals"
+          ]
+        },
+        {
+          "group": "SQL Reference",
+          "pages": [
+            "reference/sql-reference",
+            "reference/sql-reference/data-types",
+            {
+              "group": "SQL Functions",
+              "pages": [
+                "reference/sql-reference/all-functions",
+                {
+                  "group": "Aggregate",
+                  "pages": [
+                    "reference/sql-reference/all-functions/aggregate",
+                    "reference/sql-reference/all-functions/aggregate/approx_count_distinct",
+                    "reference/sql-reference/all-functions/aggregate/avg",
+                    "reference/sql-reference/all-functions/aggregate/bit_and",
+                    "reference/sql-reference/all-functions/aggregate/bit_or",
+                    "reference/sql-reference/all-functions/aggregate/corr",
+                    "reference/sql-reference/all-functions/aggregate/count",
+                    "reference/sql-reference/all-functions/aggregate/covar_pop",
+                    "reference/sql-reference/all-functions/aggregate/covar_samp",
+                    "reference/sql-reference/all-functions/aggregate/hll",
+                    "reference/sql-reference/all-functions/aggregate/listagg",
+                    "reference/sql-reference/all-functions/aggregate/max",
+                    "reference/sql-reference/all-functions/aggregate/min",
+                    "reference/sql-reference/all-functions/aggregate/ndv",
+                    "reference/sql-reference/all-functions/aggregate/stddev",
+                    "reference/sql-reference/all-functions/aggregate/stddev_pop",
+                    "reference/sql-reference/all-functions/aggregate/stddev_samp",
+                    "reference/sql-reference/all-functions/aggregate/sum",
+                    "reference/sql-reference/all-functions/aggregate/var_pop",
+                    "reference/sql-reference/all-functions/aggregate/var_samp"
+                  ]
+                },
+                {
+                  "group": "Binary",
+                  "pages": [
+                    "reference/sql-reference/all-functions/binary",
+                    "reference/sql-reference/all-functions/binary/base64",
+                    "reference/sql-reference/all-functions/binary/bit_length",
+                    "reference/sql-reference/all-functions/binary/from_hex",
+                    "reference/sql-reference/all-functions/binary/hex",
+                    "reference/sql-reference/all-functions/binary/to_hex",
+                    "reference/sql-reference/all-functions/binary/unbase64",
+                    "reference/sql-reference/all-functions/binary/unhex"
+                  ]
+                },
+                {
+                  "group": "Bitwise",
+                  "pages": [
+                    "reference/sql-reference/all-functions/bitwise",
+                    "reference/sql-reference/all-functions/bitwise/bit_and",
+                    "reference/sql-reference/all-functions/bitwise/bit_or",
+                    "reference/sql-reference/all-functions/bitwise/lshift",
+                    "reference/sql-reference/all-functions/bitwise/rshift",
+                    "reference/sql-reference/all-functions/bitwise/xor"
+                  ]
+                },
+                {
+                  "group": "Boolean",
+                  "pages": [
+                    "reference/sql-reference/all-functions/boolean",
+                    "reference/sql-reference/all-functions/boolean/is-not-distinct-from",
+                    "reference/sql-reference/all-functions/boolean/isfalse",
+                    "reference/sql-reference/all-functions/boolean/is-not-null",
+                    "reference/sql-reference/all-functions/boolean/isnumeric",
+                    "reference/sql-reference/all-functions/boolean/istrue",
+                    "reference/sql-reference/all-functions/boolean/is_member"
+                  ]
+                },
+                {
+                  "group": "Conditional",
+                  "pages": [
+                    "reference/sql-reference/all-functions/conditional",
+                    "reference/sql-reference/all-functions/conditional/bool_and",
+                    "reference/sql-reference/all-functions/conditional/bool_or",
+                    "reference/sql-reference/all-functions/conditional/case",
+                    "reference/sql-reference/all-functions/conditional/coalesce",
+                    "reference/sql-reference/all-functions/conditional/greatest",
+                    "reference/sql-reference/all-functions/conditional/least",
+                    "reference/sql-reference/all-functions/conditional/nullif"
+                  ]
+                },
+                {
+                  "group": "Conversion",
+                  "pages": [
+                    "reference/sql-reference/all-functions/conversion",
+                    "reference/sql-reference/all-functions/conversion/binary_string",
+                    "reference/sql-reference/all-functions/conversion/cast",
+                    "reference/sql-reference/all-functions/conversion/convert_from",
+                    "reference/sql-reference/all-functions/conversion/convert_replaceutf8",
+                    "reference/sql-reference/all-functions/conversion/convert_timezone",
+                    "reference/sql-reference/all-functions/conversion/convert_to",
+                    "reference/sql-reference/all-functions/conversion/flatten",
+                    "reference/sql-reference/all-functions/conversion/from_hex",
+                    "reference/sql-reference/all-functions/conversion/hash",
+                    "reference/sql-reference/all-functions/conversion/hex",
+                    "reference/sql-reference/all-functions/conversion/toascii",
+                    "reference/sql-reference/all-functions/conversion/to_char",
+                    "reference/sql-reference/all-functions/conversion/to_date",
+                    "reference/sql-reference/all-functions/conversion/to_hex",
+                    "reference/sql-reference/all-functions/conversion/to_number",
+                    "reference/sql-reference/all-functions/conversion/to_time",
+                    "reference/sql-reference/all-functions/conversion/to_timestamp",
+                    "reference/sql-reference/all-functions/conversion/unhex"
+                  ]
+                },
+                {
+                  "group": "Cryptography",
+                  "pages": [
+                    "reference/sql-reference/all-functions/cryptography",
+                    "reference/sql-reference/all-functions/cryptography/aes_decrypt",
+                    "reference/sql-reference/all-functions/cryptography/aes_encrypt",
+                    "reference/sql-reference/all-functions/cryptography/md5",
+                    "reference/sql-reference/all-functions/cryptography/sha",
+                    "reference/sql-reference/all-functions/cryptography/sha1",
+                    "reference/sql-reference/all-functions/cryptography/sha256",
+                    "reference/sql-reference/all-functions/cryptography/sha512"
+                  ]
+                },
+                {
+                  "group": "Data Generation",
+                  "pages": [
+                    "reference/sql-reference/all-functions/data-generation",
+                    "reference/sql-reference/all-functions/data-generation/random"
+                  ]
+                },
+                {
+                  "group": "Datatype",
+                  "pages": [
+                    "reference/sql-reference/all-functions/datatype",
+                    "reference/sql-reference/all-functions/datatype/is_bigint",
+                    "reference/sql-reference/all-functions/datatype/is_date",
+                    "reference/sql-reference/all-functions/datatype/is_int",
+                    "reference/sql-reference/all-functions/datatype/is_varchar",
+                    "reference/sql-reference/all-functions/datatype/size",
+                    "reference/sql-reference/all-functions/datatype/typeof"
+                  ]
+                },
+                {
+                  "group": "Date/Time",
+                  "pages": [
+                    "reference/sql-reference/all-functions/date-time",
+                    "reference/sql-reference/all-functions/date-time/convert_timezone",
+                    "reference/sql-reference/all-functions/date-time/current_date",
+                    "reference/sql-reference/all-functions/date-time/current_date_utc",
+                    "reference/sql-reference/all-functions/date-time/current_time",
+                    "reference/sql-reference/all-functions/date-time/current_timestamp",
+                    "reference/sql-reference/all-functions/date-time/datediff",
+                    "reference/sql-reference/all-functions/date-time/date_add",
+                    "reference/sql-reference/all-functions/date-time/date_diff",
+                    "reference/sql-reference/all-functions/date-time/date_part",
+                    "reference/sql-reference/all-functions/date-time/date_sub",
+                    "reference/sql-reference/all-functions/date-time/date_trunc",
+                    "reference/sql-reference/all-functions/date-time/day",
+                    "reference/sql-reference/all-functions/date-time/dayofmonth",
+                    "reference/sql-reference/all-functions/date-time/dayofweek",
+                    "reference/sql-reference/all-functions/date-time/dayofyear",
+                    "reference/sql-reference/all-functions/date-time/extract",
+                    "reference/sql-reference/all-functions/date-time/hour",
+                    "reference/sql-reference/all-functions/date-time/last_day",
+                    "reference/sql-reference/all-functions/date-time/minute",
+                    "reference/sql-reference/all-functions/date-time/month",
+                    "reference/sql-reference/all-functions/date-time/months_between",
+                    "reference/sql-reference/all-functions/date-time/next_day",
+                    "reference/sql-reference/all-functions/date-time/quarter",
+                    "reference/sql-reference/all-functions/date-time/second",
+                    "reference/sql-reference/all-functions/date-time/timestampadd",
+                    "reference/sql-reference/all-functions/date-time/timestampdiff",
+                    "reference/sql-reference/all-functions/date-time/to_date",
+                    "reference/sql-reference/all-functions/date-time/to_time",
+                    "reference/sql-reference/all-functions/date-time/to_timestamp",
+                    "reference/sql-reference/all-functions/date-time/unix_timestamp",
+                    "reference/sql-reference/all-functions/date-time/week",
+                    "reference/sql-reference/all-functions/date-time/weekofyear",
+                    "reference/sql-reference/all-functions/date-time/year"
+                  ]
+                },
+                {
+                  "group": "Math",
+                  "pages": [
+                    "reference/sql-reference/all-functions/math",
+                    "reference/sql-reference/all-functions/math/abs",
+                    "reference/sql-reference/all-functions/math/acos",
+                    "reference/sql-reference/all-functions/math/asin",
+                    "reference/sql-reference/all-functions/math/atan",
+                    "reference/sql-reference/all-functions/math/cbrt",
+                    "reference/sql-reference/all-functions/math/ceiling",
+                    "reference/sql-reference/all-functions/math/cos",
+                    "reference/sql-reference/all-functions/math/cosh",
+                    "reference/sql-reference/all-functions/math/cot",
+                    "reference/sql-reference/all-functions/math/degrees",
+                    "reference/sql-reference/all-functions/math/e",
+                    "reference/sql-reference/all-functions/math/exp",
+                    "reference/sql-reference/all-functions/math/floor",
+                    "reference/sql-reference/all-functions/math/log",
+                    "reference/sql-reference/all-functions/math/log10",
+                    "reference/sql-reference/all-functions/math/mod",
+                    "reference/sql-reference/all-functions/math/pi",
+                    "reference/sql-reference/all-functions/math/power",
+                    "reference/sql-reference/all-functions/math/radians",
+                    "reference/sql-reference/all-functions/math/round",
+                    "reference/sql-reference/all-functions/math/sign",
+                    "reference/sql-reference/all-functions/math/sin",
+                    "reference/sql-reference/all-functions/math/sinh",
+                    "reference/sql-reference/all-functions/math/sqrt",
+                    "reference/sql-reference/all-functions/math/stddev",
+                    "reference/sql-reference/all-functions/math/stddev_pop",
+                    "reference/sql-reference/all-functions/math/stddev_samp",
+                    "reference/sql-reference/all-functions/math/tan",
+                    "reference/sql-reference/all-functions/math/tanh",
+                    "reference/sql-reference/all-functions/math/truncate"
+                  ]
+                },
+                {
+                  "group": "Percentile",
+                  "pages": [
+                    "reference/sql-reference/all-functions/percentile",
+                    "reference/sql-reference/all-functions/percentile/median",
+                    "reference/sql-reference/all-functions/percentile/percentile_cont",
+                    "reference/sql-reference/all-functions/percentile/percentile_disc"
+                  ]
+                },
+                {
+                  "group": "Regular Expressions",
+                  "pages": [
+                    "reference/sql-reference/all-functions/regular-expressions",
+                    "reference/sql-reference/all-functions/regular-expressions/regexp_extract",
+                    "reference/sql-reference/all-functions/regular-expressions/regexp_like",
+                    "reference/sql-reference/all-functions/regular-expressions/regexp_matches",
+                    "reference/sql-reference/all-functions/regular-expressions/regexp_replace",
+                    "reference/sql-reference/all-functions/regular-expressions/regexp_split"
+                  ]
+                },
+                {
+                  "group": "Semistructured Data",
+                  "pages": [
+                    "reference/sql-reference/all-functions/semistructured-data",
+                    "reference/sql-reference/all-functions/semistructured-data/array_contains",
+                    "reference/sql-reference/all-functions/semistructured-data/map_keys",
+                    "reference/sql-reference/all-functions/semistructured-data/map_values"
+                  ]
+                },
+                {
+                  "group": "String",
+                  "pages": [
+                    "reference/sql-reference/all-functions/string",
+                    "reference/sql-reference/all-functions/string/ascii",
+                    "reference/sql-reference/all-functions/string/base64",
+                    "reference/sql-reference/all-functions/string/btrim",
+                    "reference/sql-reference/all-functions/string/character_length",
+                    "reference/sql-reference/all-functions/string/char_length",
+                    "reference/sql-reference/all-functions/string/chr",
+                    "reference/sql-reference/all-functions/string/col_like",
+                    "reference/sql-reference/all-functions/string/concat",
+                    "reference/sql-reference/all-functions/string/concat_ws",
+                    "reference/sql-reference/all-functions/string/ends_with",
+                    "reference/sql-reference/all-functions/string/from_hex",
+                    "reference/sql-reference/all-functions/string/hex",
+                    "reference/sql-reference/all-functions/string/ilike",
+                    "reference/sql-reference/all-functions/string/initcap",
+                    "reference/sql-reference/all-functions/string/instr",
+                    "reference/sql-reference/all-functions/string/is_utf8",
+                    "reference/sql-reference/all-functions/string/lcase",
+                    "reference/sql-reference/all-functions/string/left",
+                    "reference/sql-reference/all-functions/string/length",
+                    "reference/sql-reference/all-functions/string/levenshtein",
+                    "reference/sql-reference/all-functions/string/like",
+                    "reference/sql-reference/all-functions/string/locate",
+                    "reference/sql-reference/all-functions/string/lower",
+                    "reference/sql-reference/all-functions/string/lpad",
+                    "reference/sql-reference/all-functions/string/ltrim",
+                    "reference/sql-reference/all-functions/string/mask",
+                    "reference/sql-reference/all-functions/string/mask_first_n",
+                    "reference/sql-reference/all-functions/string/mask_hash",
+                    "reference/sql-reference/all-functions/string/mask_last_n",
+                    "reference/sql-reference/all-functions/string/mask_show_first_n",
+                    "reference/sql-reference/all-functions/string/mask_show_last_n",
+                    "reference/sql-reference/all-functions/string/octet_length",
+                    "reference/sql-reference/all-functions/string/position",
+                    "reference/sql-reference/all-functions/string/quote",
+                    "reference/sql-reference/all-functions/string/regexp_extract",
+                    "reference/sql-reference/all-functions/string/regexp_like",
+                    "reference/sql-reference/all-functions/string/regexp_matches",
+                    "reference/sql-reference/all-functions/string/regexp_replace",
+                    "reference/sql-reference/all-functions/string/regexp_split",
+                    "reference/sql-reference/all-functions/string/repeat",
+                    "reference/sql-reference/all-functions/string/repeatstr",
+                    "reference/sql-reference/all-functions/string/replace",
+                    "reference/sql-reference/all-functions/string/reverse",
+                    "reference/sql-reference/all-functions/string/right",
+                    "reference/sql-reference/all-functions/string/rpad",
+                    "reference/sql-reference/all-functions/string/rtrim",
+                    "reference/sql-reference/all-functions/string/similar_to",
+                    "reference/sql-reference/all-functions/string/soundex",
+                    "reference/sql-reference/all-functions/string/split_part",
+                    "reference/sql-reference/all-functions/string/starts_with",
+                    "reference/sql-reference/all-functions/string/strpos",
+                    "reference/sql-reference/all-functions/string/substring",
+                    "reference/sql-reference/all-functions/string/substring_index",
+                    "reference/sql-reference/all-functions/string/toascii",
+                    "reference/sql-reference/all-functions/string/to_hex",
+                    "reference/sql-reference/all-functions/string/translate",
+                    "reference/sql-reference/all-functions/string/trim",
+                    "reference/sql-reference/all-functions/string/ucase",
+                    "reference/sql-reference/all-functions/string/unbase64",
+                    "reference/sql-reference/all-functions/string/unhex",
+                    "reference/sql-reference/all-functions/string/upper"
+                  ]
+                },
+                {
+                  "group": "Window",
+                  "pages": [
+                    "reference/sql-reference/all-functions/window",
+                    "reference/sql-reference/all-functions/window/count",
+                    "reference/sql-reference/all-functions/window/covar_pop",
+                    "reference/sql-reference/all-functions/window/covar_samp",
+                    "reference/sql-reference/all-functions/window/cume_dist",
+                    "reference/sql-reference/all-functions/window/dense_rank",
+                    "reference/sql-reference/all-functions/window/first_value",
+                    "reference/sql-reference/all-functions/window/hll",
+                    "reference/sql-reference/all-functions/window/lag",
+                    "reference/sql-reference/all-functions/window/lead",
+                    "reference/sql-reference/all-functions/window/max",
+                    "reference/sql-reference/all-functions/window/min",
+                    "reference/sql-reference/all-functions/window/ndv",
+                    "reference/sql-reference/all-functions/window/ntile",
+                    "reference/sql-reference/all-functions/window/percent_rank",
+                    "reference/sql-reference/all-functions/window/rank",
+                    "reference/sql-reference/all-functions/window/row_number",
+                    "reference/sql-reference/all-functions/window/sum",
+                    "reference/sql-reference/all-functions/window/var_pop",
+                    "reference/sql-reference/all-functions/window/var_samp"
+                  ]
+                }
+              ]
+            },
+            {
+              "group": "SQL Commands",
+              "pages": [
+                "reference/sql-reference/sql-commands",
+                "reference/sql-reference/sql-commands/select",
+                "reference/sql-reference/sql-commands/use",
+                "reference/sql-reference/sql-commands/show",
+                "reference/sql-reference/sql-commands/describe",
+                "reference/sql-reference/sql-commands/with"
+              ]
+            }
+          ]
+        },
+        {
+          "group": "SQL Query Tables",
+          "pages": [
+            "reference/sql-query-tables",
+            "reference/sql-query-tables/tpc-h",
+            {
+              "group": "Bitcoin",
+              "pages": [
+                "reference/sql-query-tables/bitcoin",
+                "reference/sql-query-tables/bitcoin/btc.blocks",
+                "reference/sql-query-tables/bitcoin/btc.transactions",
+                "reference/sql-query-tables/bitcoin/btc.transaction_inputs",
+                "reference/sql-query-tables/bitcoin/btc.transaction_outputs"
+              ]
+            },
+            {
+              "group": "Ethereum",
+              "pages": [
+                "reference/sql-query-tables/ethereum",
+                {
+                  "group": "Core Tables",
+                  "pages": [
+                    "reference/sql-query-tables/ethereum/core-tables",
+                    "reference/sql-query-tables/ethereum/core-tables/eth.blocks",
+                    "reference/sql-query-tables/ethereum/core-tables/eth.transactions",
+                    "reference/sql-query-tables/ethereum/core-tables/eth.logs",
+                    "reference/sql-query-tables/ethereum/core-tables/eth.contracts",
+                    "reference/sql-query-tables/ethereum/core-tables/eth.traces",
+                    "reference/sql-query-tables/ethereum/core-tables/eth.withdrawals"
+                  ]
+                },
+                {
+                  "group": "Beacon Chain Tables",
+                  "pages": [
+                    "reference/sql-query-tables/ethereum/beacon-chain-tables",
+                    "reference/sql-query-tables/ethereum/beacon-chain-tables/eth.beacon.validators",
+                    "reference/sql-query-tables/ethereum/beacon-chain-tables/eth.beacon.slots",
+                    "reference/sql-query-tables/ethereum/beacon-chain-tables/eth.beacon.attestations",
+                    "reference/sql-query-tables/ethereum/beacon-chain-tables/eth.beacon.deposits",
+                    "reference/sql-query-tables/ethereum/beacon-chain-tables/eth.beacon.voluntary_exits",
+                    "reference/sql-query-tables/ethereum/beacon-chain-tables/eth.beacon.attester_slashings",
+                    "reference/sql-query-tables/ethereum/beacon-chain-tables/eth.beacon.proposer_slashings",
+                    "reference/sql-query-tables/ethereum/beacon-chain-tables/eth.beacon.bls_to_execution_changes",
+                    "reference/sql-query-tables/ethereum/beacon-chain-tables/eth.beacon.withdrawals"
+                  ]
+                },
+                {
+                  "group": "Token Tables",
+                  "pages": [
+                    "reference/sql-query-tables/ethereum/token-tables",
+                    "reference/sql-query-tables/ethereum/token-tables/eth.tokens",
+                    "reference/sql-query-tables/ethereum/token-tables/eth.token_transfers",
+                    "reference/sql-query-tables/ethereum/token-tables/eth.recent_token_transfers",
+                    "reference/sql-query-tables/ethereum/token-tables/eth.tokens_erc20",
+                    "reference/sql-query-tables/ethereum/token-tables/eth.token_transfers_erc20",
+                    "reference/sql-query-tables/ethereum/token-tables/eth.tokens_erc721",
+                    "reference/sql-query-tables/ethereum/token-tables/eth.token_transfers_erc721",
+                    "reference/sql-query-tables/ethereum/token-tables/eth.tokens_erc1155",
+                    "reference/sql-query-tables/ethereum/token-tables/eth.token_transfers_erc1155",
+                    "reference/sql-query-tables/ethereum/token-tables/eth.token_mints"
+                  ]
+                },
+                {
+                  "group": "NFT Tables",
+                  "pages": [
+                    "reference/sql-query-tables/ethereum/nft-tables",
+                    "reference/sql-query-tables/ethereum/nft-tables/eth.nfts",
+                    "reference/sql-query-tables/ethereum/nft-tables/eth.nft_contracts",
+                    "reference/sql-query-tables/ethereum/nft-tables/eth.nft_transfers",
+                    "reference/sql-query-tables/ethereum/nft-tables/eth.nft_owners",
+                    "reference/sql-query-tables/ethereum/nft-tables/eth.recent_nft_transfers",
+                    "reference/sql-query-tables/ethereum/nft-tables/eth.nft_airdrop_transfers"
+                  ]
+                },
+                {
+                  "group": "Wallet Balances",
+                  "pages": [
+                    "reference/sql-query-tables/ethereum/wallet-balances",
+                    "reference/sql-query-tables/ethereum/wallet-balances/eth.wallet_balances",
+                    "reference/sql-query-tables/ethereum/wallet-balances/eth.wallet_lst_balances"
+                  ]
+                },
+                {
+                  "group": "ENS Tables",
+                  "pages": [
+                    "reference/sql-query-tables/ethereum/token-tables-1",
+                    "reference/sql-query-tables/ethereum/token-tables-1/ens.domains"
+                  ]
+                },
+                {
+                  "group": "EigenLayer Tables",
+                  "pages": [
+                    "reference/sql-query-tables/ethereum/eigenlayer-tables",
+                    "reference/sql-query-tables/ethereum/eigenlayer-tables/eth.eigenlayer.eigenpod_balances",
+                    "reference/sql-query-tables/ethereum/eigenlayer-tables/eth.eigenlayer.withdrawal_router_created",
+                    "reference/sql-query-tables/ethereum/eigenlayer-tables/eth.eigenlayer.strategy_manager_withdrawal_completed",
+                    "reference/sql-query-tables/ethereum/eigenlayer-tables/eth.eigenlayer.withdrawal_router_claimed",
+                    "reference/sql-query-tables/ethereum/eigenlayer-tables/eth.eigenlayer.withdrawal_router_balances",
+                    "reference/sql-query-tables/ethereum/eigenlayer-tables/eth.eigenlayer.strategy_manager_added_to_deposit_whitelist",
+                    "reference/sql-query-tables/ethereum/eigenlayer-tables/eth.eigenlayer.strategy_manager_withdrawal_delay_blocks_set",
+                    "reference/sql-query-tables/ethereum/eigenlayer-tables/eth.eigenlayer.strategy_manager_withdrawal_queued",
+                    "reference/sql-query-tables/ethereum/eigenlayer-tables/eth.eigenlayer.eigenpods",
+                    "reference/sql-query-tables/ethereum/eigenlayer-tables/eth.eigenlayer.strategy_manager_deposits",
+                    "reference/sql-query-tables/ethereum/eigenlayer-tables/eth.eigenlayer.strategy_manager_strategy_whitelister_changed",
+                    "reference/sql-query-tables/ethereum/eigenlayer-tables/eth.eigenlayer.strategy_manager_removed_from_deposit_whitelist",
+                    "reference/sql-query-tables/ethereum/eigenlayer-tables/eth.eigenlayer.strategy_manager_share_withdrawal_queued",
+                    "reference/sql-query-tables/ethereum/eigenlayer-tables/eth.eigenlayer.delegation_manager_operator_details_modified",
+                    "reference/sql-query-tables/ethereum/eigenlayer-tables/eth.eigenlayer.delegation_manager_operator_metadata_uri_updated",
+                    "reference/sql-query-tables/ethereum/eigenlayer-tables/eth.eigenlayer.delegation_manager_operator_registered",
+                    "reference/sql-query-tables/ethereum/eigenlayer-tables/eth.eigenlayer.delegation_manager_operator_shares_decreased",
+                    "reference/sql-query-tables/ethereum/eigenlayer-tables/eth.eigenlayer.delegation_manager_operator_shares_increased",
+                    "reference/sql-query-tables/ethereum/eigenlayer-tables/eth.eigenlayer.delegation_manager_staker_delegated",
+                    "reference/sql-query-tables/ethereum/eigenlayer-tables/eth.eigenlayer.delegation_manager_staker_force_undelegated",
+                    "reference/sql-query-tables/ethereum/eigenlayer-tables/eth.eigenlayer.delegation_manager_staker_undelegated",
+                    "reference/sql-query-tables/ethereum/eigenlayer-tables/eth.eigenlayer.delegation_manager_strategy_withdrawal_delay_blocks_set",
+                    "reference/sql-query-tables/ethereum/eigenlayer-tables/eth.eigenlayer.delegation_manager_withdrawal_queued",
+                    "reference/sql-query-tables/ethereum/eigenlayer-tables/eth.eigenlayer.delegation_manager_withdrawal_completed",
+                    "reference/sql-query-tables/ethereum/eigenlayer-tables/eth.eigenlayer.delegation_manager_withdrawal_migrated",
+                    "reference/sql-query-tables/ethereum/eigenlayer-tables/eth.eigenlayer.eigenpod_validators"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "group": "Specifications",
+          "pages": [
+            "reference/specifications",
+            {
+              "group": "Dataset & View YAML Specification",
+              "pages": [
+                "reference/specifications/dataset-and-view-yaml-specification",
+                "reference/specifications/dataset-and-view-yaml-specification/firecache"
+              ]
+            },
+            {
+              "group": "Models YAML Specification",
+              "pages": [
+                "reference/specifications/models-yaml-specification",
+                "reference/specifications/models-yaml-specification/model-type-specification"
+              ]
+            }
+          ]
+        },
+        "reference/limitations",
+        "reference/release-notes",
+        {
+          "group": "Samples and Examples",
+          "pages": [
+            "reference/samples-and-examples",
+            {
+              "group": "Example Ethereum (EVM) SQL Queries",
+              "pages": [
+                "reference/samples-and-examples/example-ethereum-evm-sql-queries",
+                "reference/samples-and-examples/example-ethereum-evm-sql-queries/blocks",
+                "reference/samples-and-examples/example-ethereum-evm-sql-queries/gas-and-fees",
+                "reference/samples-and-examples/example-ethereum-evm-sql-queries/transactions",
+                "reference/samples-and-examples/example-ethereum-evm-sql-queries/nfts",
+                "reference/samples-and-examples/example-ethereum-evm-sql-queries/tokens",
+                "reference/samples-and-examples/example-ethereum-evm-sql-queries/logs",
+                "reference/samples-and-examples/example-ethereum-evm-sql-queries/ens-domains",
+                "reference/samples-and-examples/example-ethereum-evm-sql-queries/wallet-balances",
+                "reference/samples-and-examples/example-ethereum-evm-sql-queries/blobs"
+              ]
+            },
+            {
+              "group": "Example Ethereum Beacon SQL Queries",
+              "pages": [
+                "reference/samples-and-examples/example-ethereum-beacon-sql-queries",
+                "reference/samples-and-examples/example-ethereum-beacon-sql-queries/slots",
+                "reference/samples-and-examples/example-ethereum-beacon-sql-queries/attestations",
+                "reference/samples-and-examples/example-ethereum-beacon-sql-queries/voluntary-exits",
+                "reference/samples-and-examples/example-ethereum-beacon-sql-queries/deposits",
+                "reference/samples-and-examples/example-ethereum-beacon-sql-queries/attester-slashings",
+                "reference/samples-and-examples/example-ethereum-beacon-sql-queries/bls-to-execution-changes",
+                "reference/samples-and-examples/example-ethereum-beacon-sql-queries/withdrawals",
+                "reference/samples-and-examples/example-ethereum-beacon-sql-queries/validators"
+              ]
+            },
+            {
+              "group": "Example Bitcoin Queries",
+              "pages": [
+                "reference/samples-and-examples/example-bitcoin-queries",
+                "reference/samples-and-examples/example-bitcoin-queries/blocks",
+                "reference/samples-and-examples/example-bitcoin-queries/transaction-fees",
+                "reference/samples-and-examples/example-bitcoin-queries/transactions",
+                "reference/samples-and-examples/example-bitcoin-queries/transaction-inputs-outputs"
+              ]
+            },
+            "reference/samples-and-examples/arrow-flight-samples",
+            "reference/samples-and-examples/kaggle-notebooks"
+          ]
+        }
+      ]
+    },
+    {
+      "group": "Support",
+      "pages": ["support/support"]
+    },
+    {
+      "group": "Security at Spice AI",
+      "pages": ["security/security", "security/report"]
+    },
+    {
+      "group": "Privacy Policy",
+      "pages": [
+        "legal/privacy",
+        "legal/terms",
+        "legal/terms-of-service",
+        "legal/eula"
       ]
     },
     {
@@ -82,10 +759,5 @@
         "api-reference/cloud-api-reference/endpoint/delete"
       ]
     }
-  ],
-  "footerSocials": {
-    "x": "https://x.com/spice_ai",
-    "github": "https://github.com/spiceai",
-    "linkedin": "https://linkedin.com/company/spice-ai"
-  }
+  ]
 }

@@ -1,0 +1,40 @@
+---
+title: "Step 2 - SQL Query"
+---
+
+1. [🌟Getting Started](/getting-started)
+2. [Quickstart](/getting-started/get-started)
+
+### Execute a SQL query in the Playground
+
+Use the Spice.ai [Playground](https://github.com/spicehq/docs/blob/trunk/getting-started/get-started/broken-reference/README.md) to experiment with SQL queries, APIs, and models directly in app.
+
+It includes:
+
+* A [SQL Query Editor](/portal/sql-query-editor) for experimentation.
+
+* Interactive API clients and sample code.
+
+<Frame caption="SQL Query Editor: querying for UniswapV2 Pool Liquidity Stats">
+  <img src="/images/getting-started/get-started/~gitbook/image" />
+</Frame>
+
+### Execute a SQL query using cURL
+
+Once you've set up a [Portal account](/getting-started/get-started/portal-login), replace `[API-KEY]` in the sample below with your API Key from the Spice app.
+
+<CodeGroup>
+  ```curl cURL
+  curl --request POST \
+    --url 'https://data.spiceai.io/v1/sql' \
+    --header 'Content-Type: text/plain' \
+    --header 'X-API-KEY: [API-KEY]'
+    --data 'select * from eth.recent_blocks order by "timestamp" desc'
+  ```
+</CodeGroup>
+
+Visit the [FAQ](/getting-started/faq) page for more details.
+
+### Call the API
+
+To get an API key, set up a [Portal account](/getting-started/get-started/portal-login).

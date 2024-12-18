@@ -1,0 +1,55 @@
+---
+title: "LPAD"
+---
+
+1. [📚REFERENCE](/reference)
+2. [SQL Reference](/reference/sql-reference)
+3. [SQL Functions](/reference/sql-reference/all-functions)
+4. [String](/reference/sql-reference/all-functions/string)
+
+Left pads a string with spaces or specified characters to reach the number of characters specified as a parameter.
+
+### Syntax
+
+#### LPAD(*base\_expression* varchar, *length* int64) → varchar
+
+* base\_expression: The expression to pad.
+
+* length: The number of characters to return.
+
+**Examples**
+
+<CodeGroup>
+  ```bash LPAD example
+  SELECT LPAD('parameter', 11)
+  --    parameter
+  ```
+</CodeGroup>
+
+<CodeGroup>
+  ```bash LPAD example
+  SELECT LPAD('engineering', 6)
+  -- engine
+  ```
+</CodeGroup>
+
+#### LPAD(*base\_expression* varchar, *length* int64, *pad\_expression* varchar) → varchar
+
+* base\_expression: The expression to pad.
+
+* length: The number of characters to return.
+
+* pad\_expression: Characters to pad the base\_expression with.
+
+**Examples**
+
+<CodeGroup>
+  ```bash LPAD example
+  SELECT LPAD('parameter', 11, '-')
+  -- --parameter
+  ```
+</CodeGroup>
+
+### Usage Notes
+
+If pad\_expression is not specified, then the base\_expresion will be padded with spaces. If the length of parameter is less than the length of the base\_expression, the base\_expression will be truncated to the length. If the length parameter + the length of the base\_expression is less than the length of the base\_expression + the length of the pad\_expression, only the subset of the characters from the pad\_expression required to fill the length will be appended to the base\_expression.

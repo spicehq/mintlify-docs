@@ -1,0 +1,132 @@
+---
+title: "HLL"
+---
+
+1. [📚REFERENCE](/reference)
+2. [SQL Reference](/reference/sql-reference)
+3. [SQL Functions](/reference/sql-reference/all-functions)
+4. [Window](/reference/sql-reference/all-functions/window)
+
+Uses HyperLogLog to return an approximation of the distinct cardinality of the input.
+
+### Syntax
+
+#### HLL(*expression* boolean) → varbinary
+
+* expression: Expression for which you want to know the number of distinct values.
+
+**Examples**
+
+<CodeGroup>
+  ```bash HLL example
+  SELECT HLL(TRUE)
+  -- sample return
+  ```
+</CodeGroup>
+
+#### HLL(*expression* float) → varbinary
+
+* expression: Expression for which you want to know the number of distinct values.
+
+**Examples**
+
+<CodeGroup>
+  ```bash HLL example
+  SELECT HLL(67.90)
+  -- sample return
+  ```
+</CodeGroup>
+
+#### HLL(*expression* varbinary) → varbinary
+
+* expression: Expression for which you want to know the number of distinct values.
+
+#### HLL(*expression* date) → varbinary
+
+* expression: Expression for which you want to know the number of distinct values.
+
+**Examples**
+
+<CodeGroup>
+  ```bash HLL example
+  SELECT HLL('2021-06-15')
+  -- sample return
+  ```
+</CodeGroup>
+
+#### HLL(*expression* interval\_year) → varbinary
+
+* expression: Expression for which you want to know the number of distinct values.
+
+#### HLL(*expression* interval\_day) → varbinary
+
+* expression: Expression for which you want to know the number of distinct values.
+
+#### HLL(*expression* int64) → varbinary
+
+* expression: Expression for which you want to know the number of distinct values.
+
+**Examples**
+
+<CodeGroup>
+  ```bash HLL example
+  SELECT HLL(2021)
+  -- sample return
+  ```
+</CodeGroup>
+
+#### HLL(*expression* double) → varbinary
+
+* expression: Expression for which you want to know the number of distinct values.
+
+**Examples**
+
+<CodeGroup>
+  ```bash HLL example
+  SELECT HLL(45.7)
+  -- sample return
+  ```
+</CodeGroup>
+
+#### HLL(*expression* time) → varbinary
+
+* expression: Expression for which you want to know the number of distinct values.
+
+#### HLL(*expression* int32) → varbinary
+
+* expression: Expression for which you want to know the number of distinct values.
+
+**Examples**
+
+<CodeGroup>
+  ```bash HLL example
+  SELECT HLL(2021)
+  -- sample return 1
+  ```
+</CodeGroup>
+
+#### HLL(*expression* varchar) → varbinary
+
+* expression: Expression for which you want to know the number of distinct values.
+
+**Examples**
+
+<CodeGroup>
+  ```bash HLL example
+  SELECT HLL('spice')
+  -- sample return 1
+  ```
+</CodeGroup>
+
+#### HLL(*expression* timestamp) → varbinary
+
+* expression: Expression for which you want to know the number of distinct values.
+
+**Examples**
+
+<CodeGroup>
+  ```bash HLL example
+  SELECT HLL('2021-06-17 11:50:59')
+  -- sample return 1
+  ```
+</CodeGroup>

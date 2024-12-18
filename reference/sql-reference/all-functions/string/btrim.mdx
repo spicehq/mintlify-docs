@@ -1,0 +1,55 @@
+---
+title: "BTRIM"
+---
+
+1. [📚REFERENCE](/reference)
+2. [SQL Reference](/reference/sql-reference)
+3. [SQL Functions](/reference/sql-reference/all-functions)
+4. [String](/reference/sql-reference/all-functions/string)
+
+Trims leading and trailing characters from a string.
+
+### Syntax
+
+#### BTRIM(*expression* string, *trim\_text* string) → string
+
+* expression: String expression to be trimmed.
+
+* trim\_text: Leading and trailing characters to trim from the input expression. If this parameter is not specified, then spaces will be trimmed from the input expression.
+
+**Examples**
+
+<CodeGroup>
+  ```bash BTRIM example
+  SELECT BTRIM('spice ')
+  -- spice
+  ```
+</CodeGroup>
+
+<CodeGroup>
+  ```bash BTRIM example
+  SELECT BTRIM('~/~/~/spice~', '~')
+  -- /~/~/spice
+  ```
+</CodeGroup>
+
+<CodeGroup>
+  ```bash BTRIM example
+  SELECT BTRIM('---spice-', '-')
+  -- spice
+  ```
+</CodeGroup>
+
+<CodeGroup>
+  ```bash BTRIM example
+  SELECT BTRIM('stringvalue','string')
+  -- value
+  ```
+</CodeGroup>
+
+<CodeGroup>
+  ```bash BTRIM example
+  SELECT BTRIM('pancake pan','abnp')
+  -- cake
+  ```
+</CodeGroup>

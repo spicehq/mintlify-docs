@@ -1,0 +1,37 @@
+---
+title: "RANK"
+---
+
+1. [📚REFERENCE](/reference)
+2. [SQL Reference](/reference/sql-reference)
+3. [SQL Functions](/reference/sql-reference/all-functions)
+4. [Window](/reference/sql-reference/all-functions/window)
+
+Returns the rank of the current row within its partition and placement order. Rows that are equal have the same rank. However, the count of tied rows is added to the next rank, instead of being incremented by one. The rank value starts at 1 and increases sequentially.
+
+### Syntax
+
+#### RANK() OVER ( \[PARTITION BY partition\_expression] \[ORDER BY order\_expression]) → bigint
+
+* partition\_expression: An optional expression that groups rows into partitions.
+
+* order\_expression: An optional expression that specifies the order of the rows within each partition.
+
+**Examples**
+
+<CodeGroup>
+  ```bash RANK example
+  SELECT "Category", 
+    "Descript", 
+    "DayOfWeek",
+    RANK() 
+      OVER (
+        PARTITION BY "Category" 
+        ORDER BY "DayOfWeek")
+  FROM eth.recent_blocks 
+
+  -- Category, Descript, DayOfWeek, EXPR$3
+  -- ARSON, ARSON, Friday, 1 
+  -- ARSON, ARSON, Monday, 40
+  ```
+</CodeGroup>

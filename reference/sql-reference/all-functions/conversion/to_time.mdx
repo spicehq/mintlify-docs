@@ -1,0 +1,96 @@
+---
+title: "TO_TIME"
+---
+
+1. [📚REFERENCE](/reference)
+2. [SQL Reference](/reference/sql-reference)
+3. [SQL Functions](/reference/sql-reference/all-functions)
+4. [Conversion](/reference/sql-reference/all-functions/conversion)
+
+Converts the input expressions to the corresponding time.
+
+### Syntax
+
+#### TO\_TIME(*numeric\_expression* int32) → time
+
+* numeric\_expression: A Unix epoch timestamp.
+
+**Examples**
+
+<CodeGroup>
+  ```bash TO_TIME example
+  SELECT TO_TIME(1665131223)
+  -- 08:27:03
+  ```
+</CodeGroup>
+
+#### TO\_TIME(*numeric\_expression* int64) → time
+
+* numeric\_expression: A Unix epoch timestamp.
+
+**Examples**
+
+<CodeGroup>
+  ```bash TO_TIME example
+  SELECT TO_TIME(1665131223)
+  -- 08:27:03
+  ```
+</CodeGroup>
+
+#### TO\_TIME(*string\_expression* varchar, *format* varchar, *replaceErrorWithNull* int32) → time
+
+* string\_expression: The string from which to extract the time.
+
+* format: String to specify format of the time.
+
+* replaceErrorWithNull: If 0, the function will fail when given malformed input. If 1, the function will return NULL when given malformed input.
+
+**Examples**
+
+<CodeGroup>
+  ```bash TO_TIME example
+  SELECT TO_TIME('09:15:00.23232', 'HH:MI:SS', 1)
+  -- NULL
+  ```
+</CodeGroup>
+
+#### TO\_TIME(*string\_expression* varchar, *format* varchar) → time
+
+* string\_expression: The string from which to extract the time.
+
+* format: String to specify format of the time.
+
+**Examples**
+
+<CodeGroup>
+  ```bash TO_TIME example
+  SELECT TO_TIME('09:15:00', 'HH:MI:SS')
+  -- 09:15:00
+  ```
+</CodeGroup>
+
+#### TO\_TIME(*numeric\_expression* double) → time
+
+* numeric\_expression: A Unix epoch timestamp.
+
+**Examples**
+
+<CodeGroup>
+  ```bash TO_TIME example
+  SELECT TO_TIME(1665131223.69)
+  -- 08:27:03
+  ```
+</CodeGroup>
+
+#### TO\_TIME(*numeric\_expression* float) → time
+
+* numeric\_expression: A Unix epoch timestamp.
+
+**Examples**
+
+<CodeGroup>
+  ```bash TO_TIME example
+  SELECT TO_TIME(1665131223.69)
+  -- 08:27:03
+  ```
+</CodeGroup>

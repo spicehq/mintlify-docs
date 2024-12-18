@@ -1,0 +1,45 @@
+---
+title: "ARRAY_CONTAINS"
+---
+
+1. [📚REFERENCE](/reference)
+2. [SQL Reference](/reference/sql-reference)
+3. [SQL Functions](/reference/sql-reference/all-functions)
+4. [Semistructured Data](/reference/sql-reference/all-functions/semistructured-data)
+
+Returns whether a list contains a given value.
+
+### Syntax
+
+#### ARRAY\_CONTAINS(*list* LIST, *value* any) → boolean
+
+* list: The list to search.
+
+* value: An expression of a type that is comparable with the LIST.
+
+**Examples**
+
+<CodeGroup>
+  ```bash ARRAY_CONTAINS example
+  SELECT ARRAY_CONTAINS(CONVERT_FROM('["apple", "pear", "banana"]', 'json'), NULL)
+  -- null
+  ```
+</CodeGroup>
+
+<CodeGroup>
+  ```bash ARRAY_CONTAINS example
+  SELECT ARRAY_CONTAINS(CONVERT_FROM('["apple", "pear", "banana"]', 'json'), 'pear')
+  -- true
+  ```
+</CodeGroup>
+
+<CodeGroup>
+  ```bash ARRAY_CONTAINS example
+  SELECT ARRAY_CONTAINS(CONVERT_FROM('["apple", "pear", "banana"]', 'json'), 'grape')
+  -- false
+  ```
+</CodeGroup>
+
+### Usage Notes
+
+If *value* is `NULL`, the result is `NULL`. If `NULL` is in *list* and *value* is not in *list*, the result is `NULL`. If *value* is present in the *list*, the result is `TRUE`. Otherwise, the result is `FALSE`.

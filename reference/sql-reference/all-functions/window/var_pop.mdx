@@ -1,0 +1,68 @@
+---
+title: "VAR_POP"
+---
+
+1. [📚REFERENCE](/reference)
+2. [SQL Reference](/reference/sql-reference)
+3. [SQL Functions](/reference/sql-reference/all-functions)
+4. [Window](/reference/sql-reference/all-functions/window)
+
+Returns the population variance of non-NULL records.
+
+### Syntax
+
+#### VAR\_POP(*numeric\_expression* int64) → double
+
+* numeric\_expression: The set of records to calculate variance for.
+
+**Examples**
+
+<CodeGroup>
+  ```bash VAR_POP example
+  SELECT VAR_POP(pop) 
+  FROM eth.recent_blocks
+  -- 1.5167869917122573E8
+  ```
+</CodeGroup>
+
+#### VAR\_POP(*numeric\_expression* double) → double
+
+* numeric\_expression: The set of records to calculate variance for.
+
+**Examples**
+
+<CodeGroup>
+  ```bash VAR_POP example
+  SELECT VAR_POP(gas_used) 
+  FROM eth.recent_blocks
+  -- 181.26187022731304
+  ```
+</CodeGroup>
+
+#### VAR\_POP(*numeric\_expression* float) → double
+
+* numeric\_expression: The set of records to calculate variance for.
+
+**Examples**
+
+<CodeGroup>
+  ```bash VAR_POP example
+  SELECT VAR_POP(gas_used) 
+  FROM eth.recent_blocks
+  -- 181.26187022731304
+  ```
+</CodeGroup>
+
+#### VAR\_POP(*numeric\_expression* int32) → double
+
+* numeric\_expression: The set of records to calculate variance for.
+
+**Examples**
+
+<CodeGroup>
+  ```bash VAR_POP example
+  SELECT VAR_POP(pop) 
+  FROM eth.recent_blocks
+  -- 1.5167869917122573E8
+  ```
+</CodeGroup>

@@ -1,0 +1,80 @@
+---
+title: "CONVERT_FROM"
+---
+
+1. [📚REFERENCE](/reference)
+2. [SQL Reference](/reference/sql-reference)
+3. [SQL Functions](/reference/sql-reference/all-functions)
+4. [Conversion](/reference/sql-reference/all-functions/conversion)
+
+Converts a binary string from the given data type to a Spice type.
+
+### Syntax
+
+#### CONVERT\_FROM(*binary\_value* value\_to\_convert, *data\_type* name\_of\_type) → varies
+
+* binary\_value: The binary string to convert to a Spice data type.
+
+* data\_type: The data type of the specified binary string.
+
+**Examples**
+
+<CodeGroup>
+  ```bash Returns a LIST from the specified JSON.
+  SELECT CONVERT_FROM('["apple", "strawberry", "banana"]', 'json')
+  -- ['apple', 'strawberry', 'banana']
+  ```
+</CodeGroup>
+
+<CodeGroup>
+  ```bash Returns a STRUCT from the specified JSON.
+  SELECT CONVERT_FROM('{"name":"Gnarly", "age":7, "car":null}', 'json')
+  -- {"name:"Gnarly","age":7}
+  ```
+</CodeGroup>
+
+### Usage Notes
+
+You can convert from binary values that are in these data formats:
+
+* BIGINT\_BE
+
+* BIGINT\_HADOOPV
+
+* BIGINT
+
+* BOOLEAN\_BYTE
+
+* DATE\_EPOCH\_BE
+
+* DATE\_EPOCH
+
+* DOUBLE\_BE
+
+* DOUBLE
+
+* FLOAT\_BE
+
+* FLOAT
+
+* INT\_BE
+
+* INT\_HADOOPV
+
+* INT
+
+* JSON
+
+* TIME\_EPOCH\_BE
+
+* TIME\_EPOCH
+
+* TIMESTAMP\_EPOCH\_BE
+
+* TIMESTAMP\_EPOCH
+
+* TIMESTAMP\_IMPALA\_LOCALTIMEZONE
+
+* TIMESTAMP\_IMPALA
+
+* UTF8

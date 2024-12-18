@@ -1,0 +1,27 @@
+---
+title: "AES_ENCRYPT"
+---
+
+1. [📚REFERENCE](/reference)
+2. [SQL Reference](/reference/sql-reference)
+3. [SQL Functions](/reference/sql-reference/all-functions)
+4. [Cryptography](/reference/sql-reference/all-functions/cryptography)
+
+Encrypts a string using AES encryption.
+
+### Syntax
+
+#### AES\_ENCRYPT(*plaintext* varchar, *key* varchar) → varchar
+
+* plaintext: The string to be encrypted.
+
+* key: The key to use to encrypt the plaintext.
+
+**Examples**
+
+<CodeGroup>
+  ```bash AES_ENCRYPT example
+  SELECT BASE64(AES_ENCRYPT('Spice', 'mypassword'))
+  -- Fad52k2P1Y6rMZ0DBcg8SQ==
+  ```
+</CodeGroup>

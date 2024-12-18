@@ -1,0 +1,25 @@
+---
+title: "SHA1"
+---
+
+1. [📚REFERENCE](/reference)
+2. [SQL Reference](/reference/sql-reference)
+3. [SQL Functions](/reference/sql-reference/all-functions)
+4. [Cryptography](/reference/sql-reference/all-functions/cryptography)
+
+Computes the SHA-1 hash value of a string.
+
+### Syntax
+
+#### SHA1(*expr* varchar) → varchar
+
+* expression: The string to hash.
+
+**Examples**
+
+<CodeGroup>
+  ```bash SHA1 example
+  SELECT SHA1('Spice')
+  -- dda3f1ef53d1e82a4845ef5b2893b9d9c04bd3b1
+  ```
+</CodeGroup>

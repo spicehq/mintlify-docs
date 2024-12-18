@@ -1,0 +1,58 @@
+---
+title: "CASE"
+---
+
+1. [📚REFERENCE](/reference)
+2. [SQL Reference](/reference/sql-reference)
+3. [SQL Functions](/reference/sql-reference/all-functions)
+4. [Conditional](/reference/sql-reference/all-functions/conditional)
+
+Evaluates a list of conditions and returns the first resulting true expression. If a true expression is not found, will return the ELSE statement, if present, or else will return NULL.
+
+### Syntax
+
+#### CASE expression WHEN condition THEN result \[ …n ] \[ ELSE result ] END → same as input type
+
+* expression: A valid SQL expression, typically, a column name.
+
+* condition: A boolean expression. If `condition` is true, then return `result`.
+
+* result: A valid SQL expression.
+
+**Examples**
+
+<CodeGroup>
+  ```bash CASE example
+  SELECT
+  CASE categories
+       WHEN 'Restaurants' THEN 'food'
+       WHEN 'Hotels' THEN 'travel'
+       ELSE 'no result'
+  END
+  FROM table-name
+
+  -- food
+  ```
+</CodeGroup>
+
+#### CASE WHEN condition THEN result \[ …n ] \[ ELSE result ] END → same as input type
+
+* condition: A boolean expression. If `expression=condition` is true, then return `result`.
+
+* result: A valid SQL expression.
+
+**Examples**
+
+<CodeGroup>
+  ```bash CASE example
+  SELECT
+  CASE
+       WHEN categories='Restaurants' THEN 'food'
+       WHEN categories='Hotels' THEN 'travel'
+       ELSE 'no result'
+  END
+  FROM table-name
+
+  -- food
+  ```
+</CodeGroup>

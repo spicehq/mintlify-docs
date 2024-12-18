@@ -1,0 +1,40 @@
+---
+title: "RANDOM"
+---
+
+1. [📚REFERENCE](/reference)
+2. [SQL Reference](/reference/sql-reference)
+3. [SQL Functions](/reference/sql-reference/all-functions)
+4. [Data Generation](/reference/sql-reference/all-functions/data-generation)
+
+Each call returns a random generated number between 0 and 1 for each row.
+
+### Syntax
+
+#### RANDOM() → double
+
+**Examples**
+
+<CodeGroup>
+  ```bash RANDOM example
+  SELECT RANDOM()
+  -- 0.24943567857336457
+  ```
+</CodeGroup>
+
+#### RANDOM(*seed* int32) → double
+
+* seed: Seed value.
+
+**Examples**
+
+<CodeGroup>
+  ```bash RANDOM example
+  SELECT RANDOM(4000)
+  -- 0.18633151868393985
+  ```
+</CodeGroup>
+
+### Usage Notes
+
+If a seed value is specified, `RANDOM` generates a unique number for each row. If the same seed is used to call `RANDOM` on the same row multiple times, the same generated number will be returned each time.

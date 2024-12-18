@@ -1,0 +1,36 @@
+---
+title: "HASH"
+---
+
+1. [📚REFERENCE](/reference)
+2. [SQL Reference](/reference/sql-reference)
+3. [SQL Functions](/reference/sql-reference/all-functions)
+4. [Conversion](/reference/sql-reference/all-functions/conversion)
+
+Returns a hash value of the arguments. HASH does not return NULL, even for NULL inputs.
+
+### Syntax
+
+#### HASH(*expression* any) → numeric
+
+* expression: Can be a general expression of any Spice supported data type.
+
+**Examples**
+
+<CodeGroup>
+  ```bash HASH example
+  SELECT HASH(host_id)
+  FROM eth.recent_blocks 
+  LIMIT 5
+
+  -- 1110609030
+  -- 1283762365
+  -- -1745730253
+  -- 0
+  -- 0
+  ```
+</CodeGroup>
+
+### Usage Notes
+
+HASH is a proprietary function that can accept different input expressions of arbitrary Spice supported data types and returns a signed value. It is not a cryptographic hash function and should not be used as such.

@@ -1,0 +1,42 @@
+---
+title: "ISNUMERIC"
+---
+
+1. [📚REFERENCE](/reference)
+2. [SQL Reference](/reference/sql-reference)
+3. [SQL Functions](/reference/sql-reference/all-functions)
+4. [Boolean](/reference/sql-reference/all-functions/boolean)
+
+Determines whether an expression is a valid numeric type (DECIMAL, DOUBLE, INT, BIGINT, VARBINARY).
+
+### Syntax
+
+#### ISNUMERIC(*expression* any) → boolean
+
+* expression: Can be a general expression of any Spice-supported data type.
+
+**Examples**
+
+<CodeGroup>
+  ```bash ISNUMERIC example
+  SELECT ISNUMERIC('13579')
+  -- True
+  ```
+</CodeGroup>
+
+<CodeGroup>
+  ```bash ISNUMERIC example
+  SELECT ISNUMERIC('Hello World!')
+  -- False
+  ```
+</CodeGroup>
+
+<CodeGroup>
+  ```bash ISNUMERIC example
+  SELECT ISNUMERIC(transaction_count)
+  FROM eth.recent_blocks 
+  LIMIT 1 
+
+  -- True
+  ```
+</CodeGroup>

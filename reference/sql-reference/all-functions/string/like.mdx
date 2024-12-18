@@ -1,0 +1,116 @@
+---
+title: "LIKE"
+---
+
+1. [📚REFERENCE](/reference)
+2. [SQL Reference](/reference/sql-reference)
+3. [SQL Functions](/reference/sql-reference/all-functions)
+4. [String](/reference/sql-reference/all-functions/string)
+
+Tests whether an expression matches one or more patterns. Comparisons are case-sensitive.
+
+### Syntax
+
+#### *expression* \[ NOT ] LIKE *pattern* → boolean
+
+* expression: The expression to compare.
+
+* NOT: A keyword that inverts the return value.
+
+* pattern: The pattern that is compared to the expression.
+
+**Examples**
+
+<CodeGroup>
+  ```bash LIKE example
+  SELECT 'pancake' LIKE '%cake'
+  -- True
+  ```
+</CodeGroup>
+
+<CodeGroup>
+  ```bash LIKE example
+  SELECT 'pancake' NOT LIKE '%cake'
+  -- False
+  ```
+</CodeGroup>
+
+#### *expression* \[ NOT ] LIKE *pattern* ESCAPE *escape\_character* → boolean
+
+* expression: The expression to compare.
+
+* NOT: A keyword that inverts the return value.
+
+* pattern: The pattern that is compared to the expression.
+
+* escape\_character: Putting *escape\_character* before a wildcard in *pattern* makes LIKE treat the wildcard as a regular character when it appears in *expression*.
+
+**Examples**
+
+<CodeGroup>
+  ```bash LIKE example
+  SELECT '50%_Off' LIKE '%50!%%' ESCAPE '!'
+  -- True
+  ```
+</CodeGroup>
+
+<CodeGroup>
+  ```bash LIKE example
+  SELECT '%SalesData%/Users/Jane' NOT LIKE '/%SalesData/%//Users/%' ESCAPE '/'
+  -- False
+  ```
+</CodeGroup>
+
+#### *expression* \[ NOT ] LIKE \{ ANY | SOME | ALL } ( \[ *pattern* \[, …] ] ) → boolean
+
+* expression: A `STRING` expression.
+
+* NOT: A keyword that inverts the return value.
+
+* ANY or SOME or ALL: Keywords indicating whether the expression must match at least one pattern or must match all patterns.
+
+* pattern: One or more `STRING` expressions.
+
+**Examples**
+
+<CodeGroup>
+  ```bash LIKE example
+  SELECT 'Spark' LIKE ALL ('_park', '%ark')
+  -- True
+  ```
+</CodeGroup>
+
+<CodeGroup>
+  ```bash LIKE example
+  SELECT 'Spark' NOT LIKE ALL ('_park', '%ark')
+  -- False
+  ```
+</CodeGroup>
+
+<CodeGroup>
+  ```bash LIKE example
+  SELECT 'Spark' LIKE SOME ('meow', 'woof')
+  -- False
+  ```
+</CodeGroup>
+
+<CodeGroup>
+  ```bash LIKE example
+  SELECT 'Spark' NOT LIKE SOME ('meow', 'woof')
+  -- True
+  ```
+</CodeGroup>
+
+<CodeGroup>
+  ```bash LIKE example
+  SELECT 'Spark' LIKE ANY ('_park', '_mart')
+  -- True
+  ```
+</CodeGroup>
+
+<CodeGroup>
+  ```bash LIKE example
+  SELECT 'Spark' NOT LIKE ANY ('_park', '_mart')
+  -- False
+  ```
+</CodeGroup>

@@ -1,0 +1,48 @@
+---
+title: "SIMILAR_TO"
+---
+
+1. [📚REFERENCE](/reference)
+2. [SQL Reference](/reference/sql-reference)
+3. [SQL Functions](/reference/sql-reference/all-functions)
+4. [String](/reference/sql-reference/all-functions/string)
+
+Tests whether the entire expression matches a pattern.
+
+### Syntax
+
+#### *expression* SIMILAR TO *pattern* → boolean
+
+* expression: The expression to compare.
+
+* pattern: The pattern that is compared to the expression.
+
+**Examples**
+
+<CodeGroup>
+  ```bash SIMILAR_TO example
+  SELECT 'shortcakes' SIMILAR TO '%cake_'
+  -- True
+  ```
+</CodeGroup>
+
+#### *expression* SIMILAR TO *pattern* ESCAPE *escape\_character* → boolean
+
+* expression: The expression to compare.
+
+* pattern: The pattern that is compared to the expression.
+
+* escape: Putting an *escape\_character* before a wildcard in the *pattern* makes SIMILAR TO treat the wildcard as a regular character when it appears in the *expression*.
+
+**Examples**
+
+<CodeGroup>
+  ```bash SIMILAR_TO example
+  SELECT '100%' SIMILAR TO '100!%' ESCAPE '!'
+  -- True
+  ```
+</CodeGroup>
+
+### Usage Notes
+
+Succeeds only if the pattern matches the entire expression.

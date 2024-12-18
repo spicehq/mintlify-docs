@@ -1,0 +1,44 @@
+---
+title: "ILIKE"
+---
+
+1. [📚REFERENCE](/reference)
+2. [SQL Reference](/reference/sql-reference)
+3. [SQL Functions](/reference/sql-reference/all-functions)
+4. [String](/reference/sql-reference/all-functions/string)
+
+Tests whether an expression matches a pattern. The comparison is case-insensitive.
+
+### Syntax
+
+#### ILIKE(*expression* varchar, *pattern* varchar) → boolean
+
+* expression: The expression to compare.
+
+* pattern: The pattern that is compared to the expression.
+
+**Examples**
+
+<CodeGroup>
+  ```bash ILIKE example
+  SELECT ILIKE ('pancake', '%Cake')
+  -- True
+  ```
+</CodeGroup>
+
+#### ILIKE(*expression* varchar, *pattern* varchar, *escape\_character* varchar) → boolean
+
+* expression: The expression to compare.
+
+* pattern: The pattern that is compared to the expression.
+
+* escape\_character: Putting *escape\_character* before a wildcard in *pattern* makes ILIKE treat the wildcard as a regular character when it appears in *expression*.
+
+**Examples**
+
+<CodeGroup>
+  ```bash ILIKE example
+  SELECT ILIKE ('50%_Off', '%50!%%','!')
+  -- True
+  ```
+</CodeGroup>

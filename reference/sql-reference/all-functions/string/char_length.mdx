@@ -1,0 +1,32 @@
+---
+title: "CHAR_LENGTH"
+---
+
+1. [📚REFERENCE](/reference)
+2. [SQL Reference](/reference/sql-reference)
+3. [SQL Functions](/reference/sql-reference/all-functions)
+4. [String](/reference/sql-reference/all-functions/string)
+
+Returns the character length of the input string.
+
+### Syntax
+
+#### CHAR\_LENGTH(*expression* STRING) → INTEGER
+
+* expression: The expression (VARCHAR) to determine character length for.
+
+**Examples**
+
+<CodeGroup>
+  ```bash CHAR_LENGTH example
+  SELECT CHAR_LENGTH('get the char length')
+  -- 19
+  ```
+</CodeGroup>
+
+<CodeGroup>
+  ```bash CHAR_LENGTH example
+  SELECT CHAR_LENGTH('SPICE')
+  -- 5
+  ```
+</CodeGroup>

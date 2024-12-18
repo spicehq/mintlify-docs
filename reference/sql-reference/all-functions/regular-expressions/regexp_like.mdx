@@ -1,0 +1,46 @@
+---
+title: "REGEXP_LIKE"
+---
+
+1. [📚REFERENCE](/reference)
+2. [SQL Reference](/reference/sql-reference)
+3. [SQL Functions](/reference/sql-reference/all-functions)
+4. [Regular Expressions](/reference/sql-reference/all-functions/regular-expressions)
+
+Returns true when the specified regular expression matches values in a column. Otherwise, returns false.
+
+### Syntax
+
+#### REGEXP\_LIKE(*input* string, *regex* string) → boolean
+
+* input: The expression to test.
+
+* regex: The Perl-compatible regular expression (PCRE) to use for the test.
+
+**Examples**
+
+<CodeGroup>
+  ```bash REGEXP_LIKE example
+  SELECT REGEXP_LIKE('the data lakehouse', '.*?\Qlake\E.*?')
+  -- True
+  ```
+</CodeGroup>
+
+<CodeGroup>
+  ```bash REGEXP_LIKE example
+  SELECT Category, REGEXP_LIKE(Category, '.*?\Q-\E.*?') 
+  FROM eth.recent_blocks 
+  LIMIT 5
+
+  -- Category, EXPR$1
+  -- WEAPON LAWS, false
+  -- WEAPON LAWS, false
+  -- WARRANTS, false
+  -- NON-CRIMINAL, true
+  -- NON-CRIMINAL, true
+  ```
+</CodeGroup>
+
+### Usage Notes
+
+This function is identical to the function [`REGEXP_MATCHES`](/reference/sql-reference/all-functions/regular-expressions/regexp_matches).

@@ -1,0 +1,45 @@
+---
+title: "STRPOS"
+---
+
+1. [📚REFERENCE](/reference)
+2. [SQL Reference](/reference/sql-reference)
+3. [SQL Functions](/reference/sql-reference/all-functions)
+4. [String](/reference/sql-reference/all-functions/string)
+
+Searches for the first occurrence of the substring in the given expression and returns the position of where the substring begins. Searching binary values is also supported.
+
+### Syntax
+
+#### STRPOS(*expression* varchar, *substring* varchar) → int32
+
+* expression: The expression to search.
+
+* substring: The substring to search the expression for.
+
+**Examples**
+
+<CodeGroup>
+  ```bash STRPOS example
+  SELECT STRPOS('spice cloud service', 'cloud')
+  -- 8
+  ```
+</CodeGroup>
+
+<CodeGroup>
+  ```bash STRPOS example
+  SELECT STRPOS(1001111, 00)
+  -- 2
+  ```
+</CodeGroup>
+
+<CodeGroup>
+  ```bash STRPOS example
+  SELECT STRPOS('spice cloud service', 'sql')
+  -- 0
+  ```
+</CodeGroup>
+
+### Usage Notes
+
+If the substring is not found, the function returns 0. The data type of both parameters must match; specifically, they should both be either strings or binary values.

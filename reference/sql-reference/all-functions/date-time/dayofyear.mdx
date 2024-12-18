@@ -1,0 +1,32 @@
+---
+title: "DAYOFYEAR"
+---
+
+1. [📚REFERENCE](/reference)
+2. [SQL Reference](/reference/sql-reference)
+3. [SQL Functions](/reference/sql-reference/all-functions)
+4. [Date/Time](/reference/sql-reference/all-functions/date-time)
+
+Returns the day of the year (from 1 to 366) of the date or timestamp.
+
+### Syntax
+
+#### DAYOFYEAR(*date\_timestamp\_expression* string) → bigint
+
+* date\_timestamp\_expression: A `DATE` or `TIMESTAMP` expression.
+
+**Examples**
+
+<CodeGroup>
+  ```bash DAYOFYEAR example
+  SELECT DAYOFYEAR(DATE '2021-02-28')
+  -- 59
+  ```
+</CodeGroup>
+
+<CodeGroup>
+  ```bash DAYOFYEAR example
+  SELECT DAYOFYEAR(TIMESTAMP '2021-03-15 11:43:22')
+  -- 74
+  ```
+</CodeGroup>

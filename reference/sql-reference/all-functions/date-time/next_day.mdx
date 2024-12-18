@@ -1,0 +1,58 @@
+---
+title: "NEXT_DAY"
+---
+
+1. [📚REFERENCE](/reference)
+2. [SQL Reference](/reference/sql-reference)
+3. [SQL Functions](/reference/sql-reference/all-functions)
+4. [Date/Time](/reference/sql-reference/all-functions/date-time)
+
+Returns the date or timestamp of the first specified day of week that occurs after the input date.
+
+### Syntax
+
+#### NEXT\_DAY(*date\_timestamp\_expression* string, *day\_of\_week* string) → date
+
+* date\_timestamp\_expression: A `DATE` or `TIMESTAMP` expression.
+
+* day\_of\_week: A string expression identifying a day of the week. The value can be a string literal or an expression that returns a string. The string must be one of the following (case-sensitive):
+
+* * `SU`, `SUN`, `SUNDAY`
+
+  * `MO`, `MON`, `MONDAY`
+
+  * `TU`, `TUE`, `TUESDAY`
+
+  * `WE`, `WED`, `WEDNESDAY`
+
+  * `TH`, `THU`, `THURSDAY`
+
+  * `FR`, `FRI`, `FRIDAY`
+
+  * `SA`, `SAT`, `SATURDAY`
+
+**Examples**
+
+<CodeGroup>
+  ```bash NEXT_DAY example
+  SELECT NEXT_DAY('2015-01-14 12:05:55', 'TU')
+  -- 2015-01-20
+  ```
+</CodeGroup>
+
+<CodeGroup>
+  ```bash NEXT_DAY example
+  SELECT pickup_datetime, NEXT_DAY(pickup_datetime, 'FRIDAY') AS "next_day" 
+  FROM eth.recent_blocks 
+  LIMIT 3
+
+  -- pickup_datetime, next_day
+  -- 2013-05-27 19:15:00.000, 2013-05-31
+  -- 2013-05-31 16:40:00.000, 2013-06-07
+  -- 2013-05-27 19:03:00.000, 2013-05-31
+  ```
+</CodeGroup>
+
+### Usage Notes
+
+The return value is always a date regardless of whether `date_timestamp_expression` is a date or a timestamp.

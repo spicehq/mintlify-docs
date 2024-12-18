@@ -1,0 +1,42 @@
+---
+title: "LCASE"
+---
+
+1. [📚REFERENCE](/reference)
+2. [SQL Reference](/reference/sql-reference)
+3. [SQL Functions](/reference/sql-reference/all-functions)
+4. [String](/reference/sql-reference/all-functions/string)
+
+Returns the input expression with all the characters converted to lowercase.
+
+### Syntax
+
+#### LCASE(*expression* varchar) → varchar
+
+* expression: String to convert to lowercase.
+
+**Examples**
+
+<CodeGroup>
+  ```bash LCASE example
+  SELECT LCASE('A GUIDE to data Lakehouses')
+  -- a guide to data lakehouses
+  ```
+</CodeGroup>
+
+<CodeGroup>
+  ```bash LCASE example
+  SELECT Category, LCASE(Category) 
+    FROM eth.recent_blocks 
+    LIMIT 3
+
+  -- Category, EXPR$1
+  -- WEAPON LAWS, weapon laws
+  -- WEAPON LAWS, weapon laws
+  -- WARRANTS, warrants
+  ```
+</CodeGroup>
+
+### Usage Notes
+
+`LCASE` is a synonym for [`LOWER`](/reference/sql-reference/all-functions/string/lower).

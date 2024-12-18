@@ -1,0 +1,32 @@
+---
+title: "INITCAP"
+---
+
+1. [📚REFERENCE](/reference)
+2. [SQL Reference](/reference/sql-reference)
+3. [SQL Functions](/reference/sql-reference/all-functions)
+4. [String](/reference/sql-reference/all-functions/string)
+
+Returns the input string with the first letter of each word in uppercase and the subsequent letters in the word are in lowercase).
+
+### Syntax
+
+#### INITCAP(*expression* varchar) → varchar
+
+* expression: Input string.
+
+**Examples**
+
+<CodeGroup>
+  ```bash INITCAP example
+  SELECT INITCAP('a guide to data lakehouses')
+  -- A Guide To Data Lakehouses
+  ```
+</CodeGroup>
+
+<CodeGroup>
+  ```bash INITCAP example
+  SELECT INITCAP('a guide to data lakeHouses')
+  -- A Guide To Data Lakehouses
+  ```
+</CodeGroup>

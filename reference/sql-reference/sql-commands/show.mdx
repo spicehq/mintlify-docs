@@ -1,0 +1,39 @@
+---
+title: "SHOW"
+---
+
+1. [📚REFERENCE](/reference)
+2. [SQL Reference](/reference/sql-reference)
+3. [SQL Commands](/reference/sql-reference/sql-commands)
+
+### Syntax
+
+<CodeGroup>
+  ```bash Showing a Table Example
+  SHOW TABLE [ LIKE { pattern } ]
+  ```
+</CodeGroup>
+
+#### Parameters
+
+* \[ LIKE ] The pattern match is case-insensitive but must be used with the LIKE operator.
+
+#### Examples
+
+<CodeGroup>
+  ```bash Show all existing tables.
+  SHOW TABLES;
+  ```
+</CodeGroup>
+
+<CodeGroup>
+  ```bash Show an existing table with the exact name.
+  SHOW TABLES LIKE 'eth.recent_blocks';
+  ```
+</CodeGroup>
+
+<CodeGroup>
+  ```bash Show all existing tables with names that start with protect_.
+  SHOW TABLES LIKE 'eth.recent_%';
+  ```
+</CodeGroup>

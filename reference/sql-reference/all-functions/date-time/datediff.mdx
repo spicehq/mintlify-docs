@@ -1,0 +1,38 @@
+---
+title: "DATEDIFF"
+---
+
+1. [📚REFERENCE](/reference)
+2. [SQL Reference](/reference/sql-reference)
+3. [SQL Functions](/reference/sql-reference/all-functions)
+4. [Date/Time](/reference/sql-reference/all-functions/date-time)
+
+Compares two dates or timestamps and returns the difference in days.
+
+### Syntax
+
+#### DATEDIFF(*endDate* string, *startDate* string) → integer
+
+* endDate: A `DATE` or `TIMESTAMP` expression.
+
+* startDate: A `DATE` or `TIMESTAMP` expression.
+
+**Examples**
+
+<CodeGroup>
+  ```bash DATEDIFF example
+  SELECT DATEDIFF('2021-02-28', '2021-01-01')
+  -- 58
+  ```
+</CodeGroup>
+
+<CodeGroup>
+  ```bash DATEDIFF example
+  SELECT DATEDIFF('2005-04-09 12:05:55', '2003-02-01 11:43:22')
+  -- 798
+  ```
+</CodeGroup>
+
+### Usage Notes
+
+If `endDate` is before `startDate` the result is negative.

@@ -1,0 +1,25 @@
+---
+title: "Attester Slashings"
+---
+
+1. [📚REFERENCE](/reference)
+2. [Samples and Examples](/reference/samples-and-examples)
+3. [Example Ethereum Beacon SQL Queries](/reference/samples-and-examples/example-ethereum-beacon-sql-queries)
+
+### Weekly Attester Slashings Count
+
+Number of attester slashings per week
+
+**Typical query time**: \<5 seconds
+
+```
+SELECT
+  DATE_TRUNC('week', TO_TIMESTAMP(block_timestamp)) AS slashing_week,
+  COUNT(*) AS num_attester_slashings
+FROM
+  eth.beacon.attester_slashings
+GROUP BY
+  slashing_week
+ORDER BY
+  slashing_week DESC
+```

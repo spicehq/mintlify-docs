@@ -1,0 +1,51 @@
+---
+title: "LOCATE"
+---
+
+1. [📚REFERENCE](/reference)
+2. [SQL Reference](/reference/sql-reference)
+3. [SQL Functions](/reference/sql-reference/all-functions)
+4. [String](/reference/sql-reference/all-functions/string)
+
+Searches for the first occurrence of the first argument in the second argument and if found, returns the position the of the first argument in the second argument. The first character in a string is position 1. Returns 0 if the substring isn’t found in the expression.
+
+### Syntax
+
+#### LOCATE(*substring* varchar, *expression* varchar, *start* int32) → int32
+
+* substring: Substring to search for in the expression.
+
+* expression: The input expression to search.
+
+* start: Position to start the search from.
+
+**Examples**
+
+<CodeGroup>
+  ```bash LOCATE example
+  SELECT LOCATE('an','banana', 3)
+  -- 4
+  ```
+</CodeGroup>
+
+<CodeGroup>
+  ```bash LOCATE example
+  SELECT LOCATE('no','banana')
+  -- 0
+  ```
+</CodeGroup>
+
+#### LOCATE(*substring* varchar, *expression* varchar) → int32
+
+* substring: Substring to search for in the expression.
+
+* expression: The input expression to search.
+
+**Examples**
+
+<CodeGroup>
+  ```bash LOCATE example
+  SELECT LOCATE('an','banana')
+  -- 2
+  ```
+</CodeGroup>

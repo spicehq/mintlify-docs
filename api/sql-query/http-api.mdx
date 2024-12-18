@@ -1,0 +1,160 @@
+---
+title: "HTTP API"
+---
+
+1. [💻API](/api)
+2. [SQL Query API](/api/sql-query)
+
+Query web3 data with SQL via the HTTP API
+
+Blockchain and contract data may be queried by posting SQL to the `/v1/sql` API and `/v1/firesql` API for Firecached data. For documentation on the Spice Firecache see [Firecache](/reference/specifications/dataset-and-view-yaml-specification/firecache).
+
+See [Tables](/reference/sql-query-tables) for a list of tables to query or browse the example queries listed in the menu.
+
+#### Requirements and limitations
+
+* An API key is required for all SQL queries.
+
+* Results are limited to 500 rows. Use the [Apache Arrow Flight API](/api/sql-query/apache-arrow-flight-api) to fetch up to 1M rows in a single query or the [Async HTTP API](/api/sql-query/http-api-1) to fetch results with paging.
+
+* Requests are limited to 90 seconds.
+
+## Perform a SQL query
+
+`POST` `https://data.spiceai.io/v1/sql`
+
+The SQL query should be sent in the body of the request as plain text
+
+#### Query Parameters
+
+Name
+
+Type
+
+Description
+
+api\_key
+
+String
+
+The API Key for your Spice app
+
+#### Headers
+
+Name
+
+Type
+
+Description
+
+Content-Type\*
+
+String
+
+text/plain
+
+X-API-KEY
+
+String
+
+The API Key for your Spice app
+
+<CodeGroup>
+  ```id-200-ok-query-result 200: OK Query result
+  {
+      // Example response from: `select count(number) from eth.recent_blocks`
+      {
+      "rowCount": 1,
+      "schema": [
+          {
+              "name": "EXPR$0",
+              "type": {
+                  "name": "BIGINT"
+              }
+          }
+      ],
+      "rows": [
+          {
+              "EXPR$0": 149
+          }
+      ]
+  }
+  }
+  ```
+
+  ```id-400-bad-request-the-query-could-not-be-parsed 400: Bad Request The query could not be parsed
+  {
+      // Response
+  }
+  ```
+
+  ```id-401-unauthorized-missing-the-api-key 401: Unauthorized Missing the API Key
+  {
+      // Response
+  }
+  ```
+</CodeGroup>
+
+## Perform a Firecache SQL Query
+
+`POST` `https://data.spiceai.io/v1/firesql`
+
+The SQL query should be sent in the body of the request as plain text
+
+#### Query Parameters
+
+Name
+
+Type
+
+Description
+
+api\_key
+
+String
+
+The API Key for your Spice app
+
+#### Headers
+
+Name
+
+Type
+
+Description
+
+Content-Type\*
+
+String
+
+text/plain
+
+X-API-KEY
+
+String
+
+The API Key for your Spice app
+
+<Tabs />
+
+<CodeGroup>
+  ```curl cURL
+  curl --request POST \
+    --url https://data.spiceai.io/v1/sql \
+    --header 'Content-Type: text/plain' \
+    --header 'X-API-Key: [api-key]' \
+    --data 'select count(number) from eth.recent_blocks'
+  ```
+
+  ```javascript Javascript
+  import { SpiceClient } from '@spiceai/spice';
+
+  const main = async () => {
+    const spiceClient = new SpiceClient('API_KEY');
+    const table = await spiceClient.query(
+      'select count(number) as num_blocks from eth.recent_blocks'
+    );
+    console.table(table.toArray());
+  };
+  ```
+</CodeGroup>

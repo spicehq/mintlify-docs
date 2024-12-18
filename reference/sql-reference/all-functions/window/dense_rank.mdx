@@ -1,0 +1,37 @@
+---
+title: "DENSE_RANK"
+---
+
+1. [📚REFERENCE](/reference)
+2. [SQL Reference](/reference/sql-reference)
+3. [SQL Functions](/reference/sql-reference/all-functions)
+4. [Window](/reference/sql-reference/all-functions/window)
+
+Returns the rank of the current row within its partition and ordering. Rows that are equal will have the same rank.
+
+### Syntax
+
+#### DENSE\_RANK() OVER ( \[PARTITION BY partition\_expression] \[ORDER BY order\_expression]) → bigint
+
+* partition\_expression: An optional expression that groups rows into partitions.
+
+* order\_expression: An optional expression that specifies the order of the rows within each partition.
+
+**Examples**
+
+<CodeGroup>
+  ```bash DENSE_RANK example
+  SELECT "Category", 
+    "Descript", 
+    "DayOfWeek",
+    DENSE_RANK() 
+      OVER (
+        PARTITION BY "Category" 
+        ORDER BY "DayOfWeek")
+  FROM eth.recent_blocks 
+
+  -- Category, Descript, DayOfWeek, EXPR$3
+  -- ARSON, ARSON, Friday, 1
+  -- ARSON, ARSON, Monday, 2
+  ```
+</CodeGroup>

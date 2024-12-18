@@ -1,0 +1,87 @@
+---
+title: "Overview"
+---
+
+1. [📚REFERENCE](/reference)
+2. [SQL Reference](/reference/sql-reference)
+3. [SQL Functions](/reference/sql-reference/all-functions)
+
+Function Name
+
+Description
+
+[APPROX\_COUNT\_DISTINCT](/reference/sql-reference/all-functions/aggregate/approx_count_distinct)
+
+Returns the approximate number of unique, non-null values in a column.
+
+[AVG](/reference/sql-reference/all-functions/aggregate/avg)
+
+Computes the average of a set of values.
+
+[BIT\_AND](/reference/sql-reference/all-functions/aggregate/bit_and)
+
+Returns the bitwise `AND` of non-NULL input values.
+
+[BIT\_OR](/reference/sql-reference/all-functions/aggregate/bit_or)
+
+Returns the bitwise `OR` of non-NULL input values.
+
+[CORR](/reference/sql-reference/all-functions/window/count)
+
+Calculates the Pearson correlation coefficient of the values expression1 and expression2. The function name must be enclosed in double quotes (“CORR”).
+
+[COUNT](/reference/sql-reference/all-functions/window/count)
+
+Returns the total number of records for the specified expression.
+
+[COVAR\_POP](/reference/sql-reference/all-functions/window/covar_pop)
+
+Returns the population covariance for non-NULL pairs across all input values.
+
+[COVAR\_SAMP](/reference/sql-reference/all-functions/window/covar_samp)
+
+Returns the sample covariance for non-NULL pairs across all input values.
+
+[HLL](/reference/sql-reference/all-functions/window/hll)
+
+Uses HyperLogLog to return an approximation of the distinct cardinality of the input.
+
+[LISTAGG](/reference/sql-reference/all-functions/aggregate/listagg)
+
+Concatenates a group of rows into a list of strings and places a separator between them.
+
+[MAX](/reference/sql-reference/all-functions/aggregate/max)
+
+Returns the maximum value among the non-NULL input expressions.
+
+[MIN](/reference/sql-reference/all-functions/aggregate/min)
+
+Returns the minimum value among the non-NULL input expressions.
+
+[NDV](/reference/sql-reference/all-functions/window/ndv)
+
+Returns an approximate distinct value number, similar to `COUNT(DISTINCT col)`. NDV can return results faster than using the combination of COUNT and DISTINCT while using a constant amount of memory, resulting in less memory usage for columns with high cardinality.
+
+[STDDEV](/reference/sql-reference/all-functions/math/stddev)
+
+Returns the standard deviation of non-NULL values in a column with a numeric data type. If all records inside a group are NULL, returns NULL.
+
+[STDDEV\_POP](/reference/sql-reference/all-functions/math/stddev_pop)
+
+Returns the population standard deviation (square root of variance) of non-NULL values in a column with a numeric data type. If all records inside a group are NULL, returns NULL.
+
+[STDDEV\_SAMP](/reference/sql-reference/all-functions/math/stddev_samp)
+
+Returns the sample standard deviation (square root of sample variance) of non-NULL values in a column with a numeric data type. If all records inside a group are NULL, returns NULL.
+
+[SUM](/reference/sql-reference/all-functions/aggregate/sum)
+
+Returns the sum of non-NULL input expressions.
+
+[VAR\_POP](/reference/sql-reference/all-functions/window/var_pop)
+
+Returns the population variance of non-NULL records.
+
+[VAR\_SAMP](/reference/sql-reference/all-functions/window/var_samp)
+
+Returns the sample variance of non-NULL records.

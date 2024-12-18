@@ -1,0 +1,66 @@
+---
+title: "TRIM"
+---
+
+1. [📚REFERENCE](/reference)
+2. [SQL Reference](/reference/sql-reference)
+3. [SQL Functions](/reference/sql-reference/all-functions)
+4. [String](/reference/sql-reference/all-functions/string)
+
+Removes leading, trailing, or both spaces or characters from a string.
+
+### Syntax
+
+#### TRIM(LEADING or TRAILING or BOTH *trim\_expression* varchar FROM *expression* varchar) → varchar
+
+* trim\_expression: The characters to trim.
+
+* expression: The expression to be trimmed.
+
+**Examples**
+
+<CodeGroup>
+  ```bash TRIM example
+  SELECT TRIM('    pancake    ')
+  -- pancake
+  ```
+</CodeGroup>
+
+<CodeGroup>
+  ```bash TRIM example
+  SELECT TRIM(leading 'pan' from 'pancake')
+  -- cake
+  ```
+</CodeGroup>
+
+<CodeGroup>
+  ```bash TRIM example
+  SELECT TRIM(trailing 'cake' from 'pancake')
+  -- pan
+  ```
+</CodeGroup>
+
+<CodeGroup>
+  ```bash TRIM example
+  SELECT TRIM(both 'pan' from 'pancake pan')
+  -- cake
+  ```
+</CodeGroup>
+
+<CodeGroup>
+  ```bash TRIM example
+  SELECT TRIM('pan' from 'pancake pan')
+  -- cake
+  ```
+</CodeGroup>
+
+<CodeGroup>
+  ```bash TRIM example
+  SELECT TRIM('abnp' from 'pancake pan')
+  -- cake
+  ```
+</CodeGroup>
+
+### Usage Notes
+
+If you do not specify a keyword before `trim_expression`, it defaults to BOTH. If you do not specify `trim_expression`, it defaults to a space. Organizations using Oracle will always receive a `NULL` return if this function is used with an empty string.

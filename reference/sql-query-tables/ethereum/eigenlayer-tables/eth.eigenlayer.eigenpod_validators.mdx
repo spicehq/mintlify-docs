@@ -1,0 +1,21 @@
+---
+title: "eth.eigenlayer.eigenpod_validators"
+---
+
+1. [📚REFERENCE](/reference)
+2. [SQL Query Tables](/reference/sql-query-tables)
+3. [Ethereum](/reference/sql-query-tables/ethereum)
+4. [EigenLayer Tables](/reference/sql-query-tables/ethereum/eigenlayer-tables)
+
+* This is the validator list, filtered to just the validators that have withdrawal\_credentials that match one of the deployed EigenPods.
+
+It is a view defined as:
+
+```
+SELECT * FROM goerli.beacon.validators val
+WHERE val.withdrawal_credentials IN (
+  select withdrawal_credential from eth.eigenlayer.eigenpods
+)
+```
+
+See [goerli.beacon.validators](https://docs.spice.ai/reference/sql-query-tables/ethereum/beacon-chain-tables/eth.beacon.validators) for the schema and column definitions.

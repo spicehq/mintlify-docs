@@ -1,0 +1,25 @@
+---
+title: "FROM_HEX"
+---
+
+1. [📚REFERENCE](/reference)
+2. [SQL Reference](/reference/sql-reference)
+3. [SQL Functions](/reference/sql-reference/all-functions)
+4. [Binary](/reference/sql-reference/all-functions/binary)
+
+Returns a binary value for the given hexadecimal string.
+
+### Syntax
+
+#### FROM\_HEX(*in* string) → binary
+
+* in: A hexadecimal string.
+
+**Examples**
+
+<CodeGroup>
+  ```bash FROM_HEX example
+  SELECT from_hex('3fd98a3c')
+  -- P9mKPA==
+  ```
+</CodeGroup>

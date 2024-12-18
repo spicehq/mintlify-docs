@@ -1,0 +1,135 @@
+---
+title: "Overview"
+---
+
+1. [📚REFERENCE](/reference)
+2. [SQL Query Tables](/reference/sql-query-tables)
+3. [Ethereum](/reference/sql-query-tables/ethereum)
+
+Ethereum EigenLayer tables available to query via SQL
+
+Learn about [EigenLayer](https://www.eigenlayer.xyz/) and read the [whitepaper](https://2039955362-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FPy2Kmkwju3mPSo9jrKKt%2Fuploads%2F2dCfPgItRfQbX25KriQv%2Fwhitepaper.pdf?alt=media\&token=d4d94480-3f01-4e63-bc92-a0658ea37aab).
+
+**Ethereum EigenLayer tables available to query**
+
+Name
+
+Description
+
+[`eth.eigenlayer.eigenpods`](/reference/sql-query-tables/ethereum/eigenlayer-tables/eth.eigenlayer.eigenpods)
+
+All EigenPods
+
+[`eth.eigenlayer.eigenpod_validators`](/reference/sql-query-tables/ethereum/eigenlayer-tables/eth.eigenlayer.eigenpod_validators)
+
+All EigenPod Validators
+
+[`eth.eigenlayer.eigenpod_balances`](/reference/sql-query-tables/ethereum/eigenlayer-tables/eth.eigenlayer.eigenpod_balances)
+
+EigenPod ETH wallet changed balances including the delta from last block
+
+[`eth.eigenlayer.strategy_manager_added_to_deposit_whitelist`](/reference/sql-query-tables/ethereum/eigenlayer-tables/eth.eigenlayer.delegation_manager_operator_details_modified)
+
+StrategyManager event for when a strategy is added to the approved list of strategies for deposit
+
+[`eth.eigenlayer.strategy_manager_deposits`](/reference/sql-query-tables/ethereum/eigenlayer-tables/eth.eigenlayer.strategy_manager_deposits)
+
+StrategyManager event for when a new deposit occurs on behalf of `depositor`
+
+[`eth.eigenlayer.strategy_manager_removed_from_deposit_whitelist`](/reference/sql-query-tables/ethereum/eigenlayer-tables/eth.eigenlayer.strategy_manager_removed_from_deposit_whitelist)
+
+StrategyManager event for when a strategy is removed from the approved list of strategies for deposit
+
+[`eth.eigenlayer.strategy_manager_share_withdrawal_queued`](/reference/sql-query-tables/ethereum/eigenlayer-tables/eth.eigenlayer.strategy_manager_share_withdrawal_queued)
+
+StrategyManager event for when a new withdrawal occurs on behalf of `depositor`
+
+[`eth.eigenlayer.strategy_manager_strategy_whitelister_changed`](/reference/sql-query-tables/ethereum/eigenlayer-tables/eth.eigenlayer.strategy_manager_strategy_whitelister_changed)
+
+StrategyManager event for when the `strategyWhitelister` is changed
+
+[`eth.eigenlayer.strategy_manager_withdrawal_completed`](/reference/sql-query-tables/ethereum/eigenlayer-tables/eth.eigenlayer.strategy_manager_withdrawal_completed)
+
+StrategyManager event for when a queued withdrawal is completed
+
+[`eth.eigenlayer.strategy_manager_withdrawal_delay_blocks_set`](/reference/sql-query-tables/ethereum/eigenlayer-tables/eth.eigenlayer.strategy_manager_withdrawal_delay_blocks_set)
+
+StrategyManager event for when the `withdrawalDelayBlocks` variable is modified from `previousValue` to `newValue`
+
+[`eth.eigenlayer.strategy_manager_withdrawal_queued`](/reference/sql-query-tables/ethereum/eigenlayer-tables/eth.eigenlayer.strategy_manager_withdrawal_queued)
+
+StrategyManager event for when a new withdrawal is queued by `depositor`
+
+[`eth.eigenlayer.withdrawal_router_balances`](/reference/sql-query-tables/ethereum/eigenlayer-tables/eth.eigenlayer.withdrawal_router_balances)
+
+Current per-block, Ether balance for the DelayedWithdrawalRouter contract
+
+[`eth.eigenlayer.withdrawal_router_claimed`](/reference/sql-query-tables/ethereum/eigenlayer-tables/eth.eigenlayer.withdrawal_router_claimed)
+
+Decoded `DelayedWithdrawalClaimed` events for the `DelayedWithdrawalRouter` contract
+
+[`eth.eigenlayer.withdrawal_router_created`](/reference/sql-query-tables/ethereum/eigenlayer-tables/eth.eigenlayer.withdrawal_router_created)
+
+Decoded `DelayedWithdrawalCreated` events from the `DelayedWithdrawalRouter` contract
+
+[`eth.eigenlayer.delegation_manager_min_withdrawal_delay_blocks_set`](/reference/sql-query-tables/ethereum/eigenlayer-tables/eth.eigenlayer.delegation_manager_strategy_withdrawal_delay_blocks_set)
+
+DelegationManager event for when the minimum withdrawal delay blocks are set
+
+[`eth.eigenlayer.delegation_manager_operator_details_modified`](/reference/sql-query-tables/ethereum/eigenlayer-tables/eth.eigenlayer.delegation_manager_operator_details_modified)
+
+DelegationManager event for when the operator details are modified
+
+[`eth.eigenlayer.delegation_manager_operator_metadata_uri_updated`](/reference/sql-query-tables/ethereum/eigenlayer-tables/eth.eigenlayer.delegation_manager_operator_metadata_uri_updated)
+
+DelegationManager event for when the operator metadata URI is updated
+
+[`eth.eigenlayer.delegation_manager_operator_registered`](/reference/sql-query-tables/ethereum/eigenlayer-tables/eth.eigenlayer.delegation_manager_operator_registered)
+
+DelegationManager event for when an operator is registered
+
+[`eth.eigenlayer.delegation_manager_operator_shares_decreased`](/reference/sql-query-tables/ethereum/eigenlayer-tables/eth.eigenlayer.delegation_manager_operator_shares_decreased)
+
+DelegationManager event for when an operator's shares are decreased
+
+[`eth.eigenlayer.delegation_manager_operator_shares_increased`](/reference/sql-query-tables/ethereum/eigenlayer-tables/eth.eigenlayer.delegation_manager_operator_shares_increased)
+
+DelegationManager event for when an operator's shares are increased
+
+[`eth.eigenlayer.delegation_manager_staker_delegated`](/reference/sql-query-tables/ethereum/eigenlayer-tables/eth.eigenlayer.delegation_manager_staker_delegated)
+
+DelegationManager event for when a staker is delegated
+
+[`eth.eigenlayer.delegation_manager_staker_force_undelegated`](/reference/sql-query-tables/ethereum/eigenlayer-tables/eth.eigenlayer.delegation_manager_staker_force_undelegated)
+
+DelegationManager event for when a staker is force undelegated
+
+[`eth.eigenlayer.delegation_manager_staker_undelegated`](/reference/sql-query-tables/ethereum/eigenlayer-tables/eth.eigenlayer.delegation_manager_staker_undelegated)
+
+DelegationManager event for when a staker is undelegated
+
+[`eth.eigenlayer.delegation_manager_strategy_withdrawal_delay_blocks_set`](/reference/sql-query-tables/ethereum/eigenlayer-tables/eth.eigenlayer.delegation_manager_strategy_withdrawal_delay_blocks_set)
+
+DelegationManager event for when the strategy withdrawal delay blocks are set
+
+[`eth.eigenlayer.delegation_manager_withdrawal_queued`](/reference/sql-query-tables/ethereum/eigenlayer-tables/eth.eigenlayer.delegation_manager_withdrawal_queued)
+
+DelegationManager event for when a withdrawal is queued
+
+[`eth.eigenlayer.delegation_manager_withdrawal_completed`](/reference/sql-query-tables/ethereum/eigenlayer-tables/eth.eigenlayer.delegation_manager_withdrawal_completed)
+
+DelegationManager event for when a withdrawal is completed
+
+[`eth.eigenlayer.delegation_manager_withdrawal_migrated`](/reference/sql-query-tables/ethereum/eigenlayer-tables/eth.eigenlayer.delegation_manager_withdrawal_migrated)
+
+DelegationManager event for when a withdrawal is migrated
+
+The table list is also available as a SQL query using `show tables`. For example:
+
+```
+SHOW TABLES IN eth.eigenlayer
+```
+
+**Improving query performance - indexed columns**
+
+Query performance can be significantly improved by adding `WHERE` clauses to your query on specific indexed columns. All Eigenlayer tables have an index on `block_number`.

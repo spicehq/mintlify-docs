@@ -1,0 +1,54 @@
+---
+title: "IS [NOT] NULL"
+---
+
+1. [📚REFERENCE](/reference)
+2. [SQL Reference](/reference/sql-reference)
+3. [SQL Functions](/reference/sql-reference/all-functions)
+4. [Boolean](/reference/sql-reference/all-functions/boolean)
+
+Determines if an expression is NULL or not NULL. Alias for the function ISNULL/ISNOTNULL.
+
+### Syntax
+
+#### IS \[NOT] NULL(*expression* any) → boolean
+
+* expression: Expression of any Spice supported data type to evaluate.
+
+**Examples**
+
+<CodeGroup>
+  ```bash ISNULL function returns true if <expression> is NULL, and false otherwise.
+  SELECT ISNULL('SPICE')
+  -- False
+  ```
+</CodeGroup>
+
+<CodeGroup>
+  ```bash ISNULL operator returns true if <expression> is NULL, and false otherwise.
+  SELECT 'SPICE' IS NULL
+  -- False
+  ```
+</CodeGroup>
+
+#### IS \[NOT] NULL(*expression* any) → boolean
+
+* expression: Expression of any Spice supported data type to evaluate.
+
+**Examples**
+
+<CodeGroup>
+  ```bash ISNOTNULL function returns true if <expression> is not NULL, and false otherwise.
+  SELECT ISNOTNULL('SPICE')
+  -- True
+  ```
+</CodeGroup>
+
+ISNOTNULL operator returns true if \<expression> is not NULL, and false otherwise.
+
+<CodeGroup>
+  ```bash ISNOTNULL operator returns true if <expression> is not NULL, and false otherwise.
+  SELECT 'SPICE' IS NOT NULL
+  -- False
+  ```
+</CodeGroup>

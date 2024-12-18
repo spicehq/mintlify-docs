@@ -1,0 +1,27 @@
+---
+title: "RIGHT"
+---
+
+1. [📚REFERENCE](/reference)
+2. [SQL Reference](/reference/sql-reference)
+3. [SQL Functions](/reference/sql-reference/all-functions)
+4. [String](/reference/sql-reference/all-functions/string)
+
+Returns the right-most substring. The function name must be enclosed in double quotes (“RIGHT”).
+
+### Syntax
+
+#### RIGHT(*string* varchar, *length* int64) → varchar
+
+* string: String input parameter.
+
+* length: Number of characters on the right to return.
+
+**Examples**
+
+<CodeGroup>
+  ```bash RIGHT example
+  SELECT "RIGHT"('Spice - SQL Engine', 6)
+  -- Engine
+  ```
+</CodeGroup>

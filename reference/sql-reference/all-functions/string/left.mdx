@@ -1,0 +1,34 @@
+---
+title: "LEFT"
+---
+
+1. [📚REFERENCE](/reference)
+2. [SQL Reference](/reference/sql-reference)
+3. [SQL Functions](/reference/sql-reference/all-functions)
+4. [String](/reference/sql-reference/all-functions/string)
+
+Returns the left-most substring. The function name must be enclosed in double quotes ("LEFT").
+
+### Syntax
+
+#### LEFT(*expression* varchar, *length* int64) → varchar
+
+* expression: String input parameter
+
+* length: Number of characters on the left to return.
+
+**Examples**
+
+<CodeGroup>
+  ```bash LEFT example
+  SELECT "LEFT"('Spice - SQL Engine', -13)
+  -- Spice
+  ```
+</CodeGroup>
+
+<CodeGroup>
+  ```bash LEFT example
+  SELECT "LEFT"('Spice - SQL Engine', 5)
+  -- Spice
+  ```
+</CodeGroup>

@@ -1,0 +1,27 @@
+---
+title: "CONVERT_REPLACEUTF8"
+---
+
+1. [📚REFERENCE](/reference)
+2. [SQL Reference](/reference/sql-reference)
+3. [SQL Functions](/reference/sql-reference/all-functions)
+4. [Conversion](/reference/sql-reference/all-functions/conversion)
+
+Converts a binary string to a UTF-8 value and replaces all characters that cannot be converted to UTF-8 with the specified replacement character.
+
+### Syntax
+
+#### CONVERT\_REPLACEUTF8(*binary\_value* value\_to\_convert, *replacement* VARCHAR) → VARCHAR
+
+* binary\_value: The binary string to convert to a string encoded in UTF8.
+
+* replacement: A single character to use as a substitute for each character in the binary string that cannot be converted to UTF8.
+
+**Examples**
+
+<CodeGroup>
+  ```bash CONVERT_REPLACEUTF8 example
+  SELECT CONVERT_REPLACEUTF8(BINARY_STRING('These characters cannot be converted — \xa0\xa1'), 'b')
+  -- These characters cannot be converted — bb
+  ```
+</CodeGroup>

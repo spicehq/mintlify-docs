@@ -1,0 +1,32 @@
+---
+title: "Firecache"
+---
+
+1. [📚REFERENCE](/reference)
+2. [Specifications](/reference/specifications)
+3. [Dataset & View YAML Specification](/reference/specifications/dataset-and-view-yaml-specification)
+
+Dataset firecache definition
+
+### Schema Properties
+
+`enabled`
+
+Set to `true` to enable this dataset for Firecache.
+
+`trigger`
+
+The trigger event type for when to update the Firecache. Valid values are `block_number` `block_slot` .
+
+`time_column`
+
+The dataset column that represents time. For example `timestamp` for the [eth.blocks](/reference/sql-query-tables/ethereum/core-tables/eth.blocks) table or `block_timestamp` for the [eth.transactions](/reference/sql-query-tables/ethereum/core-tables/eth.transactions) table.
+
+### Example definition
+
+```
+firecache:
+  enabled: true
+  trigger: block_number
+  time_column: block_timestamp
+```

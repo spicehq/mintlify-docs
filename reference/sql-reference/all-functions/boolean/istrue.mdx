@@ -1,0 +1,51 @@
+---
+title: "ISTRUE"
+---
+
+1. [📚REFERENCE](/reference)
+2. [SQL Reference](/reference/sql-reference)
+3. [SQL Functions](/reference/sql-reference/all-functions)
+4. [Boolean](/reference/sql-reference/all-functions/boolean)
+
+Returns TRUE if the input expression evaluates to TRUE.
+
+### Syntax
+
+#### ISTRUE(*expression* int64) → boolean
+
+* expression: Input expression.
+
+**Examples**
+
+<CodeGroup>
+  ```bash ISTRUE example
+  SELECT ISTRUE(1)
+  -- True
+  ```
+</CodeGroup>
+
+#### ISTRUE(*expression* boolean) → boolean
+
+* expression: Input expression.
+
+**Examples**
+
+<CodeGroup>
+  ```bash ISTRUE example
+  SELECT ISTRUE(FALSE)
+  -- False
+  ```
+</CodeGroup>
+
+#### ISTRUE(*expression* int32) → boolean
+
+* expression: Input expression.
+
+**Examples**
+
+<CodeGroup>
+  ```bash ISTRUE example
+  SELECT ISTRUE(0)
+  -- False
+  ```
+</CodeGroup>

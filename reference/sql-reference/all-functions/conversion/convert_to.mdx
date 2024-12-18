@@ -1,0 +1,73 @@
+---
+title: "CONVERT_TO"
+---
+
+1. [📚REFERENCE](/reference)
+2. [SQL Reference](/reference/sql-reference)
+3. [SQL Functions](/reference/sql-reference/all-functions)
+4. [Conversion](/reference/sql-reference/all-functions/conversion)
+
+Converts a value to a binary string of a supported data type.
+
+### Syntax
+
+#### CONVERT\_TO(*expression* value\_to\_convert, *data\_type* name\_of\_type) → VARBINARY
+
+* expression: The value to convert to a binary string.
+
+* data\_type: The data type to use for the conversion to a binary string.
+
+**Examples**
+
+<CodeGroup>
+  ```bash CONVERT_TO example
+  SELECT CONVERT_TO('this value' ,'UTF8')
+  -- dGhpcyB2YWx1ZQ==
+  ```
+</CodeGroup>
+
+### Usage Notes
+
+You can convert values to binary strings of these data types:
+
+* BIGINT\_BE
+
+* BIGINT\_HADOOPV
+
+* BIGINT
+
+* BOOLEAN\_BYTE
+
+* DATE\_EPOCH\_BE
+
+* DATE\_EPOCH
+
+* DOUBLE\_BE
+
+* DOUBLE
+
+* EXTENDEDJSON
+
+* FLOAT\_BE
+
+* FLOAT
+
+* INT\_BE
+
+* INT\_HADOOPV
+
+* INT
+
+* JSON
+
+* SIMPLEJSON
+
+* TIME\_EPOCH\_BE
+
+* TIME\_EPOCH
+
+* TIMESTAMP\_EPOCH\_BE
+
+* TIMESTAMP\_EPOCH
+
+* UTF8

@@ -1,0 +1,41 @@
+---
+title: "CUME_DIST"
+---
+
+1. [📚REFERENCE](/reference)
+2. [SQL Reference](/reference/sql-reference)
+3. [SQL Functions](/reference/sql-reference/all-functions)
+4. [Window](/reference/sql-reference/all-functions/window)
+
+Returns the cumulative distribution of the current row with regard to other values within the same window partition.
+
+### Syntax
+
+#### CUME\_DIST() OVER ( \[PARTITION BY partition\_expression] \[ORDER BY order\_expression]) → double
+
+* partition\_expression: An optional expression that groups rows into partitions.
+
+* order\_expression: An optional expression that specifies the order of the rows within each partition.
+
+**Examples**
+
+<CodeGroup>
+  ```bash CUME_DIST example
+  SELECT "Category", 
+    "Descript", 
+    "DayOfWeek",
+    CUME_DIST() 
+      OVER (
+        PARTITION BY "Category" 
+        ORDER BY "DayOfWeek")
+  FROM eth.recent_blocks 
+
+  -- Category, Descript, DayOfWeek, EXPR$3
+  -- ARSON, ARSON, Friday, 0.13636363636363635
+  -- EMBEZZLEMENT, EMBEZZLED VEHICLE, Friday, 0.18452380952380953
+  ```
+</CodeGroup>
+
+### Usage Notes
+
+This function does not support cumulative frame windows or sliding frame windows.

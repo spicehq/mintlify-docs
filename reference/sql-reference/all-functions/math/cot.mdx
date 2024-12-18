@@ -1,0 +1,39 @@
+---
+title: "COT"
+---
+
+1. [📚REFERENCE](/reference)
+2. [SQL Reference](/reference/sql-reference)
+3. [SQL Functions](/reference/sql-reference/all-functions)
+4. [Math](/reference/sql-reference/all-functions/math)
+
+Computes the cotangent of a value in radians.
+
+### Syntax
+
+#### COT(*numeric\_expression* NUMERIC) → FLOAT
+
+* numeric\_expression: The number in radians. This must be `DOUBLE`, `INTEGER`, or `FLOAT`.
+
+**Examples**
+
+<CodeGroup>
+  ```bash COT example
+  SELECT COT(0)
+  -- 1.0
+  ```
+</CodeGroup>
+
+<CodeGroup>
+  ```bash COT example
+  SELECT COT(1.0)
+  -- 0.5403023058681398
+  ```
+</CodeGroup>
+
+<CodeGroup>
+  ```bash COT example
+  SELECT COT(-1)
+  -- 0.5403023058681398
+  ```
+</CodeGroup>

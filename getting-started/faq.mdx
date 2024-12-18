@@ -1,31 +1,42 @@
 ---
-title: FAQ
-description: Frequently asked questions
+title: "FAQ"
 ---
+
+1. [🌟Getting Started](/getting-started)
+
+Frequently asked questions
 
 ### What's the difference between the Spice.ai Cloud Platform and Spice.ai OSS?
 
 [**Spice.ai OSS**](https://github.com/spiceai/spiceai) is an open-source project created by Spice AI that provides a unified SQL query interface to locally materialize, accelerate, and query data tables sourced from any database, data warehouse, or data lake.
 
+<Frame caption="Spice.ai OSS">
+  <img src="/images/getting-started/files%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252F-Mc71sWdWMqp1e_rsTZE-129938315%252Fuploads%252FdQrRoS86LTZujvLzrgFn%252FOGP.png" />
+</Frame>
+
 **The Spice.ai Cloud Platform** is a data and AI application platform that provides a set of building-block to create data and AI driven applications. Building blocks include a cloud-data-warehouse, ML model training and inference, and a cloud-scale, managed Spice.ai OSS cloud-hosted service.
+
+<Frame caption="The Spice.ai Cloud Platform">
+  <img src="/images/getting-started/files%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252F-Mc71sWdWMqp1e_rsTZE-129938315%252Fuploads%252FzpaRZBbn7I5rbLfIth3V%252FOGP.png" />
+</Frame>
 
 ### What data is available?
 
-Spice.ai is preloaded with community data, including select blockchain datasets from [**Ethereum**](../reference/sql-query-tables/) (including [**Beacon**](broken-reference)) and [**Bitcoin**](../reference/sql-query-tables/bitcoin/) blockchain data along with [**ENS**](../reference/sql-query-tables/ethereum/token-tables-1/), [**NFT**](broken-reference/) and [**token**](../reference/sql-query-tables/ethereum/token-tables/) specific data. Spice.ai also features a comprehensive set of [EigenLayer datasets](../reference/sql-query-tables/ethereum/eigenlayer-tables/).
+Spice.ai is preloaded with community data, including select blockchain datasets from [**Ethereum**](/reference/sql-query-tables) (including **Beacon**) and [**Bitcoin**](/reference/sql-query-tables/bitcoin) blockchain data along with [**ENS**](/reference/sql-query-tables/ethereum/token-tables-1), [**NFT**](https://github.com/spicehq/docs/blob/trunk/getting-started/broken-reference/README.md) and [**token**](/reference/sql-query-tables/ethereum/token-tables) specific data. Spice.ai also features a comprehensive set of [EigenLayer datasets](/reference/sql-query-tables/ethereum/eigenlayer-tables).
 
-Datasets can be published to the Spice.ai platform by the community for public or private use using [Datasets and Views](../building-blocks/datasets-and-views.md).
+Datasets can be published to the Spice.ai platform by the community for public or private use using [Datasets and Views](/building-blocks/datasets-and-views).
 
-For the all-up list, see [Communtiy Data](../building-blocks/datasets.md) and follow the [Release notes](../reference/release-notes.md) for updates.
+For the all-up list, see [Communtiy Data](/building-blocks/datasets) and follow the [Release notes](/reference/release-notes) for updates.
 
 ### How much does Spice.ai cost?
 
-It's free to [get an API key](https://spice.ai) to use the [Community Edition](pricing/community-edition.md).
+It's free to [get an API key](https://spice.ai) to use the [Community Edition](/getting-started/pricing/community-edition).
 
-For customers who need higher request or query limits, service-level guarantees, or priority support we offer [high-value paid tiers](pricing/) based on usage.
+For customers who need higher request or query limits, service-level guarantees, or priority support we offer [high-value paid tiers](/getting-started/pricing) based on usage.
 
 ### What level of support do you offer?
 
-We offer enterprise-grade support with an SLA [for Enterprise Plans](pricing/).
+We offer enterprise-grade support with an SLA [for Enterprise Plans](/getting-started/pricing).
 
 For standard plans we offer [best-effort community support](https://github.com/spicehq/cloud-docs/blob/trunk/broken-reference/README.md) in Discord.
 
@@ -33,15 +44,15 @@ For standard plans we offer [best-effort community support](https://github.com/s
 
 Spice.ai Cloud uses an [Apache Calcite](https://calcite.apache.org/) based query engine and supports the ANSI SQL standard.
 
-[Spice Firecache](../reference/specifications/dataset-and-view-yaml-specification/firecache.md) is uses a PostgreSQL dialect and we are working to migrate Spice.ai Cloud to a PostgreSQL compatible dialect.
+[Spice Firecache](/reference/specifications/dataset-and-view-yaml-specification/firecache) is uses a PostgreSQL dialect and we are working to migrate Spice.ai Cloud to a PostgreSQL compatible dialect.
 
 ### Can you add \<table> / dataset or index a specific on-chain contract?
 
-We support [custom views and datasets](../building-blocks/datasets-and-views.md) for adding and publishing new datasets.
+We support [custom views and datasets](/building-blocks/datasets-and-views) for adding and publishing new datasets.
 
 ### Do you support WebSockets or other streaming?
 
-We do not support WebSockets. Data can be streamed using Apache Arrow Flight over gRPC which is the default when using our [SDKs.](broken-reference)
+We do not support WebSockets. Data can be streamed using Apache Arrow Flight over gRPC which is the default when using our [SDKs.](/sdks/python-sdk)
 
 ### Do you support JDBC//ODBC/ADBC?
 

@@ -1,0 +1,32 @@
+---
+title: "CHR"
+---
+
+1. [📚REFERENCE](/reference)
+2. [SQL Reference](/reference/sql-reference)
+3. [SQL Functions](/reference/sql-reference/all-functions)
+4. [String](/reference/sql-reference/all-functions/string)
+
+Converts a Unicode code point into the character that matches the input Unicode character. If an invalid code point is specified, an empty string is returned.
+
+### Syntax
+
+#### CHR(*integer\_expression* int32) → varchar
+
+* integer\_expression: Unicode code point to convert to character.
+
+**Examples**
+
+<CodeGroup>
+  ```bash CHR example
+  SELECT CHR(72)
+  -- H
+  ```
+</CodeGroup>
+
+<CodeGroup>
+  ```bash CHR example
+  SELECT CHR(33)
+  -- None
+  ```
+</CodeGroup>

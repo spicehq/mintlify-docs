@@ -1,0 +1,36 @@
+---
+title: "IS [NOT] DISTINCT FROM"
+---
+
+1. [📚REFERENCE](/reference)
+2. [SQL Reference](/reference/sql-reference)
+3. [SQL Functions](/reference/sql-reference/all-functions)
+4. [Boolean](/reference/sql-reference/all-functions/boolean)
+
+Compares two expressions to determine whether they have the same or different values. NULLs are considered as comparable values.
+
+### Syntax
+
+#### IS \[NOT] DISTINCT FROM(*expression* any) → boolean
+
+* expression: Can be a general expression of any Spice-supported data type.
+
+**Examples**
+
+<CodeGroup>
+  ```bash IS [NOT] DISTINCT FROM example
+  SELECT NULL IS DISTINCT
+  FROM NULL
+
+  -- False
+  ```
+</CodeGroup>
+
+<CodeGroup>
+  ```bash IS [NOT] DISTINCT FROM example
+  SELECT NULL IS NOT DISTINCT
+  FROM NULL
+
+  -- True
+  ```
+</CodeGroup>

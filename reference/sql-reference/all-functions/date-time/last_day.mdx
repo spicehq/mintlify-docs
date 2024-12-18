@@ -1,0 +1,44 @@
+---
+title: "LAST_DAY"
+---
+
+1. [📚REFERENCE](/reference)
+2. [SQL Reference](/reference/sql-reference)
+3. [SQL Functions](/reference/sql-reference/all-functions)
+4. [Date/Time](/reference/sql-reference/all-functions/date-time)
+
+Returns the last day of the month for the specified date or timestamp.
+
+### Syntax
+
+#### LAST\_DAY(*date\_timestamp\_expression* string) → date
+
+* date\_timestamp\_expression: A `DATE` or `TIMESTAMP` expression.
+
+**Examples**
+
+<CodeGroup>
+  ```bash LAST_DAY example
+  SELECT LAST_DAY('2009-01-12 12:58:59')
+  -- 2009-01-31
+  ```
+</CodeGroup>
+
+LAST\_DAY example
+
+<CodeGroup>
+  ```bash LAST_DAY example
+  SELECT pickup_datetime, LAST_DAY(pickup_datetime) AS "last_day" 
+  FROM eth.recent_blocks 
+  LIMIT 3
+
+  -- pickup_datetime, last_day
+  -- 2013-05-27 19:15:00.000, 2013-05-31
+  -- 2013-05-31 16:40:00.000, 2013-05-31
+  -- 2013-05-27 19:03:00.000, 2013-05-31
+  ```
+</CodeGroup>
+
+### Usage Notes
+
+The return value is always a date regardless of whether `date_timestamp_expression` is a date or a timestamp.

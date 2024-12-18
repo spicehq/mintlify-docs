@@ -1,0 +1,25 @@
+---
+title: "MD5"
+---
+
+1. [📚REFERENCE](/reference)
+2. [SQL Reference](/reference/sql-reference)
+3. [SQL Functions](/reference/sql-reference/all-functions)
+4. [Cryptography](/reference/sql-reference/all-functions/cryptography)
+
+Computes the MD5 hash value of a string.
+
+### Syntax
+
+#### MD5(*expr* varchar) → varchar
+
+* expression: The string to hash.
+
+**Examples**
+
+<CodeGroup>
+  ```bash MD5 example
+  SELECT MD5('Spice')
+  -- 288e0e9ab8b8ac8737afefecf16f61fd
+  ```
+</CodeGroup>

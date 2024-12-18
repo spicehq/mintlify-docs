@@ -1,0 +1,29 @@
+---
+title: "SPLIT_PART"
+---
+
+1. [📚REFERENCE](/reference)
+2. [SQL Reference](/reference/sql-reference)
+3. [SQL Functions](/reference/sql-reference/all-functions)
+4. [String](/reference/sql-reference/all-functions/string)
+
+Splits a given string at a specified character and returns the requested part.
+
+### Syntax
+
+#### SPLIT\_PART(*expression* varchar, *delimiter* varchar, *part\_number* int32) → varchar
+
+* expression: Input expression.
+
+* delimiter: String representing the delimiter to split the input expression by.
+
+* part\_number: Requested part of the split. Must be an integer greater than zero.
+
+**Examples**
+
+<CodeGroup>
+  ```bash SPLIT_PART example
+  SELECT SPLIT_PART('127.0.0.1', '.', 1)
+  -- 127
+  ```
+</CodeGroup>

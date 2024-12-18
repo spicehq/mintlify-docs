@@ -1,0 +1,72 @@
+---
+title: "VAR_SAMP"
+---
+
+1. [📚REFERENCE](/reference)
+2. [SQL Reference](/reference/sql-reference)
+3. [SQL Functions](/reference/sql-reference/all-functions)
+4. [Window](/reference/sql-reference/all-functions/window)
+
+Returns the sample variance of non-NULL records.
+
+### Syntax
+
+#### VAR\_SAMP(*numeric\_expression* int64) → double
+
+* numeric\_expression: The set of records to calculate variance for.
+
+**Examples**
+
+<CodeGroup>
+  ```bash VAR_SAMP example
+  SELECT VAR_SAMP(transaction_count) 
+  FROM eth.recent_blocks
+  -- 1.868747683518558
+  ```
+</CodeGroup>
+
+#### VAR\_SAMP(*numeric\_expression* float) → double
+
+* numeric\_expression: The set of records to calculate variance for.
+
+**Examples**
+
+<CodeGroup>
+  ```bash VAR_SAMP example
+  SELECT VAR_SAMP(gas_used) 
+  FROM eth.recent_blocks
+  -- 5.106086065187043
+  ```
+</CodeGroup>
+
+#### VAR\_SAMP(*numeric\_expression* double) → double
+
+* numeric\_expression: The set of records to calculate variance for.
+
+**Examples**
+
+<CodeGroup>
+  ```bash VAR_SAMP example
+  SELECT VAR_SAMP(gas_used) 
+  FROM eth.recent_blocks
+  -- 5.106086065187043
+  ```
+</CodeGroup>
+
+#### VAR\_SAMP(*numeric\_expression* int32) → double
+
+* numeric\_expression: The set of records to calculate variance for.
+
+**Examples**
+
+<CodeGroup>
+  ```bash VAR_SAMP example
+  SELECT VAR_SAMP(transaction_count) 
+  FROM eth.recent_blocks
+  -- 1.868747683518558
+  ```
+</CodeGroup>
+
+### Usage Notes
+
+For single input records, VAR\_SAMP will return NULL.

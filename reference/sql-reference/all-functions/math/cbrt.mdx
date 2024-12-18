@@ -1,0 +1,39 @@
+---
+title: "CBRT"
+---
+
+1. [📚REFERENCE](/reference)
+2. [SQL Reference](/reference/sql-reference)
+3. [SQL Functions](/reference/sql-reference/all-functions)
+4. [Math](/reference/sql-reference/all-functions/math)
+
+Computes the cube root of a numeric expression.
+
+### Syntax
+
+#### CBRT(*numeric\_expression* NUMERIC) → FLOAT
+
+* numeric\_expression: The number (`DOUBLE`, `FLOAT`, `INTEGER`) used to compute the cube root.
+
+**Examples**
+
+<CodeGroup>
+  ```bash CBRT example
+  SELECT CBRT(8)
+  -- 2.0
+  ```
+</CodeGroup>
+
+<CodeGroup>
+  ```bash CBRT example
+  SELECT CBRT(120)
+  -- 4.932424148660941
+  ```
+</CodeGroup>
+
+<CodeGroup>
+  ```bash CBRT example
+  SELECT CBRT(99.5)
+  -- 4.633839922986558
+  ```
+</CodeGroup>

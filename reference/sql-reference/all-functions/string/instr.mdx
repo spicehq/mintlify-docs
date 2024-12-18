@@ -1,0 +1,36 @@
+---
+title: "INSTR"
+---
+
+1. [📚REFERENCE](/reference)
+2. [SQL Reference](/reference/sql-reference)
+3. [SQL Functions](/reference/sql-reference/all-functions)
+4. [String](/reference/sql-reference/all-functions/string)
+
+Returns the position of the first occurrence of a string when it is contained in another string. If no such occurrence is found, a zero is returned. The comparison is case-sensitive.
+
+### Syntax
+
+#### INSTR(*expression1* string, *expression2* string) → int
+
+* expression1: The input expression to search.
+
+* expression2: The string to search for in the specified expression.
+
+**Examples**
+
+<CodeGroup>
+  ```bash INSTR example
+  SELECT INSTR('SPICE', 'S')
+  -- EXPR$0
+  -- 1
+  ```
+</CodeGroup>
+
+<CodeGroup>
+  ```bash INSTR example
+  SELECT INSTR('SPICE', 'd')
+  -- EXPR$0
+  -- 0
+  ```
+</CodeGroup>

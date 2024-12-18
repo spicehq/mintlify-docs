@@ -1,0 +1,38 @@
+---
+title: "WEEKOFYEAR"
+---
+
+1. [📚REFERENCE](/reference)
+2. [SQL Reference](/reference/sql-reference)
+3. [SQL Functions](/reference/sql-reference/all-functions)
+4. [Date/Time](/reference/sql-reference/all-functions/date-time)
+
+Returns the week of year of the date or timestamp.
+
+### Syntax
+
+#### WEEKOFYEAR(*date\_timestamp\_expression* string) → bigint
+
+* date\_timestamp\_expression: A `DATE` or `TIMESTAMP` expression.
+
+**Examples**
+
+<CodeGroup>
+  ```bash WEEKOFYEAR example
+  SELECT WEEKOFYEAR('2003-02-01 11:43:22')
+  -- 5
+  ```
+</CodeGroup>
+
+<CodeGroup>
+  ```bash WEEKOFYEAR example
+  SELECT "Date", WEEKOFYEAR("Date") 
+  FROM eth.recent_blocks 
+  LIMIT 3
+
+  -- Date, EXPR$1
+  -- 2016-01-29, 4
+  -- 2016-01-29, 4
+  -- 2016-04-25, 17
+  ```
+</CodeGroup>

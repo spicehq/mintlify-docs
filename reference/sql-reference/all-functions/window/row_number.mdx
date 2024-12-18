@@ -1,0 +1,37 @@
+---
+title: "ROW_NUMBER"
+---
+
+1. [📚REFERENCE](/reference)
+2. [SQL Reference](/reference/sql-reference)
+3. [SQL Functions](/reference/sql-reference/all-functions)
+4. [Window](/reference/sql-reference/all-functions/window)
+
+Returns the row number for the current row based on the ORDER BY clause within each partition. Rows containing identical values receive different row numbers.
+
+### Syntax
+
+#### ROW\_NUMBER() OVER ( \[PARTITION BY partition\_expression] \[ORDER BY order\_expression]) → bigint
+
+* partition\_expression: An optional expression that groups rows into partitions.
+
+* order\_expression: An optional expression that specifies the order of the rows within each partition.
+
+**Examples**
+
+<CodeGroup>
+  ```bash ROW_NUMBER example
+  SELECT "Category", 
+    "Descript", 
+    "DayOfWeek",
+    ROW_NUMBER() 
+      OVER (
+        PARTITION BY "Category" 
+        ORDER BY "DayOfWeek")
+  FROM eth.recent_blocks 
+
+  -- Category, Descript, DayOfWeek, EXPR$3
+  -- ARSON, ARSON, Friday, 1 
+  -- ARSON, ARSON, Friday, 2
+  ```
+</CodeGroup>

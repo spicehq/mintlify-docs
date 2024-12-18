@@ -1,0 +1,29 @@
+---
+title: "TRANSLATE"
+---
+
+1. [📚REFERENCE](/reference)
+2. [SQL Reference](/reference/sql-reference)
+3. [SQL Functions](/reference/sql-reference/all-functions)
+4. [String](/reference/sql-reference/all-functions/string)
+
+Translates the base expression from the source characters/expression to the target characters/expression.
+
+### Syntax
+
+#### TRANSLATE(*base\_expression* varchar, *source\_characters* varchar, *target\_characters* varchar) → varchar
+
+* base\_expression: The string to translate.
+
+* source\_characters: A string with all the characters in the base expression that need translating. Each character in this string will be replaced with the corresponding character from the target\_characters expression or ommitted from the string if target\_characters expression has less characters than the source\_characters.
+
+* target\_characters: A string containing all the characters to replace the original characters with.
+
+**Examples**
+
+<CodeGroup>
+  ```bash TRANSLATE example
+  SELECT TRANSLATE('*a*bX*dYZ*','XYZ*','cef');
+  -- abcdef
+  ```
+</CodeGroup>

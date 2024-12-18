@@ -1,0 +1,117 @@
+---
+title: "TO_CHAR"
+---
+
+1. [📚REFERENCE](/reference)
+2. [SQL Reference](/reference/sql-reference)
+3. [SQL Functions](/reference/sql-reference/all-functions)
+4. [Conversion](/reference/sql-reference/all-functions/conversion)
+
+Converts the input expression to a character/string using the specified format.
+
+### Syntax
+
+#### TO\_CHAR(*expression* time, *format* varchar) → varchar
+
+* expression: Expression to convert to a string.
+
+* format: Format to use for the conversion.
+
+**Examples**
+
+<CodeGroup>
+  ```bash TO_CHAR example
+  SELECT TO_CHAR(CAST('01:02:03' AS TIME) , 'HH:MI');
+  -- 01:02
+  ```
+</CodeGroup>
+
+#### TO\_CHAR(*expression* date, *format* varchar) → varchar
+
+* expression: Expression to convert to a string.
+
+* format: Format to use for the conversion.
+
+**Examples**
+
+<CodeGroup>
+  ```bash TO_CHAR example
+  SELECT TO_CHAR(CAST('2021-02-11' AS DATE) , 'yyyy.mm.dd');
+  -- 2021.02.11
+  ```
+</CodeGroup>
+
+#### TO\_CHAR(*expression* int32, *format* varchar) → varchar
+
+* expression: Expression to convert to a string.
+
+* format: Format to use for the conversion.
+
+**Examples**
+
+<CodeGroup>
+  ```bash TO_CHAR example
+  SELECT TO_CHAR(10, '#')
+  -- 10
+  ```
+</CodeGroup>
+
+#### TO\_CHAR(*expression* float, *format* varchar) → varchar
+
+* expression: Expression to convert to a string.
+
+* format: Format to use for the conversion.
+
+**Examples**
+
+<CodeGroup>
+  ```bash TO_CHAR example
+  SELECT TO_CHAR(7.5, '#.#')
+  -- 7.5
+  ```
+</CodeGroup>
+
+#### TO\_CHAR(*expression* int64, *format* varchar) → varchar
+
+* expression: Expression to convert to a string.
+
+* format: Format to use for the conversion.
+
+**Examples**
+
+<CodeGroup>
+  ```bash TO_CHAR example
+  SELECT TO_CHAR(10, '#')
+  -- 10
+  ```
+</CodeGroup>
+
+#### TO\_CHAR(*expression* double, *format* varchar) → varchar
+
+* expression: Expression to convert to a string.
+
+* format: Format to use for the conversion.
+
+**Examples**
+
+<CodeGroup>
+  ```bash TO_CHAR example
+  SELECT TO_CHAR(7.5, '#.#')
+  -- 7.5
+  ```
+</CodeGroup>
+
+#### TO\_CHAR(*expression* timestamp, *format* varchar) → varchar
+
+* expression: Expression to convert to a string.
+
+* format: Format to use for the conversion.
+
+**Examples**
+
+<CodeGroup>
+  ```bash TO_CHAR example
+  SELECT TO_CHAR(CAST('2013-04-05 01:02:03' AS TIMESTAMP) , 'mm/dd/yyyy, hh:mi');
+  -- 04/05/2013, 01:02
+  ```
+</CodeGroup>

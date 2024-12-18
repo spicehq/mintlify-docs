@@ -1,0 +1,38 @@
+---
+title: "SOUNDEX"
+---
+
+1. [📚REFERENCE](/reference)
+2. [SQL Reference](/reference/sql-reference)
+3. [SQL Functions](/reference/sql-reference/all-functions)
+4. [String](/reference/sql-reference/all-functions/string)
+
+Returns a string that contains a phonetic representation of the input string.
+
+### Syntax
+
+#### SOUNDEX(*expression* varchar) → varchar
+
+* expression: The expression for which a representation of the pronunciation is returned.
+
+**Examples**
+
+<CodeGroup>
+  ```bash SOUNDEX example
+  SELECT SOUNDEX('Smith'), SOUNDEX('Smythe')
+  -- EXPR$0, EXPR$1
+  -- S530, S530
+  ```
+</CodeGroup>
+
+<CodeGroup>
+  ```bash SOUNDEX example
+  SELECT SOUNDEX('the data lake'), SOUNDEX('the data lakehouse'), SOUNDEX('the data warehouse')
+  -- EXPR$0, EXPR$1, EXPR$2
+  -- T334, T334, T336
+  ```
+</CodeGroup>
+
+### Usage Notes
+
+You can use this function to determine whether two strings (for example, similar last names ‘Smith’ and ‘Smythe’) have similar pronounciations in the English language. This function uses the [Soundex phonetic algorithm](https://en.wikipedia.org/wiki/Soundex), which is described in [Soundex System](https://www.archives.gov/research/census/soundex). This function returns only four characters (one letter and three digits). As a result, the output is primarily determined by the first few syllables of the input, rather than the entire string.

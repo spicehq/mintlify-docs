@@ -1,0 +1,25 @@
+---
+title: "TO_HEX"
+---
+
+1. [📚REFERENCE](/reference)
+2. [SQL Reference](/reference/sql-reference)
+3. [SQL Functions](/reference/sql-reference/all-functions)
+4. [Conversion](/reference/sql-reference/all-functions/conversion)
+
+Returns a hexadecimal string for the given binary value.
+
+### Syntax
+
+#### TO\_HEX(*in* binary) → string
+
+* in: A binary value.
+
+**Examples**
+
+<CodeGroup>
+  ```bash TO_HEX example
+  SELECT to_hex(binary_string('hello'))
+  -- 68656C6C6F
+  ```
+</CodeGroup>

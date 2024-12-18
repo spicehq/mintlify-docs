@@ -1,0 +1,52 @@
+---
+title: "POWER"
+---
+
+1. [📚REFERENCE](/reference)
+2. [SQL Reference](/reference/sql-reference)
+3. [SQL Functions](/reference/sql-reference/all-functions)
+4. [Math](/reference/sql-reference/all-functions/math)
+
+Returns the result of raising the input value to the specified power.
+
+### Syntax
+
+#### POWER(*numeric\_expression* double, *power* double) → double
+
+* numeric\_expression: The input expression.
+
+* power: The power to raise the numeric\_expression to.
+
+**Examples**
+
+<CodeGroup>
+  ```bash POWER example
+  SELECT POWER(5, 2)
+  -- 25.0
+  ```
+</CodeGroup>
+
+<CodeGroup>
+  ```bash POWER example
+  SELECT POWER(0.1, 2)
+  -- 0.010000000000000002
+  ```
+</CodeGroup>
+
+<CodeGroup>
+  ```bash POWER example
+  SELECT POWER(-2, 2)
+  -- 4.0
+  ```
+</CodeGroup>
+
+<CodeGroup>
+  ```bash POWER example
+  SELECT POWER(10, -2)
+  -- 0.01
+  ```
+</CodeGroup>
+
+### Usage Notes
+
+This function always returns a `DOUBLE` even if the parameters are both integers.

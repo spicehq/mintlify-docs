@@ -1,0 +1,56 @@
+---
+title: "LSHIFT"
+---
+
+1. [📚REFERENCE](/reference)
+2. [SQL Reference](/reference/sql-reference)
+3. [SQL Functions](/reference/sql-reference/all-functions)
+4. [Bitwise](/reference/sql-reference/all-functions/bitwise)
+
+Shifts the bits of the numeric expression to the left.
+
+### Syntax
+
+#### LSHIFT(*expression1* int32, *expression2* int32) → int32
+
+* expression1: Integer to shift.
+
+* expression2: The number of bits to shift by.
+
+**Examples**
+
+<CodeGroup>
+  ```bash LSHIFT example
+  SELECT LSHIFT(1, 120)
+  -- 16777216
+  ```
+</CodeGroup>
+
+<CodeGroup>
+  ```bash LSHIFT example
+  SELECT LSHIFT(16, 1)
+  -- 32
+  ```
+</CodeGroup>
+
+#### LSHIFT(*expression1* int64, *expression2* int64) → int64
+
+* expression1: Integer to shift.
+
+* expression2: The number of bits to shift by.
+
+**Examples**
+
+<CodeGroup>
+  ```bash LSHIFT example
+  SELECT LSHIFT(1, 120)
+  -- 16777216
+  ```
+</CodeGroup>
+
+<CodeGroup>
+  ```bash LSHIFT example
+  SELECT LSHIFT(16, 1)
+  -- 32
+  ```
+</CodeGroup>

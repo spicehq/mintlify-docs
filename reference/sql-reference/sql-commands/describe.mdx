@@ -1,0 +1,141 @@
+---
+title: "DESCRIBE"
+---
+
+1. [📚REFERENCE](/reference)
+2. [SQL Reference](/reference/sql-reference)
+3. [SQL Commands](/reference/sql-reference/sql-commands)
+
+The DESCRIBE TABLE command is used to provide high-level information regarding the overall column properties of an existing dataset.
+
+Spice `DESCRIBE` supports all filesystem source types and relies upon a user’s existing privileges to access and describe a table or view.
+
+### Syntax
+
+#### Parameters
+
+* \<table\_name> `String` The name of an existing user-defined table.
+
+**Examples**
+
+<CodeGroup>
+  ```bash DESCRIBE TABLE syntax.
+  DESCRIBE TABLE table_name;
+  ```
+</CodeGroup>
+
+<CodeGroup>
+  ```bash Describing a table
+  DESCRIBE TABLE eth.blocks;
+  ```
+</CodeGroup>
+
+Once a table or view has been queried, the Spice UI displays the following:
+
+* Column headers indicating the type of information being described.
+
+* Rows describing each table column.
+
+* Data types, properties, policies, and other associated attributes
+
+COLUMN\_NAME
+
+DATA\_TYPE
+
+IS\_NULLABLE
+
+NUMERIC\_PRECISION
+
+NUMERIC\_SCALE
+
+EXTENDED\_PROPERTIES
+
+MASKING\_POLICY
+
+number
+
+BIGINT
+
+YES
+
+64
+
+0
+
+\[]
+
+\[]
+
+hash
+
+CHARACTER VARYING
+
+YES
+
+NULL
+
+NULL
+
+\[]
+
+\[]
+
+parent\_hash
+
+CHARACTER VARYING
+
+YES
+
+NULL
+
+NULL
+
+\[]
+
+\[]
+
+nonce
+
+CHARACTER VARYING
+
+YES
+
+NULL
+
+NULL
+
+\[]
+
+\[]
+
+sha3\_uncles
+
+CHARACTER VARYING
+
+YES
+
+NULL
+
+NULL
+
+\[]
+
+\[]
+
+logs\_bloom
+
+CHARACTER VARYING
+
+YES
+
+NULL
+
+NULL
+
+\[]
+
+\[]
+
+The cells containing a ‘\[]’ indicate “empty” values.
+
+####

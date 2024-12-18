@@ -1,0 +1,57 @@
+---
+title: "MOD"
+---
+
+1. [📚REFERENCE](/reference)
+2. [SQL Reference](/reference/sql-reference)
+3. [SQL Functions](/reference/sql-reference/all-functions)
+4. [Math](/reference/sql-reference/all-functions/math)
+
+Returns the remainder of the input expression divided by the second input expression.
+
+### Syntax
+
+#### MOD(*numeric\_expression* int64, *numeric\_expression* int64) → int64
+
+* numeric\_expression: The first numeric expression.
+
+* numeric\_expression: The second numeric expression.
+
+**Examples**
+
+<CodeGroup>
+  ```bash MOD example
+  SELECT MOD(50, 7)
+  -- 1
+  ```
+</CodeGroup>
+
+#### MOD(*numeric\_expression* int64, *numeric\_expression* int32) → int32
+
+* numeric\_expression: The first numeric expression.
+
+* numeric\_expression: The second numeric expression.
+
+**Examples**
+
+<CodeGroup>
+  ```bash MOD example
+  SELECT MOD(35, 5)
+  -- 0
+  ```
+</CodeGroup>
+
+#### MOD(*numeric\_expression* decimal(0,0), *numeric\_expression* decimal(0,0)) → decimal(0,0)
+
+* numeric\_expression: The first numeric expression.
+
+* numeric\_expression: The second numeric expression.
+
+**Examples**
+
+<CodeGroup>
+  ```bash MOD example
+  SELECT MOD(47.6, 5.2)
+  -- 0.8
+  ```
+</CodeGroup>

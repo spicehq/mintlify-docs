@@ -1,0 +1,25 @@
+---
+title: "BASE64"
+---
+
+1. [📚REFERENCE](/reference)
+2. [SQL Reference](/reference/sql-reference)
+3. [SQL Functions](/reference/sql-reference/all-functions)
+4. [Binary](/reference/sql-reference/all-functions/binary)
+
+Returns the Base64 encoding of a binary string.
+
+### Syntax
+
+#### BASE64(*expression* varbinary) → varchar
+
+* expression: The string to encode.
+
+**Examples**
+
+<CodeGroup>
+  ```bash BASE64 example
+  SELECT BASE64('Spice')
+  -- RHJlbWlv
+  ```
+</CodeGroup>

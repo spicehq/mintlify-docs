@@ -1,0 +1,25 @@
+---
+title: "LENGTH"
+---
+
+1. [📚REFERENCE](/reference)
+2. [SQL Reference](/reference/sql-reference)
+3. [SQL Functions](/reference/sql-reference/all-functions)
+4. [String](/reference/sql-reference/all-functions/string)
+
+Returns the length of an input string. If the character encoding isn’t specified, it assumes to UTF8.
+
+### Syntax
+
+#### LENGTH(*expression* varchar) → int32
+
+* expression: String expression to determine the length of.
+
+**Examples**
+
+<CodeGroup>
+  ```bash LENGTH example
+  SELECT LENGTH('SPICE')
+  -- 5
+  ```
+</CodeGroup>

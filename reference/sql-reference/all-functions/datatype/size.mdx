@@ -1,0 +1,26 @@
+---
+title: "SIZE"
+---
+
+1. [📚REFERENCE](/reference)
+2. [SQL Reference](/reference/sql-reference)
+3. [SQL Functions](/reference/sql-reference/all-functions)
+4. [Datatype](/reference/sql-reference/all-functions/datatype)
+
+Returns the number of entries in a map expression.
+
+### Syntax
+
+#### SIZE(*input* map) → int
+
+* input: A map expression for which to return the number of entries.
+
+**Examples**
+
+<CodeGroup>
+  ```bash SIZE example
+  SELECT SIZE(properties)
+  -- 3
+  -- 2
+  ```
+</CodeGroup>

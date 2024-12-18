@@ -1,0 +1,32 @@
+---
+title: "DAYOFWEEK"
+---
+
+1. [📚REFERENCE](/reference)
+2. [SQL Reference](/reference/sql-reference)
+3. [SQL Functions](/reference/sql-reference/all-functions)
+4. [Date/Time](/reference/sql-reference/all-functions/date-time)
+
+Returns the day of the week (from 1 to 7) of the date or timestamp.
+
+### Syntax
+
+#### DAYOFWEEK(*date\_timestamp\_expression* string) → bigint
+
+* date\_timestamp\_expression: A `DATE` or `TIMESTAMP` expression.
+
+**Examples**
+
+<CodeGroup>
+  ```bash DAYOFWEEK example
+  SELECT DAYOFWEEK(DATE '2021-02-28')
+  -- 1
+  ```
+</CodeGroup>
+
+<CodeGroup>
+  ```bash DAYOFWEEK example
+  SELECT DAYOFWEEK(TIMESTAMP '2021-02-27 11:43:22')
+  -- 7
+  ```
+</CodeGroup>

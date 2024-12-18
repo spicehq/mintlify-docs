@@ -1,0 +1,27 @@
+---
+title: "LEVENSHTEIN"
+---
+
+1. [📚REFERENCE](/reference)
+2. [SQL Reference](/reference/sql-reference)
+3. [SQL Functions](/reference/sql-reference/all-functions)
+4. [String](/reference/sql-reference/all-functions/string)
+
+Computes the Levenshtein distance between two input expressions.
+
+### Syntax
+
+#### LEVENSHTEIN(*expression1* varchar, *expression2* varchar) → int
+
+* expression1: The first string expression.
+
+* expression2: The second string expression.
+
+**Examples**
+
+<CodeGroup>
+  ```bash LEVENSHTEIN example
+  SELECT LEVENSHTEIN('spice', 'iceberg')
+  -- 6
+  ```
+</CodeGroup>

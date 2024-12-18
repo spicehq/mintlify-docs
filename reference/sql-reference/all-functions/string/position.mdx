@@ -1,0 +1,38 @@
+---
+title: "POSITION"
+---
+
+1. [📚REFERENCE](/reference)
+2. [SQL Reference](/reference/sql-reference)
+3. [SQL Functions](/reference/sql-reference/all-functions)
+4. [String](/reference/sql-reference/all-functions/string)
+
+Returns the position of the first occurrence of a substring within another string
+
+### Syntax
+
+#### POSITION(*substr* string IN *expression* string) → integer
+
+* substr: The substring to search for in the expression.
+
+* expression: The input expression to search.
+
+**Examples**
+
+<CodeGroup>
+  ```bash POSITION example
+  SELECT POSITION('an' in 'banana')
+  -- 2
+  ```
+</CodeGroup>
+
+<CodeGroup>
+  ```bash POSITION example
+  SELECT POSITION('no' in 'banana')
+  -- 0
+  ```
+</CodeGroup>
+
+### Usage Notes
+
+Searches for the first occurrence of the first argument in the second argument and if found, returns the position the of the first argument in the second argument. The first character in a string is position 1. Returns 0 if the substring is not found in the expression.

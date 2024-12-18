@@ -1,0 +1,32 @@
+---
+title: "CONCAT_WS"
+---
+
+1. [📚REFERENCE](/reference)
+2. [SQL Reference](/reference/sql-reference)
+3. [SQL Functions](/reference/sql-reference/all-functions)
+4. [String](/reference/sql-reference/all-functions/string)
+
+Concatenate with separator. Returns a string resulting from the joining of two or more string values in an end-to-end manner. Uses the first argument as the separator between each string.
+
+### Syntax
+
+#### CONCAT\_WS(separator, expression1, expression2, \[ … expressionN ]) → string
+
+* separator: An expression of any character type, such as `binary` or `varchar`. However, all arguments must be the same data type.
+
+* expression: An expression can be any data type. All arguments must be the same data type.
+
+**Examples**
+
+<CodeGroup>
+  ```bash CONCAT_WS example
+  SELECT CONCAT_WS('-', 'cat', 'dog', 'bird')
+
+  -- cat-dog-bird
+  ```
+</CodeGroup>
+
+### Usage Notes
+
+This function does not append a separator if there is only one argument. If the separator is `NULL`, then the result is `NULL`. If any of the expressions are `NULL`, they are ignored. If only the separator is provided, or all provided expressions are `NULL`, then an empty string is returned.

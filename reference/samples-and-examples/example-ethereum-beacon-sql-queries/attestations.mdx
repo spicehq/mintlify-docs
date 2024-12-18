@@ -1,0 +1,27 @@
+---
+title: "Attestations"
+---
+
+1. [📚REFERENCE](/reference)
+2. [Samples and Examples](/reference/samples-and-examples)
+3. [Example Ethereum Beacon SQL Queries](/reference/samples-and-examples/example-ethereum-beacon-sql-queries)
+
+### Attestations statistics
+
+Average number of attestations per slot
+
+**Typical query time**: \<15 seconds
+
+```
+SELECT
+  AVG(num_attestations) AS average_attestations_per_slot
+FROM (
+  SELECT
+    block_slot,
+    COUNT(*) AS num_attestations
+  FROM
+    eth.beacon.attestations
+  GROUP BY
+    block_slot
+) AS attestations_per_slot
+```

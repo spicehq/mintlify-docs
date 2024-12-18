@@ -1,0 +1,54 @@
+---
+title: "COVAR_POP"
+---
+
+1. [📚REFERENCE](/reference)
+2. [SQL Reference](/reference/sql-reference)
+3. [SQL Functions](/reference/sql-reference/all-functions)
+4. [Window](/reference/sql-reference/all-functions/window)
+
+Returns the population covariance for non-NULL pairs across all input values.
+
+### Syntax
+
+#### COVAR\_POP(*expression1* numeric, *expression2* numeric) → double
+
+* expression1: An expression that evaluates to a numeric type. This parameter is the dependent value.
+
+* expression2: An expression that evaluates to a numeric type. This parameter is the independent value.
+
+**Examples**
+
+<CodeGroup>
+  ```bash Aggregate function example
+  SELECT COVAR_POP(transaction_count, gas_used)
+  FROM eth.recent_blocks
+
+  -- 31.70536771189994
+  ```
+</CodeGroup>
+
+<CodeGroup>
+  ```bash Aggregate function example using optional DISTINCT clause
+  SELECT COVAR_POP(DISTINCT transaction_count, gas_used)
+  FROM eth.recent_blocks
+
+  -- 302.592806814443e
+  ```
+</CodeGroup>
+
+<CodeGroup>
+  ```bash Window function example
+  SELECT COVAR_POP(transaction_count, gas_used)
+    OVER (PARTITION BY transaction_count)
+  FROM eth.recent_blocks
+
+  -- 1.5543122344752192e-15
+  ```
+</CodeGroup>
+
+### Usage Note
+
+This function supports the use of `ALL` and `DISTINCT`:
+
+`SELECT COVAR_POP( [ { ALL | DISTINCT } ] expression1, expression2)`
