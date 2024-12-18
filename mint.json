@@ -1,0 +1,91 @@
+{
+  "$schema": "https://mintlify.com/schema.json",
+  "name": "Spice.ai",
+  "logo": {
+    "dark": "/logo/dark.svg",
+    "light": "/logo/light.svg"
+  },
+  "favicon": "/favicon.svg",
+  "colors": {
+    "primary": "#335EFF",
+    "light": "#4c71f7",
+    "dark": "#335EFF",
+    "anchors": {
+      "from": "#335EFF",
+      "to": "#4c71f7"
+    }
+  },
+  "topbarLinks": [
+    {
+      "name": "Support",
+      "url": "https://discord.gg/PUCapX22En"
+    }
+  ],
+  "topbarCtaButton": {
+    "name": "Cloud Portal",
+    "url": "https://spice.ai/login"
+  },
+  "tabs": [
+    {
+      "name": "API Reference",
+      "url": "api-reference"
+    }
+  ],
+  "anchors": [
+    {
+      "name": "Discord",
+      "icon": "discord",
+      "url": "https://discord.gg/PUCapX22En"
+    },
+    {
+      "name": "Blog",
+      "icon": "newspaper",
+      "url": "https://blog.spice.ai/"
+    }
+  ],
+  "navigation": [
+    {
+      "group": "Getting Started",
+      "pages": [
+        "getting-started/introduction",
+        "getting-started/quickstart",
+        "getting-started/faq",
+        "getting-started/pricing"
+      ]
+    },
+    {
+      "group": "Building Blocks",
+      "pages": [
+        "building-blocks/datasets-and-views",
+        "building-blocks/datasets",
+        "building-blocks/external-data-sources",
+        "building-blocks/spice-models"
+      ]
+    },
+    {
+      "group": "API Documentation",
+      "pages": ["api-reference/cloud-api-reference/introduction"]
+    },
+    {
+      "group": "Platform API",
+      "pages": [
+        "api-reference/platform-api-reference/endpoint/get",
+        "api-reference/platform-api-reference/endpoint/create",
+        "api-reference/platform-api-reference/endpoint/delete"
+      ]
+    },
+    {
+      "group": "Cloud API",
+      "pages": [
+        "api-reference/cloud-api-reference/endpoint/get",
+        "api-reference/cloud-api-reference/endpoint/create",
+        "api-reference/cloud-api-reference/endpoint/delete"
+      ]
+    }
+  ],
+  "footerSocials": {
+    "x": "https://x.com/spice_ai",
+    "github": "https://github.com/spiceai",
+    "linkedin": "https://linkedin.com/company/spice-ai"
+  }
+}
